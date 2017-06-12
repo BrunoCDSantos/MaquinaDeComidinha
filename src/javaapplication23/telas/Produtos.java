@@ -62,44 +62,46 @@ public class Produtos extends javax.swing.JFrame {
         jCheckBox28 = new javax.swing.JCheckBox();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jCheckBox7.setText("Baconzitos");
+        jCheckBox7.setText("Baconzitos(55g - R$3,85)");
 
-        jCheckBox2.setText("Stax");
+        jCheckBox2.setText("Amendoim Dori(200g - R$3,95)");
 
-        jCheckBox8.setText("Cebolitos");
+        jCheckBox8.setText("Cebolitos(60g - R$3,85)");
 
-        jCheckBox23.setText("Kinder Bueno");
+        jCheckBox23.setText("Kinder Bueno(39g - R$6,00)");
 
-        jCheckBox9.setText("Pingo de Ouro");
+        jCheckBox9.setText("Pingo de Ouro(90g - R$3,95)");
 
-        jCheckBox24.setText("Snickers");
+        jCheckBox24.setText("Snickers(40g - R$3,00)");
 
-        jCheckBox3.setText("Ruffles");
+        jCheckBox3.setText("Ruffles(96g - R$6,29)");
 
-        jCheckBox25.setText("Kit Kat");
+        jCheckBox25.setText("Kit Kat(45g - 2,50)");
 
-        jCheckBox4.setText("Fandangos");
+        jCheckBox4.setText("Fandangos(59g - R$2,90)");
 
-        jCheckBox19.setText("Barra de Cereal");
+        jCheckBox19.setText("Barra de Cereal(25g - R$1,50)");
 
-        jCheckBox26.setText("Cookies");
+        jCheckBox26.setText("Cookies(40g - R$2,50)");
 
-        jCheckBox20.setText("M & M");
+        jCheckBox20.setText("M & M(52g - R$2,99)");
 
-        jCheckBox5.setText("Stikys");
+        jCheckBox5.setText("Stiksy(90g - R$4,00)");
 
-        jCheckBox21.setText("Fini");
+        jCheckBox21.setText("Fini(80g - R$5,00)");
 
-        jCheckBox27.setText("Diamante Negro");
+        jCheckBox27.setText("Diamante Negro(20g - R$2,00)");
 
-        jCheckBox22.setText("Pipoca");
+        jCheckBox22.setText("Pipoca(60g - R$2,50)");
 
-        jCheckBox6.setText("Cheetos");
+        jCheckBox6.setText("Cheetos(150g - R$6,29)");
 
-        jCheckBox1.setText("Doritos");
+        jCheckBox1.setText("Doritos(96g - R$5,85)");
 
         jCheckBox15.setText("Água da Serra");
 
@@ -113,7 +115,7 @@ public class Produtos extends javax.swing.JFrame {
 
         jCheckBox10.setText("Fanta Laranja");
 
-        jCheckBox13.setText("Coca-cola");
+        jCheckBox13.setText("Coca-cola(R$ 4,19)");
 
         jCheckBox11.setText("Chá Matte Leão");
 
@@ -141,6 +143,10 @@ public class Produtos extends javax.swing.JFrame {
 
         jLabel2.setText("Comidas");
 
+        jButton1.setText("Confirmar");
+
+        jButton2.setText("Voltar");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -148,44 +154,6 @@ public class Produtos extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(3, 3, 3)
-                                .addComponent(jCheckBox27))
-                            .addComponent(jCheckBox24)
-                            .addComponent(jCheckBox8))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jCheckBox7)
-                            .addComponent(jCheckBox26)
-                            .addComponent(jCheckBox23)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(3, 3, 3)
-                        .addComponent(jCheckBox21)
-                        .addGap(80, 80, 80)
-                        .addComponent(jCheckBox20))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jCheckBox2)
-                            .addComponent(jCheckBox5))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(71, 71, 71)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jCheckBox4)
-                                    .addComponent(jCheckBox1))
-                                .addGap(23, 23, 23)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jCheckBox3)
-                                    .addComponent(jCheckBox6)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(173, 173, 173)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jCheckBox25)
-                                    .addComponent(jCheckBox9)
-                                    .addComponent(jCheckBox19)
-                                    .addComponent(jCheckBox22)))))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jCheckBox10)
@@ -206,13 +174,44 @@ public class Produtos extends javax.swing.JFrame {
                             .addComponent(jCheckBox17)))
                     .addComponent(jCheckBox30)
                     .addComponent(jLabel1)
-                    .addComponent(jLabel2))
-                .addContainerGap(23, Short.MAX_VALUE))
+                    .addComponent(jLabel2)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jCheckBox24)
+                            .addComponent(jCheckBox8)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(3, 3, 3)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jCheckBox27)
+                                    .addComponent(jCheckBox21)))
+                            .addComponent(jCheckBox2)
+                            .addComponent(jCheckBox5))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jCheckBox20)
+                            .addComponent(jCheckBox23)
+                            .addComponent(jCheckBox7)
+                            .addComponent(jCheckBox26)
+                            .addComponent(jCheckBox4)
+                            .addComponent(jCheckBox1))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jCheckBox22)
+                            .addComponent(jCheckBox19)
+                            .addComponent(jCheckBox9)
+                            .addComponent(jCheckBox25)
+                            .addComponent(jCheckBox6)
+                            .addComponent(jCheckBox3)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jButton2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton1)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(34, 34, 34)
+                .addContainerGap()
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -221,10 +220,11 @@ public class Produtos extends javax.swing.JFrame {
                         .addComponent(jCheckBox1)
                         .addComponent(jCheckBox3)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox5)
-                    .addComponent(jCheckBox4)
-                    .addComponent(jCheckBox6))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jCheckBox6)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jCheckBox5)
+                        .addComponent(jCheckBox4)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jCheckBox8)
@@ -237,16 +237,16 @@ public class Produtos extends javax.swing.JFrame {
                         .addComponent(jCheckBox23))
                     .addComponent(jCheckBox24))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jCheckBox27)
-                        .addComponent(jCheckBox26))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox27)
+                    .addComponent(jCheckBox26)
                     .addComponent(jCheckBox19))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jCheckBox21)
-                    .addComponent(jCheckBox20)
-                    .addComponent(jCheckBox22))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jCheckBox20)
+                        .addComponent(jCheckBox22)))
                 .addGap(24, 24, 24)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -271,7 +271,11 @@ public class Produtos extends javax.swing.JFrame {
                     .addComponent(jCheckBox29))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jCheckBox30)
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton2))
+                .addContainerGap(66, Short.MAX_VALUE))
         );
 
         pack();
@@ -323,6 +327,8 @@ public class Produtos extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox10;
     private javax.swing.JCheckBox jCheckBox11;
