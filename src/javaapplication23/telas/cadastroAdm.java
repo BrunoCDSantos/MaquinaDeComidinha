@@ -7,14 +7,14 @@ package javaapplication23.telas;
 
 /**
  *
- * @author informatica
+ * @author Windows
  */
-public class login extends javax.swing.JFrame {
+public class cadastroAdm extends javax.swing.JFrame {
 
     /**
-     * Creates new form menu
+     * Creates new form cadastroAdm
      */
-    public login() {
+    public cadastroAdm() {
         initComponents();
     }
 
@@ -27,32 +27,32 @@ public class login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        campoSenhaAdm = new javax.swing.JPasswordField();
-        campoNomeAdm = new javax.swing.JTextField();
-        botaoAcessoAdm = new javax.swing.JButton();
+        campoCadasNomeAdm = new javax.swing.JTextField();
+        botaoCadastraAdm = new javax.swing.JButton();
         botaoVolta = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        campoCadasSenhaAdm = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        campoCadasNomeAdm.setPreferredSize(new java.awt.Dimension(22, 37));
+        campoCadasNomeAdm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoCadasNomeAdmActionPerformed(evt);
+            }
+        });
+
+        botaoCadastraAdm.setText("Cadastrar");
+
+        botaoVolta.setText("Voltar");
+
+        jLabel3.setText("Cadastrar administrador");
 
         jLabel1.setText("Nome admin:");
 
         jLabel2.setText("Senha admin:");
-
-        campoNomeAdm.setPreferredSize(new java.awt.Dimension(22, 37));
-        campoNomeAdm.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoNomeAdmActionPerformed(evt);
-            }
-        });
-
-        botaoAcessoAdm.setText("Acessar");
-
-        botaoVolta.setText("Voltar");
-
-        jLabel3.setText("Login do administrador");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -64,43 +64,43 @@ public class login extends javax.swing.JFrame {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel1)
-                            .addComponent(campoNomeAdm, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(campoCadasNomeAdm, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(campoSenhaAdm, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(campoCadasSenhaAdm, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2))
                         .addGroup(layout.createSequentialGroup()
                             .addComponent(botaoVolta)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(botaoAcessoAdm)))
+                            .addComponent(botaoCadastraAdm)))
                     .addComponent(jLabel3))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(28, Short.MAX_VALUE)
+                .addContainerGap(35, Short.MAX_VALUE)
                 .addComponent(jLabel3)
                 .addGap(31, 31, 31)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(campoNomeAdm, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(campoCadasNomeAdm, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(campoSenhaAdm, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(campoCadasSenhaAdm, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(botaoAcessoAdm)
+                    .addComponent(botaoCadastraAdm)
                     .addComponent(botaoVolta))
-                .addContainerGap(51, Short.MAX_VALUE))
+                .addContainerGap(58, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void campoNomeAdmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoNomeAdmActionPerformed
+    private void campoCadasNomeAdmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoCadasNomeAdmActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_campoNomeAdmActionPerformed
+    }//GEN-LAST:event_campoCadasNomeAdmActionPerformed
 
     /**
      * @param args the command line arguments
@@ -119,30 +119,29 @@ public class login extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(cadastroAdm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(cadastroAdm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(cadastroAdm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(cadastroAdm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new login().setVisible(true);
+                new cadastroAdm().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton botaoAcessoAdm;
+    private javax.swing.JButton botaoCadastraAdm;
     private javax.swing.JButton botaoVolta;
-    private javax.swing.JTextField campoNomeAdm;
-    private javax.swing.JPasswordField campoSenhaAdm;
+    private javax.swing.JTextField campoCadasNomeAdm;
+    private javax.swing.JPasswordField campoCadasSenhaAdm;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
