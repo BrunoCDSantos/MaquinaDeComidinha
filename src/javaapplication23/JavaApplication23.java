@@ -5,17 +5,13 @@
  */
 package javaapplication23;
 
-/**
- *
- * @author informatica
- */
+import javaapplication23.telas.Principal;
+
 public class JavaApplication23 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Principal TelaPrincipal = new Principal();
+        TelaPrincipal.setVisible(true);
     }
-    
+
 }
