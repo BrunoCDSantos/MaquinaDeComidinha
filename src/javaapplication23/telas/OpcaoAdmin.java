@@ -27,21 +27,21 @@ public class OpcaoAdmin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        loginAdm = new javax.swing.JButton();
-        cadastroAdm = new javax.swing.JButton();
+        botaoLoginAdm = new javax.swing.JButton();
+        botaoCadastroAdm = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         botaoVolta = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        loginAdm.setText("Alterar Produtos");
-        loginAdm.addActionListener(new java.awt.event.ActionListener() {
+        botaoLoginAdm.setText("Alterar Produtos");
+        botaoLoginAdm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                loginAdmActionPerformed(evt);
+                botaoLoginAdmActionPerformed(evt);
             }
         });
 
-        cadastroAdm.setText("Cadastrar Administrador");
+        botaoCadastroAdm.setText("Cadastrar Administrador");
 
         jLabel1.setText("Opções do Administrador");
 
@@ -52,16 +52,13 @@ public class OpcaoAdmin extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(73, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(cadastroAdm)
+                    .addComponent(botaoCadastroAdm)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(loginAdm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(74, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(botaoVolta)
+                        .addComponent(botaoLoginAdm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(botaoVolta))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -70,9 +67,9 @@ public class OpcaoAdmin extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
-                .addComponent(loginAdm)
+                .addComponent(botaoLoginAdm)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(cadastroAdm)
+                .addComponent(botaoCadastroAdm)
                 .addGap(32, 32, 32)
                 .addComponent(botaoVolta)
                 .addContainerGap(30, Short.MAX_VALUE))
@@ -81,9 +78,9 @@ public class OpcaoAdmin extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void loginAdmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginAdmActionPerformed
+    private void botaoLoginAdmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoLoginAdmActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_loginAdmActionPerformed
+    }//GEN-LAST:event_botaoLoginAdmActionPerformed
 
     /**
      * @param args the command line arguments
@@ -121,9 +118,9 @@ public class OpcaoAdmin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botaoCadastroAdm;
+    private javax.swing.JButton botaoLoginAdm;
     private javax.swing.JButton botaoVolta;
-    private javax.swing.JButton cadastroAdm;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JButton loginAdm;
     // End of variables declaration//GEN-END:variables
 }

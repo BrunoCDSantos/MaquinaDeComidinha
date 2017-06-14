@@ -24,19 +24,15 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <EmptySpace pref="73" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="cadastroAdm" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="botaoCadastroAdm" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
                       <Component id="jLabel1" max="32767" attributes="0"/>
-                      <Component id="loginAdm" max="32767" attributes="0"/>
+                      <Component id="botaoLoginAdm" max="32767" attributes="0"/>
                   </Group>
+                  <Component id="botaoVolta" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="74" max="32767" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
-              <Component id="botaoVolta" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -47,9 +43,9 @@
               <EmptySpace max="32767" attributes="0"/>
               <Component id="jLabel1" min="-2" pref="23" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-              <Component id="loginAdm" min="-2" max="-2" attributes="0"/>
+              <Component id="botaoLoginAdm" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="cadastroAdm" min="-2" max="-2" attributes="0"/>
+              <Component id="botaoCadastroAdm" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
               <Component id="botaoVolta" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="30" max="32767" attributes="0"/>
@@ -58,15 +54,15 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="loginAdm">
+    <Component class="javax.swing.JButton" name="botaoLoginAdm">
       <Properties>
         <Property name="text" type="java.lang.String" value="Alterar Produtos"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="loginAdmActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botaoLoginAdmActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="cadastroAdm">
+    <Component class="javax.swing.JButton" name="botaoCadastroAdm">
       <Properties>
         <Property name="text" type="java.lang.String" value="Cadastrar Administrador"/>
       </Properties>
