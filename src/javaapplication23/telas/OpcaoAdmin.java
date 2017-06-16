@@ -42,23 +42,35 @@ public class OpcaoAdmin extends javax.swing.JFrame {
         });
 
         botaoCadastroAdm.setText("Cadastrar Administrador");
+        botaoCadastroAdm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoCadastroAdmActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Opções do Administrador");
 
         botaoVolta.setText("Voltar");
+        botaoVolta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoVoltaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(12, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(botaoCadastroAdm)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(botaoLoginAdm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLabel1)
                     .addComponent(botaoVolta))
+                .addContainerGap(13, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(botaoLoginAdm, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -70,9 +82,9 @@ public class OpcaoAdmin extends javax.swing.JFrame {
                 .addComponent(botaoLoginAdm)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(botaoCadastroAdm)
-                .addGap(32, 32, 32)
+                .addGap(30, 30, 30)
                 .addComponent(botaoVolta)
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
 
         pack();
@@ -80,7 +92,21 @@ public class OpcaoAdmin extends javax.swing.JFrame {
 
     private void botaoLoginAdmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoLoginAdmActionPerformed
         // TODO add your handling code here:
+        AtualizarMaq at = new AtualizarMaq();
+        at.setVisible(true);
     }//GEN-LAST:event_botaoLoginAdmActionPerformed
+
+    private void botaoCadastroAdmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCadastroAdmActionPerformed
+        // TODO add your handling code here:
+        cadastroAdm ca = new cadastroAdm();
+        ca.setVisible(true);
+    }//GEN-LAST:event_botaoCadastroAdmActionPerformed
+
+    private void botaoVoltaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoVoltaActionPerformed
+        // TODO add your handling code here:
+        Principal pr = new Principal();
+        pr.setVisible(true);
+    }//GEN-LAST:event_botaoVoltaActionPerformed
 
     /**
      * @param args the command line arguments

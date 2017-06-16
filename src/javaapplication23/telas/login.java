@@ -49,8 +49,18 @@ public class login extends javax.swing.JFrame {
         });
 
         botaoAcessoAdm.setText("Acessar");
+        botaoAcessoAdm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoAcessoAdmActionPerformed(evt);
+            }
+        });
 
         botaoVolta.setText("Voltar");
+        botaoVolta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoVoltaActionPerformed(evt);
+            }
+        });
 
         jLabel3.setText("Login do administrador");
 
@@ -78,7 +88,7 @@ public class login extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(28, Short.MAX_VALUE)
+                .addContainerGap(18, Short.MAX_VALUE)
                 .addComponent(jLabel3)
                 .addGap(31, 31, 31)
                 .addComponent(jLabel1)
@@ -92,7 +102,7 @@ public class login extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botaoAcessoAdm)
                     .addComponent(botaoVolta))
-                .addContainerGap(51, Short.MAX_VALUE))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
 
         pack();
@@ -101,6 +111,18 @@ public class login extends javax.swing.JFrame {
     private void campoNomeAdmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoNomeAdmActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_campoNomeAdmActionPerformed
+
+    private void botaoAcessoAdmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoAcessoAdmActionPerformed
+        // TODO add your handling code here:
+        OpcaoAdmin op = new OpcaoAdmin();
+        op.setVisible(true);
+    }//GEN-LAST:event_botaoAcessoAdmActionPerformed
+
+    private void botaoVoltaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoVoltaActionPerformed
+        // TODO add your handling code here:
+        Principal pr = new Principal();
+        pr.setVisible(true);
+    }//GEN-LAST:event_botaoVoltaActionPerformed
 
     /**
      * @param args the command line arguments

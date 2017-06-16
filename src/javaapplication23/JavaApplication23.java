@@ -10,8 +10,8 @@ import javaapplication23.telas.Principal;
 public class JavaApplication23 {
 
     public static void main(String[] args) {
-        Principal TelaPrincipal = new Principal();
-        TelaPrincipal.setVisible(true);
+        Principal pr = new Principal();
+        pr.setVisible(true);
     }
 
 }
