@@ -27,132 +27,107 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
+          <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="FantaLaranja" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="FantaUva" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="CocaCola" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="AguaDaSerra" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="H2O" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="Agua" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="Gatorade" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="Dolly" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="Pureza" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="Aquarius" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="CocaColaDiet" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="ChaMatteLeao" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="32767" attributes="0"/>
+                          <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel12" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel11" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel13" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel15" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel14" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel19" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel17" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel16" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel18" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel21" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel20" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel25" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel23" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel22" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel24" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
-                      </Group>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="Snickers" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="Cebolitos" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="DiamanteNegro" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="Fini" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Component id="Amendoim" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="Stiksy" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="KinderBueno" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="Baconzitos" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="Cookies" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="Fandangos" min="-2" max="-2" attributes="0"/>
-                                  <Component id="Doritos" min="-2" max="-2" attributes="0"/>
-                                  <Component id="MEM" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="Pipoca" min="-2" max="-2" attributes="0"/>
-                                  <Component id="BarraDeCereal" min="-2" max="-2" attributes="0"/>
-                                  <Component id="PingoDeOuro" min="-2" max="-2" attributes="0"/>
-                                  <Component id="KitKat" min="-2" max="-2" attributes="0"/>
-                                  <Component id="Cheetos" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="Ruffles" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Component id="Chocolate" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="69" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel27" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel26" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel31" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel29" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel28" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel30" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel33" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel32" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLabel37" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
+                              <Component id="jLabel38" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jLabel35" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel34" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel36" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="DinheiroDepositado1" min="-2" pref="121" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                          </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                                   <Component id="botaoVolta" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="botaoConfProd" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-                                      <Component id="Troco" min="-2" pref="121" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="botaoConfProd" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Troco" alignment="0" min="-2" pref="121" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
-                                      <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="Troco1" min="-2" pref="121" max="-2" attributes="0"/>
-                                  <Group type="102" attributes="0">
-                                      <Component id="DinheiroDepositado" min="-2" pref="121" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jButton2" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
+                              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="DinheiroDepositado" min="-2" pref="121" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jButton2" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                              <Component id="DinheiroDepositado1" min="-2" pref="121" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
+                              <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="Troco1" min="-2" pref="121" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                      <EmptySpace pref="47" max="32767" attributes="0"/>
+                      <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jScrollPane1" min="-2" pref="86" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="154" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="139" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -163,122 +138,121 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="Amendoim" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                              <Component id="Doritos" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="Ruffles" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="Cheetos" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                              <Component id="Stiksy" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="Fandangos" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="Cebolitos" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="Baconzitos" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="PingoDeOuro" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                              <Component id="KitKat" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="KinderBueno" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="Snickers" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="DiamanteNegro" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="Cookies" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="BarraDeCereal" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="Fini" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                              <Component id="MEM" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="Pipoca" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="CocaCola" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="Gatorade" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="Aquarius" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="FantaUva" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="CocaColaDiet" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="H2O" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="FantaLaranja" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="ChaMatteLeao" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="Agua" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="AguaDaSerra" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="Dolly" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="Pureza" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="188" max="-2" attributes="0"/>
-                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="Chocolate" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="DinheiroDepositado" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                  <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="jLabel25" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel21" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel24" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel22" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel23" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
+              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="jLabel31" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel26" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel27" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel30" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel28" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel29" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel37" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel38" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel32" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel33" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel36" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel34" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel35" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="DinheiroDepositado" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                          <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="DinheiroDepositado1" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                           <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="Troco" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="Troco1" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                       </Group>
+                      <EmptySpace pref="48" max="32767" attributes="0"/>
                   </Group>
-                  <Group type="102" attributes="0">
-                      <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="12" max="32767" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="131" pref="131" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jScrollPane1" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="botaoConfProd" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="botaoVolta" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -289,167 +263,6 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JCheckBox" name="Baconzitos">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Baconzitos(55g - R$3,85)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="Amendoim">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Amendoim Dori(200g - R$3,95)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="Cebolitos">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Cebolitos(60g - R$3,85)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="KinderBueno">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Kinder Bueno(39g - R$6,00)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="PingoDeOuro">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Pingo de Ouro(90g - R$3,95)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="Snickers">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Snickers(40g - R$3,00)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="Ruffles">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Ruffles(96g - R$6,29)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="KitKat">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Kit Kat(45g - 2,50)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="Fandangos">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Fandangos(59g - R$2,90)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="BarraDeCereal">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Barra de Cereal(25g - R$1,50)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="Cookies">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Cookies(40g - R$2,50)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="MEM">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="M &amp; M(52g - R$2,99)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="Stiksy">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Stiksy(90g - R$4,00)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="Fini">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Fini(80g - R$5,00)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="DiamanteNegro">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Diamante Negro(20g - R$2,00)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="Pipoca">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Pipoca(60g - R$2,50)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="Cheetos">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Cheetos(150g - R$6,29)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="Doritos">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Doritos(96g - R$5,85)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="AguaDaSerra">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="&#xc1;gua da Serra"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="Pureza">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Pureza"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="Chocolate">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Chocolate"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="Dolly">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Dolly"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="Gatorade">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Gatorade"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="FantaLaranja">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Fanta Laranja"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="CocaCola">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Coca-cola(R$ 4,19)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="ChaMatteLeao">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Ch&#xe1; Matte Le&#xe3;o"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="Aquarius">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Aquarius"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="FantaUva">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Fanta Uva"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="CocaColaDiet">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Coca-Cola Diet"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CocaColaDietActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="H2O">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="H2O"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="Agua">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="&#xc1;gua"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AguaActionPerformed"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="text" type="java.lang.String" value="Bebidas(600mL)"/>
@@ -493,17 +306,17 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
-        <Property name="text" type="java.lang.String" value="001 - Amendoim Dori(200g - R$6,00)"/>
+        <Property name="text" type="java.lang.String" value="001 - Amendoim Dori(200g - R$4,00)"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel6">
       <Properties>
-        <Property name="text" type="java.lang.String" value="002 - Amendoim Dori(200g - R$3,00)"/>
+        <Property name="text" type="java.lang.String" value="002 - Stiksy(90g - R$4,00)"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel7">
       <Properties>
-        <Property name="text" type="java.lang.String" value="003 - Amendoim Dori(200g - R$2,00)"/>
+        <Property name="text" type="java.lang.String" value="003 - Cebolitos(60g - R$3,00)"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel8">
@@ -564,6 +377,146 @@
     <Component class="javax.swing.JLabel" name="jLabel10">
       <Properties>
         <Property name="text" type="java.lang.String" value="Produtos Comprados:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel11">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="005 - Diamante Negro(20g - R$2,00)"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel12">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="006 - Fini(80g - R$5,00)"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel13">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="004 - Snickers(40g - R$3,00)"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel14">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="008 - Fandangos(59g - R$3,00)"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel15">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="009 - Baconzitos(55g - R$3,00)"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel16">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="011 - Cookies(40g - R$2,00)"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel17">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="012 - M &amp; M(52g - R$3,00)"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel18">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="010 - Kinder Bueno(39g - R$6,00)"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel19">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="007 - Doritos(96g - R$5,00)"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel20">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="014 - Cheetos(150g - R$6,00)"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel21">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="015 - Pingo de Ouro(90g - R$4,00)"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel22">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="017 - Barra de Cereal(25g - R$2,00)"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel23">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="018 - Pipoca(60g - R$3,00)"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel24">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="016 - Kit Kat(45g - R$3,00)"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel25">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="013 - Ruffles(96g - R$6,00)"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel26">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="020 - Fanta Uva(R$3,00)"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel27">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="021 - Fanta Laranja(R$3,00)"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel28">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="023 - Chocolate(R$2,00)"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel29">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="024 - Gatorade(R$3,00)"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel30">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="022 - &#xc1;gua da Serra(R$6,00)"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel31">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="019 - Coca-Cola(R$4,00)"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel32">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="026 - &#xc1;gua(R$6,00)"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel33">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="027 - Dolly(R$4,00)"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel34">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="029 - Coca-Cola Diet(R$2,00)"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel35">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="030 - Ch&#xe1; Matte Le&#xe3;o(R$3,00)"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel36">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="028 - Aquarius(R$3,00)"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel37">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="025 - H2O(R$6,00)"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel38">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="031 - Pureza(R$3,00)"/>
       </Properties>
     </Component>
   </SubComponents>
