@@ -30,14 +30,10 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
-              <Component id="jLabel1" min="-2" pref="185" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
-          </Group>
           <Group type="102" attributes="0">
-              <EmptySpace pref="28" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jLabel1" alignment="0" min="-2" pref="185" max="-2" attributes="0"/>
                   <Group type="102" attributes="0">
                       <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
@@ -72,7 +68,7 @@
                       <Component id="campoPrecoProd" min="-2" pref="244" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="17" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -130,6 +126,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="campoNovoNomeProd">
+      <Properties>
+        <Property name="toolTipText" type="java.lang.String" value="Digite o nome do novo produto a ser cadastrado."/>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
@@ -137,6 +136,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="campoNomeProdAlterar">
+      <Properties>
+        <Property name="toolTipText" type="java.lang.String" value="Digite o nome do produto a ser alterado."/>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
@@ -146,6 +148,9 @@
     <Component class="javax.swing.JSeparator" name="jSeparator1">
     </Component>
     <Component class="javax.swing.JTextField" name="campoQtdProd">
+      <Properties>
+        <Property name="toolTipText" type="java.lang.String" value="Digite a quantidade do produto a ser inserida na m&#xe1;quina. Respeitando o limite."/>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5">
       <Properties>
@@ -153,6 +158,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="campoPrecoProd">
+      <Properties>
+        <Property name="toolTipText" type="java.lang.String" value="Digite o pre&#xe7;o do novo produto cadastrado."/>
+      </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jButton1">
       <Properties>
@@ -170,6 +178,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="campoQtdProd1">
+      <Properties>
+        <Property name="toolTipText" type="java.lang.String" value="Digite o peso em gramas de cada unidade do produto."/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

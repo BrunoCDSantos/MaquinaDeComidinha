@@ -41,6 +41,9 @@ public class login extends javax.swing.JFrame {
 
         jLabel2.setText("Senha admin:");
 
+        campoSenhaAdm.setToolTipText("Digite a senha de acesso do administrador.");
+
+        campoNomeAdm.setToolTipText("Digite o nome para o acesso do administrador.");
         campoNomeAdm.setPreferredSize(new java.awt.Dimension(22, 37));
         campoNomeAdm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -56,6 +59,7 @@ public class login extends javax.swing.JFrame {
         });
 
         botaoVolta.setText("Voltar");
+        botaoVolta.setToolTipText("");
         botaoVolta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoVoltaActionPerformed(evt);

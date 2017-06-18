@@ -40,7 +40,7 @@
                           <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                          <Component id="campoCadasSenhaAdm1" alignment="0" min="-2" pref="280" max="-2" attributes="0"/>
+                          <Component id="campoCadasConfSenhaAdm" alignment="0" min="-2" pref="280" max="-2" attributes="0"/>
                           <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
@@ -70,7 +70,7 @@
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="campoCadasSenhaAdm1" min="-2" pref="30" max="-2" attributes="0"/>
+              <Component id="campoCadasConfSenhaAdm" min="-2" pref="30" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="botaoCadastraAdm" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -83,6 +83,9 @@
   </Layout>
   <SubComponents>
     <Component class="javax.swing.JTextField" name="campoCadasNomeAdm">
+      <Properties>
+        <Property name="toolTipText" type="java.lang.String" value="Digite o nome do administrador a ser cadastrado."/>
+      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="campoCadasNomeAdmActionPerformed"/>
       </Events>
@@ -90,11 +93,13 @@
     <Component class="javax.swing.JButton" name="botaoCadastraAdm">
       <Properties>
         <Property name="text" type="java.lang.String" value="Cadastrar"/>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="botaoVolta">
       <Properties>
         <Property name="text" type="java.lang.String" value="Voltar"/>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
@@ -113,13 +118,19 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JPasswordField" name="campoCadasSenhaAdm">
+      <Properties>
+        <Property name="toolTipText" type="java.lang.String" value="Digite uma senha de acesso para o administrador..&#x9;"/>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Senha admin:"/>
+        <Property name="text" type="java.lang.String" value="Confirmar senha admin:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JPasswordField" name="campoCadasSenhaAdm1">
+    <Component class="javax.swing.JPasswordField" name="campoCadasConfSenhaAdm">
+      <Properties>
+        <Property name="toolTipText" type="java.lang.String" value="Confirme a senha de acesso do administrador.&#x9;"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

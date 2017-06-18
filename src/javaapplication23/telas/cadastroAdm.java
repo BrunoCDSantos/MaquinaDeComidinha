@@ -35,11 +35,12 @@ public class cadastroAdm extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         campoCadasSenhaAdm = new javax.swing.JPasswordField();
         jLabel4 = new javax.swing.JLabel();
-        campoCadasSenhaAdm1 = new javax.swing.JPasswordField();
+        campoCadasConfSenhaAdm = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(367, 322));
 
+        campoCadasNomeAdm.setToolTipText("Digite o nome do administrador a ser cadastrado.");
         campoCadasNomeAdm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoCadasNomeAdmActionPerformed(evt);
@@ -47,8 +48,10 @@ public class cadastroAdm extends javax.swing.JFrame {
         });
 
         botaoCadastraAdm.setText("Cadastrar");
+        botaoCadastraAdm.setToolTipText("");
 
         botaoVolta.setText("Voltar");
+        botaoVolta.setToolTipText("");
 
         jLabel3.setText("Cadastrar administrador");
 
@@ -56,7 +59,11 @@ public class cadastroAdm extends javax.swing.JFrame {
 
         jLabel2.setText("Senha admin:");
 
-        jLabel4.setText("Senha admin:");
+        campoCadasSenhaAdm.setToolTipText("Digite uma senha de acesso para o administrador..\t");
+
+        jLabel4.setText("Confirmar senha admin:");
+
+        campoCadasConfSenhaAdm.setToolTipText("Confirme a senha de acesso do administrador.\t");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -74,7 +81,7 @@ public class cadastroAdm extends javax.swing.JFrame {
                             .addComponent(campoCadasSenhaAdm, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(campoCadasSenhaAdm1, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(campoCadasConfSenhaAdm, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel4))
                         .addGroup(layout.createSequentialGroup()
                             .addComponent(botaoVolta)
@@ -98,7 +105,7 @@ public class cadastroAdm extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(campoCadasSenhaAdm1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(campoCadasConfSenhaAdm, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botaoCadastraAdm)
@@ -151,9 +158,9 @@ public class cadastroAdm extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botaoCadastraAdm;
     private javax.swing.JButton botaoVolta;
+    private javax.swing.JPasswordField campoCadasConfSenhaAdm;
     private javax.swing.JTextField campoCadasNomeAdm;
     private javax.swing.JPasswordField campoCadasSenhaAdm;
-    private javax.swing.JPasswordField campoCadasSenhaAdm1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

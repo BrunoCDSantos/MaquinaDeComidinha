@@ -51,11 +51,19 @@ public class AtualizarMaq extends javax.swing.JFrame {
 
         jLabel2.setText("Nome do Produto a ser alterado:");
 
+        campoNovoNomeProd.setToolTipText("Digite o nome do novo produto a ser cadastrado.");
+
         jLabel3.setText("Quantidade(uni. máx. 15):");
+
+        campoNomeProdAlterar.setToolTipText("Digite o nome do produto a ser alterado.");
 
         jLabel4.setText("Nome do novo produto:");
 
+        campoQtdProd.setToolTipText("Digite a quantidade do produto a ser inserida na máquina. Respeitando o limite.");
+
         jLabel5.setText("Preço(R$):");
+
+        campoPrecoProd.setToolTipText("Digite o preço do novo produto cadastrado.");
 
         jButton1.setText("Confirmar");
 
@@ -63,17 +71,16 @@ public class AtualizarMaq extends javax.swing.JFrame {
 
         jLabel6.setText("Peso(g):");
 
+        campoQtdProd1.setToolTipText("Digite o peso em gramas de cada unidade do produto.");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(28, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel6)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -100,7 +107,7 @@ public class AtualizarMaq extends javax.swing.JFrame {
                         .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(campoPrecoProd, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
