@@ -112,6 +112,7 @@ public class Principal extends javax.swing.JFrame {
 
     private void botaoComprarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoComprarActionPerformed
         Produtos pr = new Produtos();
+        this.dispose();
         pr.setVisible(true);
     }//GEN-LAST:event_botaoComprarActionPerformed
 
