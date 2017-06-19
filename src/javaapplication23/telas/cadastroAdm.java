@@ -47,12 +47,16 @@ public class cadastroAdm extends javax.swing.JFrame {
             }
         });
 
+        botaoCadastraAdm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication23/telas/imagens/check-symbol.png"))); // NOI18N
         botaoCadastraAdm.setText("Cadastrar");
         botaoCadastraAdm.setToolTipText("");
 
+        botaoVolta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication23/telas/imagens/reply-all-button.png"))); // NOI18N
         botaoVolta.setText("Voltar");
         botaoVolta.setToolTipText("");
 
+        jLabel3.setFont(new java.awt.Font("Nimbus Roman", 0, 18)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Cadastrar novo administrador");
 
         jLabel1.setText("Nome admin:");
@@ -95,7 +99,7 @@ public class cadastroAdm extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(19, Short.MAX_VALUE)
+                .addContainerGap(11, Short.MAX_VALUE)
                 .addComponent(jLabel3)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel1)
@@ -113,7 +117,7 @@ public class cadastroAdm extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botaoCadastraAdm)
                     .addComponent(botaoVolta))
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         pack();

@@ -47,6 +47,8 @@ public class AtualizarMaq extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel1.setFont(new java.awt.Font("Nimbus Roman", 0, 18)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Alterar produtos da máquina");
 
         jLabel2.setText("Nome do Produto a ser alterado:");
@@ -65,8 +67,10 @@ public class AtualizarMaq extends javax.swing.JFrame {
 
         campoPrecoProd.setToolTipText("Digite o preço do novo produto cadastrado.");
 
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication23/telas/imagens/check-symbol.png"))); // NOI18N
         jButton1.setText("Confirmar");
 
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication23/telas/imagens/reply-all-button.png"))); // NOI18N
         jButton3.setText("Voltar");
 
         jLabel6.setText("Peso(g):");
@@ -80,7 +84,7 @@ public class AtualizarMaq extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 472, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel6)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -136,7 +140,7 @@ public class AtualizarMaq extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(campoPrecoProd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton3))
