@@ -4,6 +4,14 @@ public class Produtos extends javax.swing.JFrame {
 
     public Produtos() {
         initComponents();
+        campoCodigoProduto.setVisible(false);
+        botaoComprarProduto.setVisible(false);
+        Produto.setVisible(false);
+       comprar.setVisible(false);
+       campoCodigoProduto.setVisible(false);
+       Troco.setVisible(false);
+       campoTroco.setVisible(false);
+       campoValorCompras.setVisible(false);
     }
 
     @SuppressWarnings("unchecked")
@@ -16,16 +24,16 @@ public class Produtos extends javax.swing.JFrame {
         botaoConfCompra = new javax.swing.JButton();
         botaoVolta = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        comprar = new javax.swing.JLabel();
         campoValorCompras = new javax.swing.JTextField();
         campoDinheiroDepositado = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        Produto = new javax.swing.JLabel();
         campoCodigoProduto = new javax.swing.JTextField();
         botaoComprarProduto = new javax.swing.JButton();
-        jLabel9 = new javax.swing.JLabel();
+        Troco = new javax.swing.JLabel();
         campoTroco = new javax.swing.JTextField();
         botaoInserirDinheiro = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
@@ -75,7 +83,7 @@ public class Produtos extends javax.swing.JFrame {
 
         jLabel4.setText("Valor a inserir(R$):");
 
-        jLabel5.setText("Compras(R$):");
+        comprar.setText("Compras(R$):");
 
         campoValorCompras.setToolTipText("Total gasto em reais na compra dos produtos.");
         campoValorCompras.addActionListener(new java.awt.event.ActionListener() {
@@ -93,13 +101,13 @@ public class Produtos extends javax.swing.JFrame {
 
         jLabel7.setText("003 - Cebolitos(60g - R$3,00)");
 
-        jLabel8.setText("Produto");
+        Produto.setText("Produto");
 
         campoCodigoProduto.setToolTipText("Digite o código do produto a ser comprado.");
 
         botaoComprarProduto.setText("Comprar");
 
-        jLabel9.setText("Troco(R$):");
+        Troco.setText("Troco(R$):");
 
         campoTroco.setToolTipText("Troco da compra.");
         campoTroco.addActionListener(new java.awt.event.ActionListener() {
@@ -109,6 +117,11 @@ public class Produtos extends javax.swing.JFrame {
         });
 
         botaoInserirDinheiro.setText("Inserir $");
+        botaoInserirDinheiro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoInserirDinheiroActionPerformed(evt);
+            }
+        });
 
         jLabel11.setText("005 - Diamante Negro(20g - R$2,00)");
 
@@ -174,7 +187,7 @@ public class Produtos extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel5)
+                        .addComponent(comprar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(campoValorCompras, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
@@ -188,11 +201,11 @@ public class Produtos extends javax.swing.JFrame {
                                         .addGap(18, 18, 18)
                                         .addComponent(botaoInserirDinheiro))
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                        .addComponent(jLabel9)
+                                        .addComponent(Troco)
                                         .addGap(18, 18, 18)
                                         .addComponent(campoTroco, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                        .addComponent(jLabel8)
+                                        .addComponent(Produto)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(campoCodigoProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
@@ -336,18 +349,18 @@ public class Produtos extends javax.swing.JFrame {
                     .addComponent(botaoInserirDinheiro))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
+                    .addComponent(Produto)
                     .addComponent(campoCodigoProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(botaoComprarProduto))
                 .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
+                    .addComponent(comprar)
                     .addComponent(campoValorCompras, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(8, 8, 8)
-                        .addComponent(jLabel9))
+                        .addComponent(Troco))
                     .addComponent(campoTroco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(16, 16, 16)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -368,46 +381,30 @@ public class Produtos extends javax.swing.JFrame {
     }//GEN-LAST:event_campoTrocoActionPerformed
 
     private void botaoVoltaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoVoltaActionPerformed
+        //cria um objeto da tela principal
         Principal telaPrincipal = new Principal();
+        //fecha a janela de produtos
         this.dispose();
+        //deixa visivel a tela principal
         telaPrincipal.setVisible(true);
     }//GEN-LAST:event_botaoVoltaActionPerformed
 
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Produtos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Produtos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Produtos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Produtos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Produtos().setVisible(true);
-            }
-        });
-    }
+    private void botaoInserirDinheiroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoInserirDinheiroActionPerformed
+       boolean opcoesVisivel;
+       botaoComprarProduto.setVisible(true);
+       campoCodigoProduto.setVisible(true);
+       Produto.setVisible(true);
+       comprar.setVisible(true);
+       campoCodigoProduto.setVisible(true);
+       Troco.setVisible(true);
+       campoTroco.setVisible(true);
+       campoValorCompras.setVisible(true);
+    }//GEN-LAST:event_botaoInserirDinheiroActionPerformed
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Produto;
+    private javax.swing.JLabel Troco;
     private javax.swing.JButton botaoComprarProduto;
     private javax.swing.JButton botaoConfCompra;
     private javax.swing.JButton botaoInserirDinheiro;
@@ -417,6 +414,7 @@ public class Produtos extends javax.swing.JFrame {
     private javax.swing.JTextField campoDinheiroDepositado;
     private javax.swing.JTextField campoTroco;
     private javax.swing.JTextField campoValorCompras;
+    private javax.swing.JLabel comprar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -449,11 +447,8 @@ public class Produtos extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }
