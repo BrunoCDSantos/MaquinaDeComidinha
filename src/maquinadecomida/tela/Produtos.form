@@ -251,7 +251,7 @@
           <Font name="Nimbus Roman" size="18" style="0"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/javaapplication23/telas/imagens/soda.png"/>
+          <Image iconType="3" name="/maquinadecomida/tela/imagens/soda.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Bebidas(600mL)"/>
       </Properties>
@@ -262,7 +262,7 @@
           <Font name="Nimbus Roman" size="18" style="0"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/javaapplication23/telas/imagens/chips.png"/>
+          <Image iconType="3" name="/maquinadecomida/tela/imagens/chips.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Comidas"/>
       </Properties>
@@ -270,7 +270,7 @@
     <Component class="javax.swing.JButton" name="botaoConfCompra">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/javaapplication23/telas/imagens/check-symbol.png"/>
+          <Image iconType="3" name="/maquinadecomida/tela/imagens/check-symbol.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Confirmar"/>
       </Properties>
@@ -278,7 +278,7 @@
     <Component class="javax.swing.JButton" name="botaoVolta">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/javaapplication23/telas/imagens/reply-all-button.png"/>
+          <Image iconType="3" name="/maquinadecomida/tela/imagens/reply-all-button.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Voltar"/>
       </Properties>
@@ -338,7 +338,7 @@
     <Component class="javax.swing.JButton" name="botaoComprarProduto">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/javaapplication23/telas/imagens/shopping-cart.png"/>
+          <Image iconType="3" name="/maquinadecomida/tela/imagens/shopping-cart.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Comprar"/>
       </Properties>
@@ -359,7 +359,7 @@
     <Component class="javax.swing.JButton" name="botaoInserirDinheiro">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/javaapplication23/telas/imagens/banknote.png"/>
+          <Image iconType="3" name="/maquinadecomida/tela/imagens/banknote.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Inserir"/>
       </Properties>

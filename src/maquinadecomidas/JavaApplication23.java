@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package javaapplication23;
+package maquinadecomidas;
 
-import javaapplication23.telas.Principal;
+import maquinadecomida.tela.Principal;
 
 public class JavaApplication23 {
 

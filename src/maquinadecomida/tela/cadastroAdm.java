@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package javaapplication23.telas;
+package maquinadecomida.tela;
 
 /**
  *
@@ -38,7 +38,6 @@ public class cadastroAdm extends javax.swing.JFrame {
         campoCadasConfSenhaAdm = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(367, 322));
 
         campoCadasNomeAdm.setToolTipText("Digite o nome do administrador a ser cadastrado.");
         campoCadasNomeAdm.addActionListener(new java.awt.event.ActionListener() {
@@ -47,11 +46,11 @@ public class cadastroAdm extends javax.swing.JFrame {
             }
         });
 
-        botaoCadastraAdm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication23/telas/imagens/check-symbol.png"))); // NOI18N
+        botaoCadastraAdm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/tela/imagens/check-symbol.png"))); // NOI18N
         botaoCadastraAdm.setText("Cadastrar");
         botaoCadastraAdm.setToolTipText("");
 
-        botaoVolta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication23/telas/imagens/reply-all-button.png"))); // NOI18N
+        botaoVolta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/tela/imagens/reply-all-button.png"))); // NOI18N
         botaoVolta.setText("Voltar");
         botaoVolta.setToolTipText("");
 
@@ -99,7 +98,7 @@ public class cadastroAdm extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(11, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel3)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel1)

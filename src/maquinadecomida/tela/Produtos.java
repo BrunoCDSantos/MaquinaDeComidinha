@@ -1,4 +1,4 @@
-package javaapplication23.telas;
+package maquinadecomida.tela;
 
 public class Produtos extends javax.swing.JFrame {
 
@@ -70,17 +70,17 @@ public class Produtos extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Nimbus Roman", 0, 18)); // NOI18N
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication23/telas/imagens/soda.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/tela/imagens/soda.png"))); // NOI18N
         jLabel1.setText("Bebidas(600mL)");
 
         jLabel2.setFont(new java.awt.Font("Nimbus Roman", 0, 18)); // NOI18N
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication23/telas/imagens/chips.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/tela/imagens/chips.png"))); // NOI18N
         jLabel2.setText("Comidas");
 
-        botaoConfCompra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication23/telas/imagens/check-symbol.png"))); // NOI18N
+        botaoConfCompra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/tela/imagens/check-symbol.png"))); // NOI18N
         botaoConfCompra.setText("Confirmar");
 
-        botaoVolta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication23/telas/imagens/reply-all-button.png"))); // NOI18N
+        botaoVolta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/tela/imagens/reply-all-button.png"))); // NOI18N
         botaoVolta.setText("Voltar");
         botaoVolta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -112,7 +112,7 @@ public class Produtos extends javax.swing.JFrame {
 
         campoCodigoProduto.setToolTipText("Digite o código do produto a ser comprado.");
 
-        botaoComprarProduto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication23/telas/imagens/shopping-cart.png"))); // NOI18N
+        botaoComprarProduto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/tela/imagens/shopping-cart.png"))); // NOI18N
         botaoComprarProduto.setText("Comprar");
 
         Troco.setText("Troco(R$):");
@@ -124,7 +124,7 @@ public class Produtos extends javax.swing.JFrame {
             }
         });
 
-        botaoInserirDinheiro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication23/telas/imagens/banknote.png"))); // NOI18N
+        botaoInserirDinheiro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/tela/imagens/banknote.png"))); // NOI18N
         botaoInserirDinheiro.setText("Inserir");
         botaoInserirDinheiro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

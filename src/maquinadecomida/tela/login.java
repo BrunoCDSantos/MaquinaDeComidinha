@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package javaapplication23.telas;
+package maquinadecomida.tela;
 
 /**
  *
@@ -44,14 +44,13 @@ public class login extends javax.swing.JFrame {
         campoSenhaAdm.setToolTipText("Digite a senha de acesso do administrador.");
 
         campoNomeAdm.setToolTipText("Digite o nome para o acesso do administrador.");
-        campoNomeAdm.setPreferredSize(new java.awt.Dimension(22, 37));
         campoNomeAdm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoNomeAdmActionPerformed(evt);
             }
         });
 
-        botaoAcessoAdm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication23/telas/imagens/check-symbol.png"))); // NOI18N
+        botaoAcessoAdm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/tela/imagens/check-symbol.png"))); // NOI18N
         botaoAcessoAdm.setText("Acessar");
         botaoAcessoAdm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -59,7 +58,7 @@ public class login extends javax.swing.JFrame {
             }
         });
 
-        botaoVolta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication23/telas/imagens/reply-all-button.png"))); // NOI18N
+        botaoVolta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/tela/imagens/reply-all-button.png"))); // NOI18N
         botaoVolta.setText("Voltar");
         botaoVolta.setToolTipText("");
         botaoVolta.addActionListener(new java.awt.event.ActionListener() {

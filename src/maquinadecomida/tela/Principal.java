@@ -1,5 +1,5 @@
 
-package javaapplication23.telas;
+package maquinadecomida.tela;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -52,7 +52,7 @@ public class Principal extends javax.swing.JFrame {
         jLabel1.setToolTipText("");
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        botaoAdm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication23/telas/imagens/user-shape.png"))); // NOI18N
+        botaoAdm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/tela/imagens/user-shape.png"))); // NOI18N
         botaoAdm.setText("Administrador");
         botaoAdm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -60,7 +60,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        botaoComprar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication23/telas/imagens/shopping-cart.png"))); // NOI18N
+        botaoComprar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/tela/imagens/shopping-cart.png"))); // NOI18N
         botaoComprar.setText("Comprar");
         botaoComprar.setToolTipText("");
         botaoComprar.addMouseListener(new java.awt.event.MouseAdapter() {
