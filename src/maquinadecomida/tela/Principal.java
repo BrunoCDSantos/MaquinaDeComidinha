@@ -51,6 +51,11 @@ public class Principal extends javax.swing.JFrame {
 
         botaoAdm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/telas/imagens/user-shape.png"))); // NOI18N
         botaoAdm.setText("Administrador");
+        botaoAdm.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botaoAdmMouseClicked(evt);
+            }
+        });
         botaoAdm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoAdmActionPerformed(evt);
@@ -76,20 +81,17 @@ public class Principal extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(botaoComprar, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(20, 20, 20)
-                                .addComponent(botaoAdm))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(32, 32, 32)
-                                .addComponent(botaoComprar, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(botaoAdm)
                         .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -109,6 +111,7 @@ public class Principal extends javax.swing.JFrame {
     private void botaoAdmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoAdmActionPerformed
         // TODO add your handling code here:
         login lg = new login();
+        this.dispose();
         lg.setVisible(true);
     }//GEN-LAST:event_botaoAdmActionPerformed
 
@@ -119,17 +122,15 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_botaoComprarActionPerformed
 
     private void botaoComprarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoComprarMouseClicked
-
         Principal pr = new Principal();
         pr.setVisible(false);
     }//GEN-LAST:event_botaoComprarMouseClicked
 
-    
-    public static void main(String[] args) {
+    private void botaoAdmMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoAdmMouseClicked
         Principal pr = new Principal();
-        pr.setVisible(true);
-        
-    }
+        pr.setVisible(false);
+    }//GEN-LAST:event_botaoAdmMouseClicked
+
     /**
      * @param args the command line arguments
      */

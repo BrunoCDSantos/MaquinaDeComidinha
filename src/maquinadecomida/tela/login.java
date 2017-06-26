@@ -61,6 +61,11 @@ public class login extends javax.swing.JFrame {
         botaoVolta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/telas/imagens/reply-all-button.png"))); // NOI18N
         botaoVolta.setText("Voltar");
         botaoVolta.setToolTipText("");
+        botaoVolta.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botaoVoltaMouseClicked(evt);
+            }
+        });
         botaoVolta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoVoltaActionPerformed(evt);
@@ -130,8 +135,14 @@ public class login extends javax.swing.JFrame {
     private void botaoVoltaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoVoltaActionPerformed
         // TODO add your handling code here:
         Principal pr = new Principal();
+        this.dispose();
         pr.setVisible(true);
     }//GEN-LAST:event_botaoVoltaActionPerformed
+
+    private void botaoVoltaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoVoltaMouseClicked
+        Principal pr = new Principal();
+        pr.setVisible(false);
+    }//GEN-LAST:event_botaoVoltaMouseClicked
 
     /**
      * @param args the command line arguments
