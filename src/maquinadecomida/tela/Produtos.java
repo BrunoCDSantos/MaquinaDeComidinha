@@ -70,17 +70,17 @@ public class Produtos extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Nimbus Roman", 0, 18)); // NOI18N
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/tela/imagens/soda.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/telas/imagens/soda.png"))); // NOI18N
         jLabel1.setText("Bebidas(600mL)");
 
         jLabel2.setFont(new java.awt.Font("Nimbus Roman", 0, 18)); // NOI18N
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/tela/imagens/chips.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/telas/imagens/chips.png"))); // NOI18N
         jLabel2.setText("Comidas");
 
-        botaoConfCompra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/tela/imagens/check-symbol.png"))); // NOI18N
+        botaoConfCompra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/telas/imagens/check-symbol.png"))); // NOI18N
         botaoConfCompra.setText("Confirmar");
 
-        botaoVolta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/tela/imagens/reply-all-button.png"))); // NOI18N
+        botaoVolta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/telas/imagens/reply-all-button.png"))); // NOI18N
         botaoVolta.setText("Voltar");
         botaoVolta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -102,17 +102,17 @@ public class Produtos extends javax.swing.JFrame {
         campoDinheiroDepositado.setHorizontalAlignment(javax.swing.JTextField.TRAILING);
         campoDinheiroDepositado.setToolTipText("Digite o valor a ser inserido na máquina.");
 
-        jLabel3.setText("001 - Amendoim Dori(200g - R$4,00)");
+        jLabel3.setText("001 - Amendoim Dori(R$4,00)");
 
-        jLabel6.setText("002 - Stiksy(90g - R$4,00)");
+        jLabel6.setText("002 - Stiksy(R$4,00)");
 
-        jLabel7.setText("003 - Cebolitos(60g - R$3,00)");
+        jLabel7.setText("003 - Cebolitos(R$3,00)");
 
         Produto.setText("Produto");
 
         campoCodigoProduto.setToolTipText("Digite o código do produto a ser comprado.");
 
-        botaoComprarProduto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/tela/imagens/shopping-cart.png"))); // NOI18N
+        botaoComprarProduto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/telas/imagens/shopping-cart.png"))); // NOI18N
         botaoComprarProduto.setText("Comprar");
 
         Troco.setText("Troco(R$):");
@@ -124,7 +124,7 @@ public class Produtos extends javax.swing.JFrame {
             }
         });
 
-        botaoInserirDinheiro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/tela/imagens/banknote.png"))); // NOI18N
+        botaoInserirDinheiro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/telas/imagens/banknote.png"))); // NOI18N
         botaoInserirDinheiro.setText("Inserir");
         botaoInserirDinheiro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -132,35 +132,35 @@ public class Produtos extends javax.swing.JFrame {
             }
         });
 
-        jLabel11.setText("005 - Diamante Negro(20g - R$2,00)");
+        jLabel11.setText("005 - Diamante Negro(R$2,00)");
 
-        jLabel12.setText("006 - Fini(80g - R$5,00)");
+        jLabel12.setText("006 - Fini(R$5,00)");
 
-        jLabel13.setText("004 - Snickers(40g - R$3,00)");
+        jLabel13.setText("004 - Snickers(R$3,00)");
 
-        jLabel14.setText("008 - Fandangos(59g - R$3,00)");
+        jLabel14.setText("008 - Fandangos(R$3,00)");
 
-        jLabel15.setText("009 - Baconzitos(55g - R$3,00)");
+        jLabel15.setText("009 - Baconzitos(R$3,00)");
 
-        jLabel16.setText("011 - Cookies(40g - R$2,00)");
+        jLabel16.setText("011 - Cookies(R$2,00)");
 
-        jLabel17.setText("012 - M & M(52g - R$3,00)");
+        jLabel17.setText("012 - M & M(R$3,00)");
 
-        jLabel18.setText("010 - Kinder Bueno(39g - R$6,00)");
+        jLabel18.setText("010 - Kinder Bueno(R$6,00)");
 
-        jLabel19.setText("007 - Doritos(96g - R$5,00)");
+        jLabel19.setText("007 - Doritos(R$5,00)");
 
-        jLabel20.setText("014 - Cheetos(150g - R$6,00)");
+        jLabel20.setText("014 - Cheetos(R$6,00)");
 
-        jLabel21.setText("015 - Pingo de Ouro(90g - R$4,00)");
+        jLabel21.setText("015 - Pingo de Ouro(R$4,00)");
 
-        jLabel22.setText("017 - Barra de Cereal(25g - R$2,00)");
+        jLabel22.setText("017 - Barra de Cereal(R$2,00)");
 
-        jLabel23.setText("018 - Pipoca(60g - R$3,00)");
+        jLabel23.setText("018 - Pipoca(R$3,00)");
 
-        jLabel24.setText("016 - Kit Kat(45g - R$3,00)");
+        jLabel24.setText("016 - Kit Kat(R$3,00)");
 
-        jLabel25.setText("013 - Ruffles(96g - R$6,00)");
+        jLabel25.setText("013 - Ruffles(R$6,00)");
 
         jLabel26.setText("020 - Fanta Uva(R$3,00)");
 
@@ -267,7 +267,7 @@ public class Produtos extends javax.swing.JFrame {
                                 .addComponent(Troco)
                                 .addGap(18, 18, 18)
                                 .addComponent(campoTroco, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 57, Short.MAX_VALUE)))
+                        .addGap(0, 141, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -368,7 +368,7 @@ public class Produtos extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botaoConfCompra)
                     .addComponent(botaoVolta))
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();

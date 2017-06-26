@@ -28,13 +28,14 @@
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Component id="botaoCadastroAdm" alignment="0" max="32767" attributes="0"/>
                   <Component id="botaoVolta" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                      <Component id="botaoLoginAdm" min="-2" max="-2" attributes="0"/>
-                  </Group>
                   <Component id="jLabel1" alignment="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="botaoLoginAdm" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -49,7 +50,7 @@
               <Component id="botaoCadastroAdm" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
               <Component id="botaoVolta" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="14" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -58,7 +59,7 @@
     <Component class="javax.swing.JButton" name="botaoLoginAdm">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/maquinadecomida/tela/imagens/create-new-pencil-button.png"/>
+          <Image iconType="3" name="/maquinadecomida/telas/imagens/create-new-pencil-button.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Alterar Produtos"/>
       </Properties>
@@ -69,7 +70,7 @@
     <Component class="javax.swing.JButton" name="botaoCadastroAdm">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/maquinadecomida/tela/imagens/create-group-button.png"/>
+          <Image iconType="3" name="/maquinadecomida/telas/imagens/create-group-button.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Cadastrar Administrador"/>
       </Properties>
@@ -89,7 +90,7 @@
     <Component class="javax.swing.JButton" name="botaoVolta">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/maquinadecomida/tela/imagens/reply-all-button.png"/>
+          <Image iconType="3" name="/maquinadecomida/telas/imagens/reply-all-button.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Voltar"/>
       </Properties>

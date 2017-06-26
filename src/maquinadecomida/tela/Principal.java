@@ -52,7 +52,7 @@ public class Principal extends javax.swing.JFrame {
         jLabel1.setToolTipText("");
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        botaoAdm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/tela/imagens/user-shape.png"))); // NOI18N
+        botaoAdm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/telas/imagens/user-shape.png"))); // NOI18N
         botaoAdm.setText("Administrador");
         botaoAdm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -60,7 +60,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        botaoComprar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/tela/imagens/shopping-cart.png"))); // NOI18N
+        botaoComprar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/telas/imagens/shopping-cart.png"))); // NOI18N
         botaoComprar.setText("Comprar");
         botaoComprar.setToolTipText("");
         botaoComprar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -78,17 +78,20 @@ public class Principal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(45, Short.MAX_VALUE)
-                .addComponent(botaoComprar, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(56, 56, 56))
             .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(botaoAdm)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(20, 20, 20)
+                                .addComponent(botaoAdm))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(32, 32, 32)
+                                .addComponent(botaoComprar, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -100,7 +103,7 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(botaoComprar, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(botaoAdm)
-                .addContainerGap(11, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();

@@ -50,7 +50,7 @@ public class login extends javax.swing.JFrame {
             }
         });
 
-        botaoAcessoAdm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/tela/imagens/check-symbol.png"))); // NOI18N
+        botaoAcessoAdm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/telas/imagens/check-symbol.png"))); // NOI18N
         botaoAcessoAdm.setText("Acessar");
         botaoAcessoAdm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,7 +58,7 @@ public class login extends javax.swing.JFrame {
             }
         });
 
-        botaoVolta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/tela/imagens/reply-all-button.png"))); // NOI18N
+        botaoVolta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/telas/imagens/reply-all-button.png"))); // NOI18N
         botaoVolta.setText("Voltar");
         botaoVolta.setToolTipText("");
         botaoVolta.addActionListener(new java.awt.event.ActionListener() {
@@ -97,7 +97,7 @@ public class login extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(10, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel3)
                 .addGap(31, 31, 31)
                 .addComponent(jLabel1)
@@ -111,7 +111,7 @@ public class login extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botaoAcessoAdm)
                     .addComponent(botaoVolta))
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         pack();

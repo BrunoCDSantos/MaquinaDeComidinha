@@ -45,17 +45,10 @@
                       <Component id="campoNovoNomeProd" min="-2" pref="244" max="-2" attributes="0"/>
                   </Group>
                   <Component id="jSeparator1" alignment="0" min="-2" pref="464" max="-2" attributes="0"/>
-                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="campoQtdProd" min="-2" pref="244" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="jButton3" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="campoQtdProd" min="-2" pref="244" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
@@ -64,6 +57,13 @@
                   </Group>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="jButton3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -94,7 +94,7 @@
                   <Component id="campoPrecoProd" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="26" max="32767" attributes="0"/>
+              <EmptySpace pref="16" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jButton3" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -116,7 +116,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="C&#xf3;digo do Produto a ser alterado:"/>
+        <Property name="text" type="java.lang.String" value="C&#xf3;digo do Produto a ser alterado(ex.: produto001):"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="campoNovoNomeProd">
@@ -159,7 +159,7 @@
     <Component class="javax.swing.JButton" name="jButton1">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/maquinadecomida/tela/imagens/check-symbol.png"/>
+          <Image iconType="3" name="/maquinadecomida/telas/imagens/check-symbol.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Confirmar"/>
       </Properties>
@@ -167,7 +167,7 @@
     <Component class="javax.swing.JButton" name="jButton3">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/maquinadecomida/tela/imagens/reply-all-button.png"/>
+          <Image iconType="3" name="/maquinadecomida/telas/imagens/reply-all-button.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Voltar"/>
       </Properties>

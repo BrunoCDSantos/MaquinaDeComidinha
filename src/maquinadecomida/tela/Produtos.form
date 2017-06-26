@@ -120,7 +120,7 @@
                               <Component id="campoTroco" min="-2" pref="138" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="0" pref="57" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="141" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -239,7 +239,7 @@
                   <Component id="botaoConfCompra" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="botaoVolta" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="20" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -251,7 +251,7 @@
           <Font name="Nimbus Roman" size="18" style="0"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/maquinadecomida/tela/imagens/soda.png"/>
+          <Image iconType="3" name="/maquinadecomida/telas/imagens/soda.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Bebidas(600mL)"/>
       </Properties>
@@ -262,7 +262,7 @@
           <Font name="Nimbus Roman" size="18" style="0"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/maquinadecomida/tela/imagens/chips.png"/>
+          <Image iconType="3" name="/maquinadecomida/telas/imagens/chips.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Comidas"/>
       </Properties>
@@ -270,7 +270,7 @@
     <Component class="javax.swing.JButton" name="botaoConfCompra">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/maquinadecomida/tela/imagens/check-symbol.png"/>
+          <Image iconType="3" name="/maquinadecomida/telas/imagens/check-symbol.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Confirmar"/>
       </Properties>
@@ -278,7 +278,7 @@
     <Component class="javax.swing.JButton" name="botaoVolta">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/maquinadecomida/tela/imagens/reply-all-button.png"/>
+          <Image iconType="3" name="/maquinadecomida/telas/imagens/reply-all-button.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Voltar"/>
       </Properties>
@@ -312,17 +312,17 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
-        <Property name="text" type="java.lang.String" value="001 - Amendoim Dori(200g - R$4,00)"/>
+        <Property name="text" type="java.lang.String" value="001 - Amendoim Dori(R$4,00)"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel6">
       <Properties>
-        <Property name="text" type="java.lang.String" value="002 - Stiksy(90g - R$4,00)"/>
+        <Property name="text" type="java.lang.String" value="002 - Stiksy(R$4,00)"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel7">
       <Properties>
-        <Property name="text" type="java.lang.String" value="003 - Cebolitos(60g - R$3,00)"/>
+        <Property name="text" type="java.lang.String" value="003 - Cebolitos(R$3,00)"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="Produto">
@@ -338,7 +338,7 @@
     <Component class="javax.swing.JButton" name="botaoComprarProduto">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/maquinadecomida/tela/imagens/shopping-cart.png"/>
+          <Image iconType="3" name="/maquinadecomida/telas/imagens/shopping-cart.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Comprar"/>
       </Properties>
@@ -359,7 +359,7 @@
     <Component class="javax.swing.JButton" name="botaoInserirDinheiro">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/maquinadecomida/tela/imagens/banknote.png"/>
+          <Image iconType="3" name="/maquinadecomida/telas/imagens/banknote.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Inserir"/>
       </Properties>
@@ -369,77 +369,77 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel11">
       <Properties>
-        <Property name="text" type="java.lang.String" value="005 - Diamante Negro(20g - R$2,00)"/>
+        <Property name="text" type="java.lang.String" value="005 - Diamante Negro(R$2,00)"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel12">
       <Properties>
-        <Property name="text" type="java.lang.String" value="006 - Fini(80g - R$5,00)"/>
+        <Property name="text" type="java.lang.String" value="006 - Fini(R$5,00)"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel13">
       <Properties>
-        <Property name="text" type="java.lang.String" value="004 - Snickers(40g - R$3,00)"/>
+        <Property name="text" type="java.lang.String" value="004 - Snickers(R$3,00)"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel14">
       <Properties>
-        <Property name="text" type="java.lang.String" value="008 - Fandangos(59g - R$3,00)"/>
+        <Property name="text" type="java.lang.String" value="008 - Fandangos(R$3,00)"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel15">
       <Properties>
-        <Property name="text" type="java.lang.String" value="009 - Baconzitos(55g - R$3,00)"/>
+        <Property name="text" type="java.lang.String" value="009 - Baconzitos(R$3,00)"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel16">
       <Properties>
-        <Property name="text" type="java.lang.String" value="011 - Cookies(40g - R$2,00)"/>
+        <Property name="text" type="java.lang.String" value="011 - Cookies(R$2,00)"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel17">
       <Properties>
-        <Property name="text" type="java.lang.String" value="012 - M &amp; M(52g - R$3,00)"/>
+        <Property name="text" type="java.lang.String" value="012 - M &amp; M(R$3,00)"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel18">
       <Properties>
-        <Property name="text" type="java.lang.String" value="010 - Kinder Bueno(39g - R$6,00)"/>
+        <Property name="text" type="java.lang.String" value="010 - Kinder Bueno(R$6,00)"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel19">
       <Properties>
-        <Property name="text" type="java.lang.String" value="007 - Doritos(96g - R$5,00)"/>
+        <Property name="text" type="java.lang.String" value="007 - Doritos(R$5,00)"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel20">
       <Properties>
-        <Property name="text" type="java.lang.String" value="014 - Cheetos(150g - R$6,00)"/>
+        <Property name="text" type="java.lang.String" value="014 - Cheetos(R$6,00)"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel21">
       <Properties>
-        <Property name="text" type="java.lang.String" value="015 - Pingo de Ouro(90g - R$4,00)"/>
+        <Property name="text" type="java.lang.String" value="015 - Pingo de Ouro(R$4,00)"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel22">
       <Properties>
-        <Property name="text" type="java.lang.String" value="017 - Barra de Cereal(25g - R$2,00)"/>
+        <Property name="text" type="java.lang.String" value="017 - Barra de Cereal(R$2,00)"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel23">
       <Properties>
-        <Property name="text" type="java.lang.String" value="018 - Pipoca(60g - R$3,00)"/>
+        <Property name="text" type="java.lang.String" value="018 - Pipoca(R$3,00)"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel24">
       <Properties>
-        <Property name="text" type="java.lang.String" value="016 - Kit Kat(45g - R$3,00)"/>
+        <Property name="text" type="java.lang.String" value="016 - Kit Kat(R$3,00)"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel25">
       <Properties>
-        <Property name="text" type="java.lang.String" value="013 - Ruffles(96g - R$6,00)"/>
+        <Property name="text" type="java.lang.String" value="013 - Ruffles(R$6,00)"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel26">

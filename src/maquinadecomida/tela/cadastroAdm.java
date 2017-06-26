@@ -46,11 +46,11 @@ public class cadastroAdm extends javax.swing.JFrame {
             }
         });
 
-        botaoCadastraAdm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/tela/imagens/check-symbol.png"))); // NOI18N
+        botaoCadastraAdm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/telas/imagens/check-symbol.png"))); // NOI18N
         botaoCadastraAdm.setText("Cadastrar");
         botaoCadastraAdm.setToolTipText("");
 
-        botaoVolta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/tela/imagens/reply-all-button.png"))); // NOI18N
+        botaoVolta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/telas/imagens/reply-all-button.png"))); // NOI18N
         botaoVolta.setText("Voltar");
         botaoVolta.setToolTipText("");
 
@@ -116,7 +116,7 @@ public class cadastroAdm extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botaoCadastraAdm)
                     .addComponent(botaoVolta))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         pack();
