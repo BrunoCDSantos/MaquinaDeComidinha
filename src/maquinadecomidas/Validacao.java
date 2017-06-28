@@ -32,9 +32,9 @@ public class Validacao {
         return true;
     }
 
-    public static boolean validaInteiro(JTextField campo) {
+    public static boolean validaPreco(JTextField campo) {
         try {
-            int valor = Integer.valueOf(campo.getText());
+            float valor = Integer.valueOf(campo.getText());
             return true;
         } catch (Exception e){
             Mensagens.msgErro(campo.getToolTipText());

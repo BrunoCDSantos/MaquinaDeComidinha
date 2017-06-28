@@ -42,7 +42,7 @@ public class Principal extends javax.swing.JFrame {
         jMenuItem1.setText("jMenuItem1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBounds(new java.awt.Rectangle(50, 50, 0, 0));
+        setBounds(new java.awt.Rectangle(500, 200, 0, 0));
         setIconImages(null);
 
         jLabel1.setFont(new java.awt.Font("Nimbus Roman", 0, 18)); // NOI18N

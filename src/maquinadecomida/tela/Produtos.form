@@ -318,6 +318,9 @@
         <Property name="horizontalAlignment" type="int" value="11"/>
         <Property name="toolTipText" type="java.lang.String" value="Digite o valor a ser inserido na m&#xe1;quina."/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="campoDinheiroDepositadoActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="produto001">
       <Properties>

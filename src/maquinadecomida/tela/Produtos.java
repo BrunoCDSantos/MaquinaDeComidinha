@@ -2,19 +2,20 @@ package maquinadecomida.tela;
 
 import javax.swing.JOptionPane;
 import maquinadecomidas.Mensagens;
+import maquinadecomidas.Validacao;
 
 public class Produtos extends javax.swing.JFrame {
 
     public Produtos() {
-       initComponents();
-       campoCodigoProduto.setVisible(false);
-       botaoComprarProduto.setVisible(false);
-       Produto.setVisible(false);
-       comprar.setVisible(false);
-       campoCodigoProduto.setVisible(false);
-       Troco.setVisible(false);
-       campoTroco.setVisible(false);
-       campoValorCompras.setVisible(false);
+        initComponents();
+        campoCodigoProduto.setVisible(false);
+        botaoComprarProduto.setVisible(false);
+        Produto.setVisible(false);
+        comprar.setVisible(false);
+        campoCodigoProduto.setVisible(false);
+        Troco.setVisible(false);
+        campoTroco.setVisible(false);
+        campoValorCompras.setVisible(false);
     }
 
     @SuppressWarnings("unchecked")
@@ -114,6 +115,11 @@ public class Produtos extends javax.swing.JFrame {
 
         campoDinheiroDepositado.setHorizontalAlignment(javax.swing.JTextField.TRAILING);
         campoDinheiroDepositado.setToolTipText("Digite o valor a ser inserido na máquina.");
+        campoDinheiroDepositado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoDinheiroDepositadoActionPerformed(evt);
+            }
+        });
 
         produto001.setText("001 - Amendoim Dori(R$4,00)");
 
@@ -399,7 +405,7 @@ public class Produtos extends javax.swing.JFrame {
     }//GEN-LAST:event_campoTrocoActionPerformed
 
     private void botaoVoltaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoVoltaActionPerformed
-        if(Mensagens.msgConf("Gostaria de encerrar a compra.")){
+        if (Mensagens.msgConf("Gostaria de encerrar a compra.")) {
             Principal telaPrincipal = new Principal();
             this.dispose();
             telaPrincipal.setVisible(true);
@@ -407,15 +413,18 @@ public class Produtos extends javax.swing.JFrame {
     }//GEN-LAST:event_botaoVoltaActionPerformed
 
     private void botaoInserirDinheiroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoInserirDinheiroActionPerformed
-       boolean opcoesVisivel;
-       botaoComprarProduto.setVisible(true);
-       campoCodigoProduto.setVisible(true);
-       Produto.setVisible(true);
-       comprar.setVisible(true);
-       campoCodigoProduto.setVisible(true);
-       Troco.setVisible(true);
-       campoTroco.setVisible(true);
-       campoValorCompras.setVisible(true);
+        if (Validacao.validaPreco(campoDinheiroDepositado)) {
+            botaoComprarProduto.setVisible(true);
+            campoCodigoProduto.setVisible(true);
+            Produto.setVisible(true);
+            comprar.setVisible(true);
+            campoCodigoProduto.setVisible(true);
+            Troco.setVisible(true);
+            campoTroco.setVisible(true);
+            campoValorCompras.setVisible(true);
+            campoDinheiroDepositado.setEnabled(false);
+        }
+
     }//GEN-LAST:event_botaoInserirDinheiroActionPerformed
 
     private void botaoVoltaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoVoltaMouseClicked
@@ -424,11 +433,15 @@ public class Produtos extends javax.swing.JFrame {
     }//GEN-LAST:event_botaoVoltaMouseClicked
 
     private void botaoConfCompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoConfCompraActionPerformed
-        if(Mensagens.msgConf("Gostaria de encerrar a compra.")){
+        if (Mensagens.msgConf("Gostaria de encerrar a compra.")) {
             
         }
     }//GEN-LAST:event_botaoConfCompraActionPerformed
-    
+
+    private void campoDinheiroDepositadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoDinheiroDepositadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoDinheiroDepositadoActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Produto;
