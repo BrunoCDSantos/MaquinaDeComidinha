@@ -13,7 +13,7 @@ import javax.swing.JTextField;
  * @author licac
  */
 public class Validacao {
-    
+
     public static boolean validaTexto(JTextField campo) {
         if (campo.getText().trim().isEmpty()) {
             Mensagens.msgErro(campo.getToolTipText());
@@ -22,7 +22,7 @@ public class Validacao {
         }
         return true;
     }
-    
+
     public static boolean validaSenha(JPasswordField campo) {
         if (String.copyValueOf(campo.getPassword()).trim().isEmpty()) {
             Mensagens.msgErro(campo.getToolTipText());
@@ -32,15 +32,21 @@ public class Validacao {
         return true;
     }
 
-    public static boolean validaInteiro(JTextField campo) {
+    public static boolean validaPreco(JTextField campo) {
         try {
-            int valor = Integer.valueOf(campo.getText());
-            return true;
-        } catch (Exception e){
+            float valor = Integer.valueOf(campo.getText());
+            if (valor != 0) {
+                return true;
+            } else {
+                Mensagens.msgErro("Valor inexistente");
+                return false;
+            }
+
+        } catch (Exception e) {
             Mensagens.msgErro(campo.getToolTipText());
             campo.requestFocus();
             return false;
         }
     }
-    
+
 }

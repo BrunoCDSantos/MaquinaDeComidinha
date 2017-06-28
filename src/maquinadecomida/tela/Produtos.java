@@ -2,19 +2,20 @@ package maquinadecomida.tela;
 
 import javax.swing.JOptionPane;
 import maquinadecomidas.Mensagens;
+import maquinadecomidas.Validacao;
 
 public class Produtos extends javax.swing.JFrame {
 
     public Produtos() {
-       initComponents();
-       campoCodigoProduto.setVisible(false);
-       botaoComprarProduto.setVisible(false);
-       Produto.setVisible(false);
-       comprar.setVisible(false);
-       campoCodigoProduto.setVisible(false);
-       Troco.setVisible(false);
-       campoTroco.setVisible(false);
-       campoValorCompras.setVisible(false);
+        initComponents();
+        campoCodigoProduto.setVisible(false);
+        botaoComprarProduto.setVisible(false);
+        Produto.setVisible(false);
+        comprar.setVisible(false);
+        campoCodigoProduto.setVisible(false);
+        Troco.setVisible(false);
+        campoTroco.setVisible(false);
+        campoValorCompras.setVisible(false);
     }
 
     @SuppressWarnings("unchecked")
@@ -73,11 +74,11 @@ public class Produtos extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Nimbus Roman", 0, 18)); // NOI18N
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/telas/imagens/soda.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/tela/imgs/soda.png"))); // NOI18N
         jLabel1.setText("Bebidas(600mL)");
 
         jLabel2.setFont(new java.awt.Font("Nimbus Roman", 0, 18)); // NOI18N
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/telas/imagens/chips.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/tela/imgs/chips.png"))); // NOI18N
         jLabel2.setText("Comidas  e");
 
         botaoConfCompra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/tela/imgs/check-symbol.png"))); // NOI18N
@@ -114,6 +115,11 @@ public class Produtos extends javax.swing.JFrame {
 
         campoDinheiroDepositado.setHorizontalAlignment(javax.swing.JTextField.TRAILING);
         campoDinheiroDepositado.setToolTipText("Digite o valor a ser inserido na máquina.");
+        campoDinheiroDepositado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoDinheiroDepositadoActionPerformed(evt);
+            }
+        });
 
         produto001.setText("001 - Amendoim Dori(R$4,00)");
 
@@ -222,9 +228,10 @@ public class Produtos extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(botaoConfCompra))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel2)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(335, 335, 335))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel7)
@@ -282,7 +289,7 @@ public class Produtos extends javax.swing.JFrame {
                                 .addComponent(Troco)
                                 .addGap(18, 18, 18)
                                 .addComponent(campoTroco, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 141, Short.MAX_VALUE)))
+                        .addGap(141, 141, 141)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -398,7 +405,7 @@ public class Produtos extends javax.swing.JFrame {
     }//GEN-LAST:event_campoTrocoActionPerformed
 
     private void botaoVoltaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoVoltaActionPerformed
-        if(Mensagens.msgConf("Gostaria de encerrar a compra.")){
+        if (Mensagens.msgConf("Gostaria de encerrar a compra.")) {
             Principal telaPrincipal = new Principal();
             this.dispose();
             telaPrincipal.setVisible(true);
@@ -406,15 +413,18 @@ public class Produtos extends javax.swing.JFrame {
     }//GEN-LAST:event_botaoVoltaActionPerformed
 
     private void botaoInserirDinheiroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoInserirDinheiroActionPerformed
-       boolean opcoesVisivel;
-       botaoComprarProduto.setVisible(true);
-       campoCodigoProduto.setVisible(true);
-       Produto.setVisible(true);
-       comprar.setVisible(true);
-       campoCodigoProduto.setVisible(true);
-       Troco.setVisible(true);
-       campoTroco.setVisible(true);
-       campoValorCompras.setVisible(true);
+        if (Validacao.validaPreco(campoDinheiroDepositado)) {
+            botaoComprarProduto.setVisible(true);
+            campoCodigoProduto.setVisible(true);
+            Produto.setVisible(true);
+            comprar.setVisible(true);
+            campoCodigoProduto.setVisible(true);
+            Troco.setVisible(true);
+            campoTroco.setVisible(true);
+            campoValorCompras.setVisible(true);
+            campoDinheiroDepositado.setEnabled(false);
+        }
+
     }//GEN-LAST:event_botaoInserirDinheiroActionPerformed
 
     private void botaoVoltaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoVoltaMouseClicked
@@ -423,11 +433,18 @@ public class Produtos extends javax.swing.JFrame {
     }//GEN-LAST:event_botaoVoltaMouseClicked
 
     private void botaoConfCompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoConfCompraActionPerformed
-        if(Mensagens.msgConf("Gostaria de encerrar a compra.")){
+        if (Mensagens.msgConf("Gostaria de encerrar a compra.") && !campoDinheiroDepositado.getText().equals("") && !campoDinheiroDepositado.getText().equals("0")) {
+            Principal pr = new Principal();
+            pr.setVisible(true);
+            this.dispose();
             
         }
     }//GEN-LAST:event_botaoConfCompraActionPerformed
-    
+
+    private void campoDinheiroDepositadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoDinheiroDepositadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoDinheiroDepositadoActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Produto;

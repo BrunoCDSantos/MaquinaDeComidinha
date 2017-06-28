@@ -67,7 +67,7 @@
                   <Component id="botaoAcessoAdm" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="botaoVolta" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="21" max="32767" attributes="0"/>
+              <EmptySpace pref="17" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -99,7 +99,7 @@
     <Component class="javax.swing.JButton" name="botaoAcessoAdm">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/maquinadecomida/telas/imagens/check-symbol.png"/>
+          <Image iconType="3" name="/maquinadecomida/tela/imgs/check-symbol.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Acessar"/>
       </Properties>
@@ -110,7 +110,7 @@
     <Component class="javax.swing.JButton" name="botaoVolta">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/maquinadecomida/telas/imagens/reply-all-button.png"/>
+          <Image iconType="3" name="/maquinadecomida/tela/imgs/reply-all-button.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Voltar"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>

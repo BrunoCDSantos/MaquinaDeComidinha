@@ -42,6 +42,8 @@ public class Principal extends javax.swing.JFrame {
         jMenuItem1.setText("jMenuItem1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBounds(new java.awt.Rectangle(500, 200, 0, 0));
+        setIconImages(null);
 
         jLabel1.setFont(new java.awt.Font("Nimbus Roman", 0, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -49,7 +51,7 @@ public class Principal extends javax.swing.JFrame {
         jLabel1.setToolTipText("");
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        botaoAdm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/telas/imagens/user-shape.png"))); // NOI18N
+        botaoAdm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/tela/imgs/user-shape.png"))); // NOI18N
         botaoAdm.setText("Administrador");
         botaoAdm.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -62,7 +64,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        botaoComprar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/telas/imagens/shopping-cart.png"))); // NOI18N
+        botaoComprar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/tela/imgs/shopping-cart.png"))); // NOI18N
         botaoComprar.setText("Comprar");
         botaoComprar.setToolTipText("");
         botaoComprar.addMouseListener(new java.awt.event.MouseAdapter() {
