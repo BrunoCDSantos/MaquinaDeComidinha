@@ -433,7 +433,10 @@ public class Produtos extends javax.swing.JFrame {
     }//GEN-LAST:event_botaoVoltaMouseClicked
 
     private void botaoConfCompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoConfCompraActionPerformed
-        if (Mensagens.msgConf("Gostaria de encerrar a compra.")) {
+        if (Mensagens.msgConf("Gostaria de encerrar a compra.") && !campoDinheiroDepositado.getText().equals("") && !campoDinheiroDepositado.getText().equals("0")) {
+            Principal pr = new Principal();
+            pr.setVisible(true);
+            this.dispose();
             
         }
     }//GEN-LAST:event_botaoConfCompraActionPerformed
