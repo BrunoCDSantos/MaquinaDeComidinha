@@ -16,9 +16,11 @@ import maquinadecomida.persistencia.UsuarioDTO;
  *
  * @author informatica
  */
-/*
- 
+
+public class UsuarioDAO {
+    
     public UsuarioDTO autenticaUsuario(
+            int id,
             String nome,
             String senha) throws SQLException {
         // definição da String de conexão
@@ -41,25 +43,8 @@ import maquinadecomida.persistencia.UsuarioDTO;
             usuarioDTO.setCodigo(rs.getInt(1));
             usuarioDTO.setNome(rs.getString(2));
             usuarioDTO.setSenha(rs.getString(3));
+           
         }
         return usuarioDTO;
-    }
-*/
-public class UsuarioDAO {
-    public UsuarioDTO validaAdm(String nome, String senha) throws SQLException{
-        String str = "jdbc:mysql://localhost/maquinadecomida?" + "user=root&password=root";
-        Connection c = DriverManager.getConnection(str);
-        String sql = "select codAdm, nomeAdm, senhaAdm from Administrador"+
-                " where nome = ? "+
-                " and senha = ? ";
-        PreparedStatement p = c.prepareStatement(sql);
-        p.setString(1, nome);
-        p.setString(2, senha);
-        ResultSet rs = p.executeQuery();
-        UsuarioDTO userDTO = null;
-        if(rs.next()){
-            
-        }
-        return userDTO;
     }
 }
