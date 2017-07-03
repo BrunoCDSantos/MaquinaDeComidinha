@@ -35,7 +35,7 @@ public class Validacao {
     public static boolean validaPreco(JTextField campo) {
         try {
             float valor = Integer.valueOf(campo.getText());
-            if (valor != 0) {
+            if (valor != 0 && valor >= 1) {
                 return true;
             } else {
                 Mensagens.msgErro("Valor inexistente");

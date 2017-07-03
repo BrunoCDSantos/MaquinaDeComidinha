@@ -127,16 +127,17 @@ public class login extends javax.swing.JFrame {
     }//GEN-LAST:event_campoNomeAdmActionPerformed
 
     private void botaoAcessoAdmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoAcessoAdmActionPerformed
-        // TODO add your handling code here:
+
         OpcaoAdmin op = new OpcaoAdmin();
         op.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_botaoAcessoAdmActionPerformed
 
     private void botaoVoltaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoVoltaActionPerformed
         // TODO add your handling code here:
         Principal pr = new Principal();
-        this.dispose();
         pr.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_botaoVoltaActionPerformed
 
     private void botaoVoltaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoVoltaMouseClicked

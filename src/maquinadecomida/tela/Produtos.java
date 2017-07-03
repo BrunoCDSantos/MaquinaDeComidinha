@@ -1,10 +1,12 @@
 package maquinadecomida.tela;
 
-import javax.swing.JOptionPane;
 import maquinadecomidas.Mensagens;
 import maquinadecomidas.Validacao;
 
 public class Produtos extends javax.swing.JFrame {
+
+    private static float dinheiroDepositado;
+    private static float produto;
 
     public Produtos() {
         initComponents();
@@ -16,6 +18,7 @@ public class Produtos extends javax.swing.JFrame {
         Troco.setVisible(false);
         campoTroco.setVisible(false);
         campoValorCompras.setVisible(false);
+        botaoConfCompra.setVisible(false);
     }
 
     @SuppressWarnings("unchecked")
@@ -133,6 +136,11 @@ public class Produtos extends javax.swing.JFrame {
 
         botaoComprarProduto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/tela/imgs/shopping-cart.png"))); // NOI18N
         botaoComprarProduto.setText("Comprar");
+        botaoComprarProduto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoComprarProdutoActionPerformed(evt);
+            }
+        });
 
         Troco.setText("Troco(R$):");
 
@@ -401,7 +409,10 @@ public class Produtos extends javax.swing.JFrame {
     }//GEN-LAST:event_campoValorComprasActionPerformed
 
     private void campoTrocoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoTrocoActionPerformed
-        // TODO add your handling code here:
+        String stringTroco = Float.toString(dinheiroDepositado - produto);
+        campoTroco.setEnabled(false);
+        campoTroco.setText(stringTroco);
+
     }//GEN-LAST:event_campoTrocoActionPerformed
 
     private void botaoVoltaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoVoltaActionPerformed
@@ -423,6 +434,11 @@ public class Produtos extends javax.swing.JFrame {
             campoTroco.setVisible(true);
             campoValorCompras.setVisible(true);
             campoDinheiroDepositado.setEnabled(false);
+            botaoConfCompra.setVisible(true);
+            dinheiroDepositado = Integer.valueOf(campoDinheiroDepositado.getText());
+            String stringTroco = Float.toString(dinheiroDepositado - produto);
+            campoTroco.setEnabled(false);
+            campoTroco.setText(stringTroco);
         }
 
     }//GEN-LAST:event_botaoInserirDinheiroActionPerformed
@@ -433,17 +449,21 @@ public class Produtos extends javax.swing.JFrame {
     }//GEN-LAST:event_botaoVoltaMouseClicked
 
     private void botaoConfCompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoConfCompraActionPerformed
-        if (Mensagens.msgConf("Gostaria de encerrar a compra.") && !campoDinheiroDepositado.getText().equals("") && !campoDinheiroDepositado.getText().equals("0")) {
+        if (Mensagens.msgConf("Gostaria de encerrar a compra.")) {
             Principal pr = new Principal();
             pr.setVisible(true);
             this.dispose();
-            
+
         }
     }//GEN-LAST:event_botaoConfCompraActionPerformed
 
     private void campoDinheiroDepositadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoDinheiroDepositadoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_campoDinheiroDepositadoActionPerformed
+
+    private void botaoComprarProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoComprarProdutoActionPerformed
+        
+    }//GEN-LAST:event_botaoComprarProdutoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

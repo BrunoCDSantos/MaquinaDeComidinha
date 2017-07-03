@@ -97,18 +97,21 @@ public class OpcaoAdmin extends javax.swing.JFrame {
         // TODO add your handling code here:
         AtualizarMaq at = new AtualizarMaq();
         at.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_botaoLoginAdmActionPerformed
 
     private void botaoCadastroAdmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCadastroAdmActionPerformed
         // TODO add your handling code here:
         cadastroAdm ca = new cadastroAdm();
         ca.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_botaoCadastroAdmActionPerformed
 
     private void botaoVoltaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoVoltaActionPerformed
         // TODO add your handling code here:
         Principal pr = new Principal();
         pr.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_botaoVoltaActionPerformed
 
     /**
