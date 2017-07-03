@@ -13,5 +13,4 @@ public class JavaApplication23 {
         Principal pr = new Principal();
         pr.setVisible(true);
     }
-
 }

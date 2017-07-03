@@ -11,6 +11,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import maquinadecomida.persistencia.UsuarioDTO;
+import maquinadecomidas.Mensagens;
 
 /**
  *
@@ -18,18 +19,18 @@ import maquinadecomida.persistencia.UsuarioDTO;
  */
 
 public class UsuarioDAO {
+    private static final String STRING_CONEXAO = "jdbc:mysql://localhost/MaquinaDeComida?"
+            + "user=root&password=info2015";
     
     public UsuarioDTO autenticaUsuario(
-            int id,
             String nome,
             String senha) throws SQLException {
         // definição da String de conexão
-        String str = "jdbc:mysql://localhost/turma302?" + "user=root&password=root";
         // estabelecer a conexão...mysql-connector-java-5.1.42-bin.jar
-        Connection conn = DriverManager.getConnection(str);
-        String sql = "select id, nome, senha from usuarios"+
-                     " where nome = ? "+
-                     "   and senha = ? ";
+        Connection conn = DriverManager.getConnection(STRING_CONEXAO);
+        String sql = "select codAdm from Adm"+
+                     " where nomeAdm = ? "+
+                     "   and senhaAdm = ? ";
         // enviar o select para ser analisado pelo banco
         // de dados...
         PreparedStatement p = conn.prepareStatement(sql);
@@ -41,10 +42,10 @@ public class UsuarioDAO {
         if (rs.next()) {
             usuarioDTO = new UsuarioDTO();
             usuarioDTO.setCodigo(rs.getInt(1));
-            usuarioDTO.setNome(rs.getString(2));
-            usuarioDTO.setSenha(rs.getString(3));
-           
+            usuarioDTO.setNome(nome);
+            usuarioDTO.setSenha(senha);
         }
+        conn.close();
         return usuarioDTO;
     }
 }
