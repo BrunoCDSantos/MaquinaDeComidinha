@@ -435,10 +435,13 @@ public class Produtos extends javax.swing.JFrame {
             campoValorCompras.setVisible(true);
             campoDinheiroDepositado.setEnabled(false);
             botaoConfCompra.setVisible(true);
+           
             dinheiroDepositado = Integer.valueOf(campoDinheiroDepositado.getText());
-            String stringTroco = Float.toString(dinheiroDepositado - produto);
+             String stringTroco = Float.toString(dinheiroDepositado - produto);
+             campoTroco.setText(stringTroco + "0");
             campoTroco.setEnabled(false);
-            campoTroco.setText(stringTroco);
+        } else {
+            campoDinheiroDepositado.setText("");        
         }
 
     }//GEN-LAST:event_botaoInserirDinheiroActionPerformed
@@ -475,7 +478,7 @@ public class Produtos extends javax.swing.JFrame {
     private javax.swing.JButton botaoVolta;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JTextField campoCodigoProduto;
-    private javax.swing.JTextField campoDinheiroDepositado;
+    public javax.swing.JTextField campoDinheiroDepositado;
     private javax.swing.JTextField campoTroco;
     private javax.swing.JTextField campoValorCompras;
     private javax.swing.JLabel comprar;

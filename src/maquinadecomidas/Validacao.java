@@ -7,6 +7,7 @@ package maquinadecomidas;
 
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+import maquinadecomida.tela.Produtos;
 
 /**
  *
@@ -34,17 +35,15 @@ public class Validacao {
 
     public static boolean validaPreco(JTextField campo) {
         try {
-            float valor = Integer.valueOf(campo.getText());
+            float valor = Float.valueOf(campo.getText());
             if (valor != 0 && valor >= 1) {
                 return true;
             } else {
                 Mensagens.msgErro("Valor inexistente");
                 return false;
             }
-
         } catch (Exception e) {
             Mensagens.msgErro(campo.getToolTipText());
-            campo.requestFocus();
             return false;
         }
     }
