@@ -5,6 +5,8 @@
  */
 package maquinadecomida.tela;
 
+import maquinadecomidas.Mensagens;
+
 /**
  *
  * @author informatica
@@ -127,10 +129,16 @@ public class login extends javax.swing.JFrame {
     }//GEN-LAST:event_campoNomeAdmActionPerformed
 
     private void botaoAcessoAdmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoAcessoAdmActionPerformed
-
-        OpcaoAdmin op = new OpcaoAdmin();
-        op.setVisible(true);
-        this.dispose();
+        if (campoNomeAdm.getText().isEmpty() || campoSenhaAdm.getPassword().length == 0) {
+            Mensagens.msgAviso("O nome ou a senha do administrador não foram informados");
+        } else if (campoNomeAdm.equals("Comidinha") && campoSenhaAdm.equals("1234")) {
+            OpcaoAdmin op = new OpcaoAdmin();
+            op.setVisible(true);
+            this.dispose();
+        } else {
+            Mensagens.msgErro("Login inválido.");
+            campoNomeAdm.requestFocus();
+        }
     }//GEN-LAST:event_botaoAcessoAdmActionPerformed
 
     private void botaoVoltaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoVoltaActionPerformed
