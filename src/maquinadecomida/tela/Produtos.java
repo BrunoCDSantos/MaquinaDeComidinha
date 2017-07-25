@@ -464,12 +464,12 @@ public class Produtos extends javax.swing.JFrame {
     }//GEN-LAST:event_campoDinheiroDepositadoActionPerformed
 
     private void botaoComprarProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoComprarProdutoActionPerformed
-        if(campoCodigoProduto.getText().isEmpty()){
+        /*if(campoCodigoProduto.getText().isEmpty()){
             Mensagens.msgAviso("Nenhum código informado.");
             campoCodigoProduto.requestFocus();
         } else if(campoCodigoProduto){
             
-        }
+        }*/
     }//GEN-LAST:event_botaoComprarProdutoActionPerformed
 
 

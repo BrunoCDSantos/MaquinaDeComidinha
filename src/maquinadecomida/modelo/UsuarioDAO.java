@@ -20,7 +20,7 @@ import maquinadecomidas.Mensagens;
 
 public class UsuarioDAO {
     private static final String STRING_CONEXAO = "jdbc:mysql://localhost/MaquinaDeComida?"
-            + "user=root&password=info2015";
+            + "user=root&password=alunoifc";
     
     public UsuarioDTO autenticaUsuario(
             String nome,
