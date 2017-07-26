@@ -145,6 +145,9 @@
       <Properties>
         <Property name="toolTipText" type="java.lang.String" value="Digite a quantidade do produto a ser inserida na m&#xe1;quina. Respeitando o limite."/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="campoQtdProdActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5">
       <Properties>

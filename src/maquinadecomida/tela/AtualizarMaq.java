@@ -60,6 +60,11 @@ public class AtualizarMaq extends javax.swing.JFrame {
         jLabel4.setText("Nome do novo produto:");
 
         campoQtdProd.setToolTipText("Digite a quantidade do produto a ser inserida na máquina. Respeitando o limite.");
+        campoQtdProd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoQtdProdActionPerformed(evt);
+            }
+        });
 
         jLabel5.setText("Preço(R$):");
 
@@ -136,6 +141,10 @@ public class AtualizarMaq extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void campoQtdProdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoQtdProdActionPerformed
+        
+    }//GEN-LAST:event_campoQtdProdActionPerformed
 
     /**
      * @param args the command line arguments

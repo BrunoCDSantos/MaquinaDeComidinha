@@ -5,15 +5,24 @@
  */
 package maquinadecomida.tela;
 
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import maquinadecomida.modelo.UsuarioDAO;
+import maquinadecomida.persistencia.UsuarioDTO;
+import maquinadecomidas.Mensagens;
+
 /**
  *
  * @author Windows
  */
 public class cadastroAdm extends javax.swing.JFrame {
 
-    /**
-     * Creates new form cadastroAdm
-     */
+    private String novaSenha;
+    private String confNovaSenha;
+    private String novoNome;
+    private static UsuarioDTO usuarioDTO = new UsuarioDTO();
+    
     public cadastroAdm() {
         initComponents();
     }
@@ -34,8 +43,6 @@ public class cadastroAdm extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         campoCadasSenhaAdm = new javax.swing.JPasswordField();
-        jLabel4 = new javax.swing.JLabel();
-        campoCadasConfSenhaAdm = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -49,6 +56,11 @@ public class cadastroAdm extends javax.swing.JFrame {
         botaoCadastraAdm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/tela/imgs/check-symbol.png"))); // NOI18N
         botaoCadastraAdm.setText("Cadastrar");
         botaoCadastraAdm.setToolTipText("");
+        botaoCadastraAdm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoCadastraAdmActionPerformed(evt);
+            }
+        });
 
         botaoVolta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/tela/imgs/reply-all-button.png"))); // NOI18N
         botaoVolta.setText("Voltar");
@@ -63,10 +75,11 @@ public class cadastroAdm extends javax.swing.JFrame {
         jLabel2.setText("Senha admin:");
 
         campoCadasSenhaAdm.setToolTipText("Digite uma senha de acesso para o administrador..\t");
-
-        jLabel4.setText("Confirmar senha admin:");
-
-        campoCadasConfSenhaAdm.setToolTipText("Confirme a senha de acesso do administrador.\t");
+        campoCadasSenhaAdm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoCadasSenhaAdmActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -76,7 +89,7 @@ public class cadastroAdm extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 21, Short.MAX_VALUE)
+                        .addGap(0, 20, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(jLabel1)
@@ -84,21 +97,18 @@ public class cadastroAdm extends javax.swing.JFrame {
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(campoCadasSenhaAdm, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jLabel2))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(campoCadasConfSenhaAdm, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel4))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(botaoVolta)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(botaoCadastraAdm)))
-                        .addGap(0, 50, Short.MAX_VALUE))
+                        .addGap(0, 48, Short.MAX_VALUE))
                     .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(18, Short.MAX_VALUE)
                 .addComponent(jLabel3)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel1)
@@ -108,23 +118,36 @@ public class cadastroAdm extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(campoCadasSenhaAdm, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(campoCadasConfSenhaAdm, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botaoCadastraAdm)
-                    .addComponent(botaoVolta))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(botaoVolta)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void campoCadasNomeAdmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoCadasNomeAdmActionPerformed
-        // TODO add your handling code here:
+        novoNome = campoCadasNomeAdm.getText();
     }//GEN-LAST:event_campoCadasNomeAdmActionPerformed
+
+    private void campoCadasSenhaAdmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoCadasSenhaAdmActionPerformed
+        novaSenha = campoCadasSenhaAdm.getPassword().toString();
+    }//GEN-LAST:event_campoCadasSenhaAdmActionPerformed
+
+    private void botaoCadastraAdmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCadastraAdmActionPerformed
+        if(campoCadasNomeAdm.getText().isEmpty() || campoCadasSenhaAdm.getPassword().length == 0){
+            Mensagens.msgAviso("Verifique se todos os campos foram preenchidos corretamente.");
+        }else{
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            try {
+                usuarioDTO = usuarioDAO.autenticaUsuario(campoCadasNomeAdm.getText(), String.valueOf(campoCadasSenhaAdm.getPassword()));
+            } catch (SQLException ex) {
+                Logger.getLogger(cadastroAdm.class.getName()).log(Level.SEVERE, null, ex);
+            }
+                
+        }
+    }//GEN-LAST:event_botaoCadastraAdmActionPerformed
 
     /**
      * @param args the command line arguments
@@ -164,12 +187,10 @@ public class cadastroAdm extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botaoCadastraAdm;
     private javax.swing.JButton botaoVolta;
-    private javax.swing.JPasswordField campoCadasConfSenhaAdm;
     private javax.swing.JTextField campoCadasNomeAdm;
     private javax.swing.JPasswordField campoCadasSenhaAdm;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     // End of variables declaration//GEN-END:variables
 }

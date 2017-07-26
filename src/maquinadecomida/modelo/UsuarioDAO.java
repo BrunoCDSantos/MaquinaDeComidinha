@@ -48,4 +48,9 @@ public class UsuarioDAO {
         conn.close();
         return usuarioDTO;
     }
+    
+    public UsuarioDTO atualizaUsuario(String nome, String senha) throws SQLException{
+        Connection conn = DriverManager.getConnection(STRING_CONEXAO);
+        String sql = "update ";
+    }
 }
