@@ -36,42 +36,42 @@ public class Produtos extends javax.swing.JFrame {
         campoValorCompras = new javax.swing.JTextField();
         campoDinheiroDepositado = new javax.swing.JTextField();
         produto001 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        produto002 = new javax.swing.JLabel();
+        produto003 = new javax.swing.JLabel();
         Produto = new javax.swing.JLabel();
         campoCodigoProduto = new javax.swing.JTextField();
         botaoComprarProduto = new javax.swing.JButton();
         Troco = new javax.swing.JLabel();
         campoTroco = new javax.swing.JTextField();
         botaoInserirDinheiro = new javax.swing.JButton();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        jLabel24 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
-        jLabel26 = new javax.swing.JLabel();
-        jLabel27 = new javax.swing.JLabel();
-        jLabel28 = new javax.swing.JLabel();
-        jLabel29 = new javax.swing.JLabel();
-        jLabel30 = new javax.swing.JLabel();
-        jLabel31 = new javax.swing.JLabel();
-        jLabel32 = new javax.swing.JLabel();
-        jLabel33 = new javax.swing.JLabel();
-        jLabel34 = new javax.swing.JLabel();
-        jLabel35 = new javax.swing.JLabel();
-        jLabel36 = new javax.swing.JLabel();
-        jLabel37 = new javax.swing.JLabel();
-        jLabel38 = new javax.swing.JLabel();
+        produto005 = new javax.swing.JLabel();
+        produto006 = new javax.swing.JLabel();
+        produto004 = new javax.swing.JLabel();
+        produto008 = new javax.swing.JLabel();
+        produto009 = new javax.swing.JLabel();
+        produto011 = new javax.swing.JLabel();
+        produto012 = new javax.swing.JLabel();
+        produto010 = new javax.swing.JLabel();
+        produto007 = new javax.swing.JLabel();
+        produto014 = new javax.swing.JLabel();
+        produto015 = new javax.swing.JLabel();
+        produto017 = new javax.swing.JLabel();
+        produto018 = new javax.swing.JLabel();
+        produto016 = new javax.swing.JLabel();
+        produto013 = new javax.swing.JLabel();
+        produto020 = new javax.swing.JLabel();
+        produto021 = new javax.swing.JLabel();
+        produto023 = new javax.swing.JLabel();
+        produto024 = new javax.swing.JLabel();
+        produto022 = new javax.swing.JLabel();
+        produto019 = new javax.swing.JLabel();
+        produto026 = new javax.swing.JLabel();
+        produto027 = new javax.swing.JLabel();
+        produto029 = new javax.swing.JLabel();
+        produto030 = new javax.swing.JLabel();
+        produto028 = new javax.swing.JLabel();
+        produto025 = new javax.swing.JLabel();
+        produto031 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -126,9 +126,9 @@ public class Produtos extends javax.swing.JFrame {
 
         produto001.setText("001 - Amendoim Dori(R$4,00)");
 
-        jLabel6.setText("002 - Stiksy(R$4,00)");
+        produto002.setText("002 - Stiksy(R$4,00)");
 
-        jLabel7.setText("003 - Cebolitos(R$3,00)");
+        produto003.setText("003 - Cebolitos(R$3,00)");
 
         Produto.setText("Produto");
 
@@ -159,61 +159,61 @@ public class Produtos extends javax.swing.JFrame {
             }
         });
 
-        jLabel11.setText("005 - Diamante Negro(R$2,00)");
+        produto005.setText("005 - Diamante Negro(R$2,00)");
 
-        jLabel12.setText("006 - Fini(R$5,00)");
+        produto006.setText("006 - Fini(R$5,00)");
 
-        jLabel13.setText("004 - Snickers(R$3,00)");
+        produto004.setText("004 - Snickers(R$3,00)");
 
-        jLabel14.setText("008 - Fandangos(R$3,00)");
+        produto008.setText("008 - Fandangos(R$3,00)");
 
-        jLabel15.setText("009 - Baconzitos(R$3,00)");
+        produto009.setText("009 - Baconzitos(R$3,00)");
 
-        jLabel16.setText("011 - Cookies(R$2,00)");
+        produto011.setText("011 - Cookies(R$2,00)");
 
-        jLabel17.setText("012 - M & M(R$3,00)");
+        produto012.setText("012 - M & M(R$3,00)");
 
-        jLabel18.setText("010 - Kinder Bueno(R$6,00)");
+        produto010.setText("010 - Kinder Bueno(R$6,00)");
 
-        jLabel19.setText("007 - Doritos(R$5,00)");
+        produto007.setText("007 - Doritos(R$5,00)");
 
-        jLabel20.setText("014 - Cheetos(R$6,00)");
+        produto014.setText("014 - Cheetos(R$6,00)");
 
-        jLabel21.setText("015 - Pingo de Ouro(R$4,00)");
+        produto015.setText("015 - Pingo de Ouro(R$4,00)");
 
-        jLabel22.setText("017 - Barra de Cereal(R$2,00)");
+        produto017.setText("017 - Barra de Cereal(R$2,00)");
 
-        jLabel23.setText("018 - Pipoca(R$3,00)");
+        produto018.setText("018 - Pipoca(R$3,00)");
 
-        jLabel24.setText("016 - Kit Kat(R$3,00)");
+        produto016.setText("016 - Kit Kat(R$3,00)");
 
-        jLabel25.setText("013 - Ruffles(R$6,00)");
+        produto013.setText("013 - Ruffles(R$6,00)");
 
-        jLabel26.setText("020 - Fanta Uva(R$3,00)");
+        produto020.setText("020 - Fanta Uva(R$3,00)");
 
-        jLabel27.setText("021 - Fanta Laranja(R$3,00)");
+        produto021.setText("021 - Fanta Laranja(R$3,00)");
 
-        jLabel28.setText("023 - Chocolate(R$2,00)");
+        produto023.setText("023 - Chocolate(R$2,00)");
 
-        jLabel29.setText("024 - Gatorade(R$3,00)");
+        produto024.setText("024 - Gatorade(R$3,00)");
 
-        jLabel30.setText("022 - Água da Serra(R$6,00)");
+        produto022.setText("022 - Água da Serra(R$6,00)");
 
-        jLabel31.setText("019 - Coca-Cola(R$4,00)");
+        produto019.setText("019 - Coca-Cola(R$4,00)");
 
-        jLabel32.setText("026 - Água(R$6,00)");
+        produto026.setText("026 - Água(R$6,00)");
 
-        jLabel33.setText("027 - Dolly(R$4,00)");
+        produto027.setText("027 - Dolly(R$4,00)");
 
-        jLabel34.setText("029 - Coca-Cola Diet(R$2,00)");
+        produto029.setText("029 - Coca-Cola Diet(R$2,00)");
 
-        jLabel35.setText("030 - Chá Matte Leão(R$3,00)");
+        produto030.setText("030 - Chá Matte Leão(R$3,00)");
 
-        jLabel36.setText("028 - Aquarius(R$3,00)");
+        produto028.setText("028 - Aquarius(R$3,00)");
 
-        jLabel37.setText("025 - H2O(R$6,00)");
+        produto025.setText("025 - H2O(R$6,00)");
 
-        jLabel38.setText("031 - Pureza(R$3,00)");
+        produto031.setText("031 - Pureza(R$3,00)");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -242,47 +242,47 @@ public class Produtos extends javax.swing.JFrame {
                                 .addGap(335, 335, 335))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel7)
-                                    .addComponent(jLabel6)
+                                    .addComponent(produto003)
+                                    .addComponent(produto002)
                                     .addComponent(produto001)
-                                    .addComponent(jLabel12)
-                                    .addComponent(jLabel11)
-                                    .addComponent(jLabel13))
+                                    .addComponent(produto006)
+                                    .addComponent(produto005)
+                                    .addComponent(produto004))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel15)
-                                    .addComponent(jLabel14)
-                                    .addComponent(jLabel19)
-                                    .addComponent(jLabel17)
-                                    .addComponent(jLabel16)
-                                    .addComponent(jLabel18))
+                                    .addComponent(produto009)
+                                    .addComponent(produto008)
+                                    .addComponent(produto007)
+                                    .addComponent(produto012)
+                                    .addComponent(produto011)
+                                    .addComponent(produto010))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel21)
-                                    .addComponent(jLabel20)
-                                    .addComponent(jLabel25)
-                                    .addComponent(jLabel23)
-                                    .addComponent(jLabel22)
-                                    .addComponent(jLabel24)))
+                                    .addComponent(produto015)
+                                    .addComponent(produto014)
+                                    .addComponent(produto013)
+                                    .addComponent(produto018)
+                                    .addComponent(produto017)
+                                    .addComponent(produto016)))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel27)
-                                    .addComponent(jLabel26)
-                                    .addComponent(jLabel31)
-                                    .addComponent(jLabel29)
-                                    .addComponent(jLabel28)
-                                    .addComponent(jLabel30))
+                                    .addComponent(produto021)
+                                    .addComponent(produto020)
+                                    .addComponent(produto019)
+                                    .addComponent(produto024)
+                                    .addComponent(produto023)
+                                    .addComponent(produto022))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel33)
-                                    .addComponent(jLabel32)
+                                    .addComponent(produto027)
+                                    .addComponent(produto026)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel37)
+                                        .addComponent(produto025)
                                         .addGap(77, 77, 77)
-                                        .addComponent(jLabel38))
-                                    .addComponent(jLabel35)
-                                    .addComponent(jLabel34)
-                                    .addComponent(jLabel36)))
+                                        .addComponent(produto031))
+                                    .addComponent(produto030)
+                                    .addComponent(produto029)
+                                    .addComponent(produto028)))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(Produto)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -311,69 +311,69 @@ public class Produtos extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabel19)
+                            .addComponent(produto007)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jLabel14)
+                            .addComponent(produto008)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jLabel15)
+                            .addComponent(produto009)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jLabel18)
+                            .addComponent(produto010)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jLabel16)
+                            .addComponent(produto011)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jLabel17))
+                            .addComponent(produto012))
                         .addGroup(layout.createSequentialGroup()
                             .addComponent(produto001)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jLabel6)
+                            .addComponent(produto002)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jLabel7)
+                            .addComponent(produto003)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jLabel13)
+                            .addComponent(produto004)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jLabel11)
+                            .addComponent(produto005)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jLabel12)))
+                            .addComponent(produto006)))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel25)
+                        .addComponent(produto013)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel20)
+                        .addComponent(produto014)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel21)
+                        .addComponent(produto015)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel24)
+                        .addComponent(produto016)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel22)
+                        .addComponent(produto017)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel23)))
+                        .addComponent(produto018)))
                 .addGap(53, 53, 53)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel31)
+                        .addComponent(produto019)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel26)
+                        .addComponent(produto020)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel27)
+                        .addComponent(produto021)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel30)
+                        .addComponent(produto022)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel28)
+                        .addComponent(produto023)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel29))
+                        .addComponent(produto024))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel37)
-                            .addComponent(jLabel38))
+                            .addComponent(produto025)
+                            .addComponent(produto031))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel32)
+                        .addComponent(produto026)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel33)
+                        .addComponent(produto027)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel36)
+                        .addComponent(produto028)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel34)
+                        .addComponent(produto029)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel35)))
+                        .addComponent(produto030)))
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
@@ -482,45 +482,45 @@ public class Produtos extends javax.swing.JFrame {
     private javax.swing.JButton botaoVolta;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JTextField campoCodigoProduto;
-    public javax.swing.JTextField campoDinheiroDepositado;
+    private javax.swing.JTextField campoDinheiroDepositado;
     private javax.swing.JTextField campoTroco;
     private javax.swing.JTextField campoValorCompras;
     private javax.swing.JLabel comprar;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel34;
-    private javax.swing.JLabel jLabel35;
-    private javax.swing.JLabel jLabel36;
-    private javax.swing.JLabel jLabel37;
-    private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel produto001;
+    private javax.swing.JLabel produto002;
+    private javax.swing.JLabel produto003;
+    private javax.swing.JLabel produto004;
+    private javax.swing.JLabel produto005;
+    private javax.swing.JLabel produto006;
+    private javax.swing.JLabel produto007;
+    private javax.swing.JLabel produto008;
+    private javax.swing.JLabel produto009;
+    private javax.swing.JLabel produto010;
+    private javax.swing.JLabel produto011;
+    private javax.swing.JLabel produto012;
+    private javax.swing.JLabel produto013;
+    private javax.swing.JLabel produto014;
+    private javax.swing.JLabel produto015;
+    private javax.swing.JLabel produto016;
+    private javax.swing.JLabel produto017;
+    private javax.swing.JLabel produto018;
+    private javax.swing.JLabel produto019;
+    private javax.swing.JLabel produto020;
+    private javax.swing.JLabel produto021;
+    private javax.swing.JLabel produto022;
+    private javax.swing.JLabel produto023;
+    private javax.swing.JLabel produto024;
+    private javax.swing.JLabel produto025;
+    private javax.swing.JLabel produto026;
+    private javax.swing.JLabel produto027;
+    private javax.swing.JLabel produto028;
+    private javax.swing.JLabel produto029;
+    private javax.swing.JLabel produto030;
+    private javax.swing.JLabel produto031;
     // End of variables declaration//GEN-END:variables
 }

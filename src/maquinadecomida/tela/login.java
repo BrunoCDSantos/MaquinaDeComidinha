@@ -131,7 +131,7 @@ public class login extends javax.swing.JFrame {
     private void botaoAcessoAdmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoAcessoAdmActionPerformed
         if (campoNomeAdm.getText().isEmpty() || campoSenhaAdm.getPassword().length == 0) {
             Mensagens.msgAviso("O nome ou a senha do administrador não foram informados");
-        } else if (campoNomeAdm.equals("Comidinha") && campoSenhaAdm.equals("1234")) {
+        } else if (campoNomeAdm.equals("comidinha") && campoSenhaAdm.equals("1234")) {
             OpcaoAdmin op = new OpcaoAdmin();
             op.setVisible(true);
             this.dispose();
