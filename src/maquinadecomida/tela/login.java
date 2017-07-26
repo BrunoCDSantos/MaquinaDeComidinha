@@ -5,17 +5,17 @@
  */
 package maquinadecomida.tela;
 
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import maquinadecomida.modelo.UsuarioDAO;
 import maquinadecomidas.Mensagens;
+import maquinadecomida.persistencia.UsuarioDTO;
 
-/**
- *
- * @author informatica
- */
 public class login extends javax.swing.JFrame {
 
-    /**
-     * Creates new form menu
-     */
+    private static UsuarioDTO usuarioDTO = new UsuarioDTO();
+
     public login() {
         initComponents();
     }
@@ -129,16 +129,29 @@ public class login extends javax.swing.JFrame {
     }//GEN-LAST:event_campoNomeAdmActionPerformed
 
     private void botaoAcessoAdmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoAcessoAdmActionPerformed
+        System.out.println(usuarioDTO.getNome());
         if (campoNomeAdm.getText().isEmpty() || campoSenhaAdm.getPassword().length == 0) {
             Mensagens.msgAviso("O nome ou a senha do administrador não foram informados");
-        } else if (campoNomeAdm.equals("comidinha") && campoSenhaAdm.equals("1234")) {
-            OpcaoAdmin op = new OpcaoAdmin();
-            op.setVisible(true);
-            this.dispose();
         } else {
-            Mensagens.msgErro("Login inválido.");
-            campoNomeAdm.requestFocus();
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+
+            try {
+                usuarioDTO = usuarioDAO.autenticaUsuario(campoNomeAdm.getText(), String.valueOf(campoSenhaAdm.getPassword()));
+                if (usuarioDTO == null) {
+                    Mensagens.msgErro("Login inválido.");
+                    campoNomeAdm.requestFocus();
+                } else {
+                    OpcaoAdmin op = new OpcaoAdmin();
+                    op.setVisible(true);
+                    this.dispose();
+                }
+            } catch (SQLException ex) {
+                // mensagem de erro
+                Mensagens.msgErro("Ocorreu um erro ao acessar o banco de dados. O computador vai explodir em 15 segundos. Run for your life!");
+                Mensagens.msgAviso("Booommm");
+            }
         }
+
     }//GEN-LAST:event_botaoAcessoAdmActionPerformed
 
     private void botaoVoltaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoVoltaActionPerformed
