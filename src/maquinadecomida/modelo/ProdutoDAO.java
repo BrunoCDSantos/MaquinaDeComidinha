@@ -49,7 +49,7 @@ public class ProdutoDAO {
         while (rs.next()) {
             ProdutoDTO produtoDTO = new ProdutoDTO();
             produtoDTO.setCodProd(rs.getInt(1));        
-            produtoDTO.setNomeProd(rs.get());
+            produtoDTO.setNomeProd(rs.get ());
             System.out.println(rs.getString(2));
             produtoDTO.setPrecoProd(rs.getFloat(3));
             produtoDTO.setQtdProd(rs.getInt(4));
