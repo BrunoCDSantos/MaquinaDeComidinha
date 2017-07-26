@@ -22,7 +22,7 @@ public class ProdutoDAO {
 
     // definição da String de conexão
     private static final String STRING_CONEXAO = "jdbc:mysql://localhost/MaquinaDeComida?"
-            + "user=root&password=info2015";
+            + "user=root&password=alunoifc";
 
     /*
      public static void main(String[] args) throws SQLException {
@@ -48,8 +48,9 @@ public class ProdutoDAO {
 
         while (rs.next()) {
             ProdutoDTO produtoDTO = new ProdutoDTO();
-            produtoDTO.setCodProd(rs.getInt(1));
-            produtoDTO.setNomeProd(rs.getString(2));
+            produtoDTO.setCodProd(rs.getInt(1));        
+            produtoDTO.setNomeProd(rs.get());
+            System.out.println(rs.getString(2));
             produtoDTO.setPrecoProd(rs.getFloat(3));
             produtoDTO.setQtdProd(rs.getInt(4));
             //
