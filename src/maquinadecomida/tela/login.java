@@ -6,8 +6,6 @@
 package maquinadecomida.tela;
 
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import maquinadecomida.modelo.UsuarioDAO;
 import maquinadecomidas.Mensagens;
 import maquinadecomida.persistencia.UsuarioDTO;
@@ -129,12 +127,10 @@ public class login extends javax.swing.JFrame {
     }//GEN-LAST:event_campoNomeAdmActionPerformed
 
     private void botaoAcessoAdmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoAcessoAdmActionPerformed
-        System.out.println(usuarioDTO.getNome());
         if (campoNomeAdm.getText().isEmpty() || campoSenhaAdm.getPassword().length == 0) {
             Mensagens.msgAviso("O nome ou a senha do administrador não foram informados");
         } else {
             UsuarioDAO usuarioDAO = new UsuarioDAO();
-
             try {
                 usuarioDTO = usuarioDAO.autenticaUsuario(campoNomeAdm.getText(), String.valueOf(campoSenhaAdm.getPassword()));
                 if (usuarioDTO == null) {
