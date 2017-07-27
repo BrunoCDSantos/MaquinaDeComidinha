@@ -1,5 +1,10 @@
 package maquinadecomida.tela;
 
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import maquinadecomida.modelo.ProdutoDAO;
+import maquinadecomida.persistencia.ProdutoDTO;
 import maquinadecomidas.Mensagens;
 import maquinadecomidas.Validacao;
 
@@ -7,7 +12,8 @@ public class Produtos extends javax.swing.JFrame {
 
     private static float dinheiroDepositado;
     private static float produto;
-
+    private static ProdutoDTO produtoDinamico = new ProdutoDTO();
+    private static ProdutoDAO inicialiazacao = new ProdutoDAO();
     public Produtos() {
         initComponents();
         campoCodigoProduto.setVisible(false);
@@ -19,6 +25,15 @@ public class Produtos extends javax.swing.JFrame {
         campoTroco.setVisible(false);
         campoValorCompras.setVisible(false);
         botaoConfCompra.setVisible(false);
+        try {
+            produto001.setText(inicialiazacao.montaListaProdutos().get(0).getNomeProd().get(0));
+        } catch (SQLException ex) {
+            
+        }
+        
+        
+        
+        
     }
 
     @SuppressWarnings("unchecked")
@@ -123,8 +138,6 @@ public class Produtos extends javax.swing.JFrame {
                 campoDinheiroDepositadoActionPerformed(evt);
             }
         });
-
-        produto001.setText("001 - Amendoim Dori(R$4,00)");
 
         produto002.setText("002 - Stiksy(R$4,00)");
 
