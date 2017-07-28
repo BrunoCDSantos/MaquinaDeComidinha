@@ -48,7 +48,8 @@ public class UsuarioDAO {
         conn.close();
         return usuarioDTO;
     }
-    novoNome = campoNomeAdmAlterar
+    //criar os objetos novoNome e novaSenha na classe da tela de cadastro adm e importalos aqui depois da validação feita para 
+    //mandar para o bd. E terminar o restante do código do método.
     public UsuarioDTO atualizaUsuario(String nome, String senha) throws SQLException{
         Connection conn = DriverManager.getConnection(STRING_CONEXAO);
         String sql = "update Adm set nomeAdm = 'novoNome', senhaAdm = 'novaSenha'";
