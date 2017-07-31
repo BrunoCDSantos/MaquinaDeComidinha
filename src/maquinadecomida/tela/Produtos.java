@@ -21,10 +21,14 @@ public class Produtos extends javax.swing.JFrame {
     private int posicaoY = 0;
     int numeroDoLado;
 
-    public Produtos() throws SQLException {
+    public Produtos()  {
         initComponents();
 
-        listaProdutos = produtoDAO.montaListaProdutos();
+        try {
+            listaProdutos = produtoDAO.montaListaProdutos();
+        } catch (SQLException ex) {
+            Logger.getLogger(Produtos.class.getName()).log(Level.SEVERE, null, ex);
+        }
         for (ProdutoDTO produto : listaProdutos) {
 
             numeroDoLado += 1;

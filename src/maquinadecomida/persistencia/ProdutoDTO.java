@@ -12,6 +12,8 @@ package maquinadecomida.persistencia;
 public class ProdutoDTO {
     private int codProd;
     private String nomeProd;
+    private float precoProd;
+    private int qtdProd;
     
     public int getCodProd() {
         return codProd;
@@ -44,7 +46,5 @@ public class ProdutoDTO {
     public void setQtdProd(int qtdProd) {
         this.qtdProd = qtdProd;
     }
-    private float precoProd;
-    private int qtdProd;
     
 }
