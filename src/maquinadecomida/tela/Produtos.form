@@ -35,96 +35,48 @@
               <EmptySpace min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jSeparator1" max="32767" attributes="0"/>
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="campoDinheiroDepositado" min="-2" pref="121" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="botaoInserirDinheiro" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Component id="botaoVolta" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="botaoConfCompra" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabel2" max="32767" attributes="0"/>
-                              <EmptySpace min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel1" min="-2" pref="171" max="-2" attributes="0"/>
-                              <EmptySpace min="335" pref="335" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="produto003" min="-2" max="-2" attributes="0"/>
-                                  <Component id="produto002" min="-2" max="-2" attributes="0"/>
-                                  <Component id="produto001" min="-2" max="-2" attributes="0"/>
-                                  <Component id="produto006" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="produto005" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="produto004" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="produto009" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="produto008" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="produto007" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="produto012" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="produto011" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="produto010" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="produto015" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="produto014" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="produto013" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="produto018" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="produto017" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="produto016" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="produto021" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="produto020" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="produto019" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="produto024" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="produto023" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="produto022" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="produto027" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="produto026" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="produto025" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
-                                      <Component id="produto031" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="produto030" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="produto029" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="produto028" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="Produto" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="campoCodigoProduto" min="-2" pref="121" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="botaoComprarProduto" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="comprar" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="campoValorCompras" min="-2" pref="121" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="Troco" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="campoTroco" min="-2" pref="138" max="-2" attributes="0"/>
-                          </Group>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="jLabel2" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel1" min="-2" pref="171" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="476" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="141" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="campoDinheiroDepositado" min="-2" pref="121" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="botaoInserirDinheiro" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="botaoVolta" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="botaoConfCompra" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="produto001" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="Produto" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="campoCodigoProduto" min="-2" pref="121" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="botaoComprarProduto" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="comprar" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="campoValorCompras" min="-2" pref="121" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="Troco" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="campoTroco" min="-2" pref="138" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" pref="415" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
               </Group>
               <EmptySpace min="-2" max="-2" attributes="0"/>
@@ -140,82 +92,8 @@
                   <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="produto007" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="produto008" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="produto009" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="produto010" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="produto011" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="produto012" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="produto001" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="produto002" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="produto003" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="produto004" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="produto005" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="produto006" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Component id="produto013" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="produto014" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="produto015" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="produto016" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="produto017" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="produto018" min="-2" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="produto019" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="produto020" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="produto021" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="produto022" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="produto023" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="produto024" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="produto025" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="produto031" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="produto026" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="produto027" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="produto028" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="produto029" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="produto030" min="-2" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="produto001" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="371" max="-2" attributes="0"/>
               <Component id="jSeparator1" min="-2" pref="10" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -324,16 +202,6 @@
     </Component>
     <Component class="javax.swing.JLabel" name="produto001">
     </Component>
-    <Component class="javax.swing.JLabel" name="produto002">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="002 - Stiksy(R$4,00)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="produto003">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="003 - Cebolitos(R$3,00)"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JLabel" name="Produto">
       <Properties>
         <Property name="text" type="java.lang.String" value="Produto"/>
@@ -378,146 +246,6 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botaoInserirDinheiroActionPerformed"/>
       </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="produto005">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="005 - Diamante Negro(R$2,00)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="produto006">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="006 - Fini(R$5,00)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="produto004">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="004 - Snickers(R$3,00)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="produto008">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="008 - Fandangos(R$3,00)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="produto009">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="009 - Baconzitos(R$3,00)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="produto011">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="011 - Cookies(R$2,00)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="produto012">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="012 - M &amp; M(R$3,00)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="produto010">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="010 - Kinder Bueno(R$6,00)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="produto007">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="007 - Doritos(R$5,00)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="produto014">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="014 - Cheetos(R$6,00)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="produto015">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="015 - Pingo de Ouro(R$4,00)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="produto017">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="017 - Barra de Cereal(R$2,00)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="produto018">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="018 - Pipoca(R$3,00)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="produto016">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="016 - Kit Kat(R$3,00)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="produto013">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="013 - Ruffles(R$6,00)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="produto020">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="020 - Fanta Uva(R$3,00)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="produto021">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="021 - Fanta Laranja(R$3,00)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="produto023">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="023 - Chocolate(R$2,00)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="produto024">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="024 - Gatorade(R$3,00)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="produto022">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="022 - &#xc1;gua da Serra(R$6,00)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="produto019">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="019 - Coca-Cola(R$4,00)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="produto026">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="026 - &#xc1;gua(R$6,00)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="produto027">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="027 - Dolly(R$4,00)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="produto029">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="029 - Coca-Cola Diet(R$2,00)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="produto030">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="030 - Ch&#xe1; Matte Le&#xe3;o(R$3,00)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="produto028">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="028 - Aquarius(R$3,00)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="produto025">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="025 - H2O(R$6,00)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="produto031">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="031 - Pureza(R$3,00)"/>
-      </Properties>
     </Component>
     <Component class="javax.swing.JSeparator" name="jSeparator1">
     </Component>

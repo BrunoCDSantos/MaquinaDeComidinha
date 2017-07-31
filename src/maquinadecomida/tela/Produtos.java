@@ -1,8 +1,10 @@
 package maquinadecomida.tela;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JLabel;
 import maquinadecomida.modelo.ProdutoDAO;
 import maquinadecomida.persistencia.ProdutoDTO;
 import maquinadecomidas.Mensagens;
@@ -10,12 +12,30 @@ import maquinadecomidas.Validacao;
 
 public class Produtos extends javax.swing.JFrame {
 
-    private static float dinheiroDepositado;
-    private static float produto;
-    private static ProdutoDTO produtoDinamico = new ProdutoDTO();
-    private static ProdutoDAO inicialiazacao = new ProdutoDAO();
-    public Produtos() {
+    private float dinheiroDepositado;
+    private float produto;
+    private ProdutoDTO produtoDinamico = new ProdutoDTO();
+    private ProdutoDAO produtoDAO = new ProdutoDAO();
+    private ArrayList<ProdutoDTO> listaProdutos;
+    private int posicaoX = 100;
+    private int posicaoY = 0;
+    int numeroDoLado;
+
+    public Produtos() throws SQLException {
         initComponents();
+
+        listaProdutos = produtoDAO.montaListaProdutos();
+        for (ProdutoDTO produto : listaProdutos) {
+
+            numeroDoLado += 1;
+            JLabel produtos = new JLabel();
+            produtos.setText( "00"+ numeroDoLado + "- " + produto.getNomeProd() + " (R$) " + produto.getPrecoProd()+("0"));
+            produtos.setBounds(posicaoX, posicaoY, 200, 30);
+            posicaoY += 30;
+            this.getContentPane().add(produtos);
+
+        }
+
         campoCodigoProduto.setVisible(false);
         botaoComprarProduto.setVisible(false);
         Produto.setVisible(false);
@@ -25,15 +45,6 @@ public class Produtos extends javax.swing.JFrame {
         campoTroco.setVisible(false);
         campoValorCompras.setVisible(false);
         botaoConfCompra.setVisible(false);
-        try {
-            produto001.setText(inicialiazacao.montaListaProdutos().get(0).getNomeProd().get(0));
-        } catch (SQLException ex) {
-            
-        }
-        
-        
-        
-        
     }
 
     @SuppressWarnings("unchecked")
@@ -51,42 +62,12 @@ public class Produtos extends javax.swing.JFrame {
         campoValorCompras = new javax.swing.JTextField();
         campoDinheiroDepositado = new javax.swing.JTextField();
         produto001 = new javax.swing.JLabel();
-        produto002 = new javax.swing.JLabel();
-        produto003 = new javax.swing.JLabel();
         Produto = new javax.swing.JLabel();
         campoCodigoProduto = new javax.swing.JTextField();
         botaoComprarProduto = new javax.swing.JButton();
         Troco = new javax.swing.JLabel();
         campoTroco = new javax.swing.JTextField();
         botaoInserirDinheiro = new javax.swing.JButton();
-        produto005 = new javax.swing.JLabel();
-        produto006 = new javax.swing.JLabel();
-        produto004 = new javax.swing.JLabel();
-        produto008 = new javax.swing.JLabel();
-        produto009 = new javax.swing.JLabel();
-        produto011 = new javax.swing.JLabel();
-        produto012 = new javax.swing.JLabel();
-        produto010 = new javax.swing.JLabel();
-        produto007 = new javax.swing.JLabel();
-        produto014 = new javax.swing.JLabel();
-        produto015 = new javax.swing.JLabel();
-        produto017 = new javax.swing.JLabel();
-        produto018 = new javax.swing.JLabel();
-        produto016 = new javax.swing.JLabel();
-        produto013 = new javax.swing.JLabel();
-        produto020 = new javax.swing.JLabel();
-        produto021 = new javax.swing.JLabel();
-        produto023 = new javax.swing.JLabel();
-        produto024 = new javax.swing.JLabel();
-        produto022 = new javax.swing.JLabel();
-        produto019 = new javax.swing.JLabel();
-        produto026 = new javax.swing.JLabel();
-        produto027 = new javax.swing.JLabel();
-        produto029 = new javax.swing.JLabel();
-        produto030 = new javax.swing.JLabel();
-        produto028 = new javax.swing.JLabel();
-        produto025 = new javax.swing.JLabel();
-        produto031 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -139,10 +120,6 @@ public class Produtos extends javax.swing.JFrame {
             }
         });
 
-        produto002.setText("002 - Stiksy(R$4,00)");
-
-        produto003.setText("003 - Cebolitos(R$3,00)");
-
         Produto.setText("Produto");
 
         campoCodigoProduto.setToolTipText("Digite o código do produto a ser comprado.");
@@ -172,62 +149,6 @@ public class Produtos extends javax.swing.JFrame {
             }
         });
 
-        produto005.setText("005 - Diamante Negro(R$2,00)");
-
-        produto006.setText("006 - Fini(R$5,00)");
-
-        produto004.setText("004 - Snickers(R$3,00)");
-
-        produto008.setText("008 - Fandangos(R$3,00)");
-
-        produto009.setText("009 - Baconzitos(R$3,00)");
-
-        produto011.setText("011 - Cookies(R$2,00)");
-
-        produto012.setText("012 - M & M(R$3,00)");
-
-        produto010.setText("010 - Kinder Bueno(R$6,00)");
-
-        produto007.setText("007 - Doritos(R$5,00)");
-
-        produto014.setText("014 - Cheetos(R$6,00)");
-
-        produto015.setText("015 - Pingo de Ouro(R$4,00)");
-
-        produto017.setText("017 - Barra de Cereal(R$2,00)");
-
-        produto018.setText("018 - Pipoca(R$3,00)");
-
-        produto016.setText("016 - Kit Kat(R$3,00)");
-
-        produto013.setText("013 - Ruffles(R$6,00)");
-
-        produto020.setText("020 - Fanta Uva(R$3,00)");
-
-        produto021.setText("021 - Fanta Laranja(R$3,00)");
-
-        produto023.setText("023 - Chocolate(R$2,00)");
-
-        produto024.setText("024 - Gatorade(R$3,00)");
-
-        produto022.setText("022 - Água da Serra(R$6,00)");
-
-        produto019.setText("019 - Coca-Cola(R$4,00)");
-
-        produto026.setText("026 - Água(R$6,00)");
-
-        produto027.setText("027 - Dolly(R$4,00)");
-
-        produto029.setText("029 - Coca-Cola Diet(R$2,00)");
-
-        produto030.setText("030 - Chá Matte Leão(R$3,00)");
-
-        produto028.setText("028 - Aquarius(R$3,00)");
-
-        produto025.setText("025 - H2O(R$6,00)");
-
-        produto031.setText("031 - Pureza(R$3,00)");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -236,81 +157,40 @@ public class Produtos extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jSeparator1)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(campoDinheiroDepositado, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(botaoInserirDinheiro))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(botaoVolta)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(botaoConfCompra))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(335, 335, 335))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(produto003)
-                                    .addComponent(produto002)
-                                    .addComponent(produto001)
-                                    .addComponent(produto006)
-                                    .addComponent(produto005)
-                                    .addComponent(produto004))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(produto009)
-                                    .addComponent(produto008)
-                                    .addComponent(produto007)
-                                    .addComponent(produto012)
-                                    .addComponent(produto011)
-                                    .addComponent(produto010))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(produto015)
-                                    .addComponent(produto014)
-                                    .addComponent(produto013)
-                                    .addComponent(produto018)
-                                    .addComponent(produto017)
-                                    .addComponent(produto016)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(produto021)
-                                    .addComponent(produto020)
-                                    .addComponent(produto019)
-                                    .addComponent(produto024)
-                                    .addComponent(produto023)
-                                    .addComponent(produto022))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(produto027)
-                                    .addComponent(produto026)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(produto025)
-                                        .addGap(77, 77, 77)
-                                        .addComponent(produto031))
-                                    .addComponent(produto030)
-                                    .addComponent(produto029)
-                                    .addComponent(produto028)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(Produto)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(campoCodigoProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(botaoComprarProduto))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(comprar)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(campoValorCompras, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(Troco)
-                                .addGap(18, 18, 18)
-                                .addComponent(campoTroco, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(141, 141, 141)))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(476, 476, 476))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jLabel4)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(campoDinheiroDepositado, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(botaoInserirDinheiro))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(botaoVolta)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(botaoConfCompra))
+                                .addComponent(produto001)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(Produto)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(campoCodigoProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(botaoComprarProduto))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(comprar)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(campoValorCompras, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(Troco)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(campoTroco, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGap(415, 415, 415))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -321,73 +201,8 @@ public class Produtos extends javax.swing.JFrame {
                     .addComponent(jLabel2)
                     .addComponent(jLabel1))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(produto007)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(produto008)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(produto009)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(produto010)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(produto011)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(produto012))
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(produto001)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(produto002)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(produto003)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(produto004)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(produto005)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(produto006)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(produto013)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(produto014)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(produto015)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(produto016)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(produto017)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(produto018)))
-                .addGap(53, 53, 53)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(produto019)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(produto020)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(produto021)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(produto022)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(produto023)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(produto024))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(produto025)
-                            .addComponent(produto031))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(produto026)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(produto027)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(produto028)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(produto029)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(produto030)))
-                .addGap(18, 18, 18)
+                .addComponent(produto001)
+                .addGap(371, 371, 371)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -448,13 +263,13 @@ public class Produtos extends javax.swing.JFrame {
             campoValorCompras.setVisible(true);
             campoDinheiroDepositado.setEnabled(false);
             botaoConfCompra.setVisible(true);
-           
+
             dinheiroDepositado = Integer.valueOf(campoDinheiroDepositado.getText());
-             String stringTroco = Float.toString(dinheiroDepositado - produto);
-             campoTroco.setText(stringTroco + "0");
+            String stringTroco = Float.toString(dinheiroDepositado - produto);
+            campoTroco.setText(stringTroco + "0");
             campoTroco.setEnabled(false);
         } else {
-            campoDinheiroDepositado.setText("");        
+            campoDinheiroDepositado.setText("");
         }
 
     }//GEN-LAST:event_botaoInserirDinheiroActionPerformed
@@ -505,35 +320,5 @@ public class Produtos extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel produto001;
-    private javax.swing.JLabel produto002;
-    private javax.swing.JLabel produto003;
-    private javax.swing.JLabel produto004;
-    private javax.swing.JLabel produto005;
-    private javax.swing.JLabel produto006;
-    private javax.swing.JLabel produto007;
-    private javax.swing.JLabel produto008;
-    private javax.swing.JLabel produto009;
-    private javax.swing.JLabel produto010;
-    private javax.swing.JLabel produto011;
-    private javax.swing.JLabel produto012;
-    private javax.swing.JLabel produto013;
-    private javax.swing.JLabel produto014;
-    private javax.swing.JLabel produto015;
-    private javax.swing.JLabel produto016;
-    private javax.swing.JLabel produto017;
-    private javax.swing.JLabel produto018;
-    private javax.swing.JLabel produto019;
-    private javax.swing.JLabel produto020;
-    private javax.swing.JLabel produto021;
-    private javax.swing.JLabel produto022;
-    private javax.swing.JLabel produto023;
-    private javax.swing.JLabel produto024;
-    private javax.swing.JLabel produto025;
-    private javax.swing.JLabel produto026;
-    private javax.swing.JLabel produto027;
-    private javax.swing.JLabel produto028;
-    private javax.swing.JLabel produto029;
-    private javax.swing.JLabel produto030;
-    private javax.swing.JLabel produto031;
     // End of variables declaration//GEN-END:variables
 }
