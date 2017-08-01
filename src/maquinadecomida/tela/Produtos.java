@@ -17,8 +17,8 @@ public class Produtos extends javax.swing.JFrame {
     private ProdutoDTO produtoDinamico = new ProdutoDTO();
     private ProdutoDAO produtoDAO = new ProdutoDAO();
     private ArrayList<ProdutoDTO> listaProdutos;
-    private int posicaoX = 100;
-    private int posicaoY = 0;
+    private int posicaoX = 30;
+    private int posicaoY = 30;
     int numeroDoLado;
 
     public Produtos()  {
@@ -33,10 +33,15 @@ public class Produtos extends javax.swing.JFrame {
 
             numeroDoLado += 1;
             JLabel produtos = new JLabel();
-            produtos.setText( "00"+ numeroDoLado + "- " + produto.getNomeProd() + " (R$) " + produto.getPrecoProd()+("0"));
-            produtos.setBounds(posicaoX, posicaoY, 200, 30);
+            produtos.setText( "00"+ (numeroDoLado - 1) + "- " + produto.getNomeProd() + " (R$) " + produto.getPrecoProd()+("0"));
+            produtos.setBounds(posicaoX, posicaoY, 230, 30);
             posicaoY += 30;
             this.getContentPane().add(produtos);
+            if (produto.getCodProd()%13 == 0) {
+                posicaoX +=230;
+                posicaoY = 30;
+                
+            }
 
         }
 
