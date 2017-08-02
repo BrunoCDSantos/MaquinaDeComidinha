@@ -17,43 +17,41 @@ public class Produtos extends javax.swing.JFrame {
     private ProdutoDTO produtoDinamico = new ProdutoDTO();
     private ProdutoDAO produtoDAO = new ProdutoDAO();
     private ArrayList<ProdutoDTO> listaProdutos;
-    private int posicaoX = 30;
-    private int posicaoY = 30;
+    private int posicaoX = 20;
+    private int posicaoY = 50;
     int numeroDoLado;
 
-    public Produtos()  {
+    public Produtos() throws SQLException {
         initComponents();
 
-        try {
+    
             listaProdutos = produtoDAO.montaListaProdutos();
-        } catch (SQLException ex) {
-            Logger.getLogger(Produtos.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        for (ProdutoDTO produto : listaProdutos) {
+            for (ProdutoDTO produto : listaProdutos) {
+                numeroDoLado += 1;
+                JLabel produtos = new JLabel();
+                produtos.setText("00" + (numeroDoLado) + "- " + produto.getNomeProd() + " (R$) " + produto.getPrecoProd() + ("0"));
+                produtos.setBounds(posicaoX, posicaoY, 230, 30);
+                posicaoY += 30;
+                this.getContentPane().add(produtos);
+                if (produto.getCodProd() % 12 == 0) {
+                    posicaoX += 230;
+                    posicaoY = 50;
 
-            numeroDoLado += 1;
-            JLabel produtos = new JLabel();
-            produtos.setText( "00"+ (numeroDoLado - 1) + "- " + produto.getNomeProd() + " (R$) " + produto.getPrecoProd()+("0"));
-            produtos.setBounds(posicaoX, posicaoY, 230, 30);
-            posicaoY += 30;
-            this.getContentPane().add(produtos);
-            if (produto.getCodProd()%13 == 0) {
-                posicaoX +=230;
-                posicaoY = 30;
-                
+                }
+
             }
-
-        }
-
-        campoCodigoProduto.setVisible(false);
-        botaoComprarProduto.setVisible(false);
-        Produto.setVisible(false);
-        comprar.setVisible(false);
-        campoCodigoProduto.setVisible(false);
-        Troco.setVisible(false);
-        campoTroco.setVisible(false);
-        campoValorCompras.setVisible(false);
-        botaoConfCompra.setVisible(false);
+            campoCodigoProduto.setVisible(false);
+            botaoComprarProduto.setVisible(false);
+            Produto.setVisible(false);
+            comprar.setVisible(false);
+            campoCodigoProduto.setVisible(false);
+            Troco.setVisible(false);
+            campoTroco.setVisible(false);
+            campoValorCompras.setVisible(false);
+            botaoConfCompra.setVisible(false);
+       
+            
+  
     }
 
     @SuppressWarnings("unchecked")
@@ -80,6 +78,8 @@ public class Produtos extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("tela de Produtos");
+        setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Nimbus Roman", 0, 18)); // NOI18N
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/tela/imgs/soda.png"))); // NOI18N
@@ -165,42 +165,42 @@ public class Produtos extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSeparator1)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(476, 476, 476))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jLabel4)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(campoDinheiroDepositado, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(botaoInserirDinheiro))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(botaoVolta)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(botaoConfCompra))
-                                .addComponent(produto001)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(Produto)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(campoCodigoProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(botaoComprarProduto))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(comprar)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(campoValorCompras, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(Troco)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(campoTroco, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGap(415, 415, 415))))
-                .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(488, 488, 488))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jSeparator1)
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(botaoVolta)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(botaoConfCompra))
+                            .addComponent(produto001)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(Produto)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(campoCodigoProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(botaoComprarProduto))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(comprar)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(campoValorCompras, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(Troco)
+                                .addGap(18, 18, 18)
+                                .addComponent(campoTroco, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(campoDinheiroDepositado, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(botaoInserirDinheiro)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

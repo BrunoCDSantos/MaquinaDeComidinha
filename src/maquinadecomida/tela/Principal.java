@@ -1,5 +1,7 @@
-
 package maquinadecomida.tela;
+
+import java.sql.SQLException;
+import maquinadecomidas.Mensagens;
 
 /**
  *
@@ -11,7 +13,6 @@ public class Principal extends javax.swing.JFrame {
         initComponents();
     }
 
-    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -42,8 +43,10 @@ public class Principal extends javax.swing.JFrame {
         jMenuItem1.setText("jMenuItem1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Tela Principal");
         setBounds(new java.awt.Rectangle(500, 200, 0, 0));
         setIconImages(null);
+        setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Nimbus Roman", 0, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -109,7 +112,7 @@ public class Principal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    
+
     private void botaoAdmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoAdmActionPerformed
         // TODO add your handling code here:
         login lg = new login();
@@ -118,9 +121,13 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_botaoAdmActionPerformed
 
     private void botaoComprarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoComprarActionPerformed
-        Produtos pr = new Produtos();
-        this.dispose();
-        pr.setVisible(true);
+        try {
+            Produtos pr = new Produtos();
+            this.dispose();
+            pr.setVisible(true);
+        } catch (SQLException ex ) {
+           Mensagens.msgErro("Deu erro no banco de dados.Por favor contate o suporte técnico da BLW");
+        }
     }//GEN-LAST:event_botaoComprarActionPerformed
 
     private void botaoComprarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoComprarMouseClicked

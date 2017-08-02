@@ -36,6 +36,7 @@ public class login extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jLabel1.setText("Nome admin:");
 
@@ -143,8 +144,7 @@ public class login extends javax.swing.JFrame {
                 }
             } catch (SQLException ex) {
                 // mensagem de erro
-                Mensagens.msgErro("Ocorreu um erro ao acessar o banco de dados. O computador vai explodir em 15 segundos. Run for your life!");
-                Mensagens.msgAviso("Booommm");
+                Mensagens.msgErro("Deu erro no banco de dados.Por favor contate o suporte técnico da BLW");
             }
         }
 

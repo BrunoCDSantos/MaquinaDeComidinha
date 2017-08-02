@@ -65,6 +65,11 @@ public class cadastroAdm extends javax.swing.JFrame {
         botaoVolta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/tela/imgs/reply-all-button.png"))); // NOI18N
         botaoVolta.setText("Voltar");
         botaoVolta.setToolTipText("");
+        botaoVolta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoVoltaActionPerformed(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Nimbus Roman", 0, 18)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -148,6 +153,12 @@ public class cadastroAdm extends javax.swing.JFrame {
                 
         }
     }//GEN-LAST:event_botaoCadastraAdmActionPerformed
+
+    private void botaoVoltaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoVoltaActionPerformed
+        OpcaoAdmin volta = new OpcaoAdmin();
+        volta.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_botaoVoltaActionPerformed
 
     /**
      * @param args the command line arguments
