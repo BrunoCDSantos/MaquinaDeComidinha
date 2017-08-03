@@ -33,6 +33,27 @@ public class ProdutoDAO {
      }
      }
      */
+    
+    public ProdutoDTO autenticaProd(String cod) throws SQLException {
+        // definição da String de conexão
+        // estabelecer a conexão...mysql-connector-java-5.1.42-bin.jar
+        Connection conn = DriverManager.getConnection(STRING_CONEXAO);
+        String sql = "select codProd from Produtos where codProd = ?";
+        // enviar o select para ser analisado pelo banco
+        // de dados...
+        PreparedStatement p = conn.prepareStatement(sql);
+        // definir o valor de cada um dos parâmetros...
+        p.setString(1, cod);
+        ResultSet rs = p.executeQuery();
+        ProdutoDTO produtoDTO = null;
+        if (rs.next()) {
+            produtoDTO = new ProdutoDTO();
+            produtoDTO.setCodProd(rs.getInt(1));
+       }
+        conn.close();
+        return produtoDTO;
+    }
+    
     public ArrayList<ProdutoDTO> montaListaProdutos() throws SQLException {
 
         ArrayList<ProdutoDTO> listaRetorno = new ArrayList();
