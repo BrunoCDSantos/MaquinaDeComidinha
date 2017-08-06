@@ -229,7 +229,13 @@ public class AtualizarMaq extends javax.swing.JFrame {
     }//GEN-LAST:event_campoQtdProdActionPerformed
 
     private void botaoConfirmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoConfirmaActionPerformed
-
+        if(campoCodProdAlterar.equals(false)){
+            if(boxNome.isSelected()){
+                //campoNovoNomeProd.getText()
+            }
+        }else{
+            Mensagens.msgAviso("Verifique se o valor digitado no campo código do produto a ser alterado está correto");
+        }
     }//GEN-LAST:event_botaoConfirmaActionPerformed
 
     private void botaoVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoVoltarActionPerformed
