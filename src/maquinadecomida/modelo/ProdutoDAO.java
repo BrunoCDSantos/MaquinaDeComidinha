@@ -12,7 +12,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import maquinadecomida.persistencia.ProdutoDTO;
-import maquinadecomidas.Mensagens;
 
 /**
  *
@@ -24,15 +23,11 @@ public class ProdutoDAO {
     private static final String STRING_CONEXAO = "jdbc:mysql://localhost/MaquinaDeComida?"
             + "user=root&password=alunoifc";
 
-    /*
-     public static void main(String[] args) throws SQLException {
-     ProdutoDAO dao = new ProdutoDAO();
-     ArrayList<ProdutoDTO> lista = dao.montaListaProdutos();
-     for (ProdutoDTO produtoDTO : lista) {
-     System.out.println(produtoDTO.getNomeProd() + " " + produtoDTO.getPrecoProd());
-     }
-     }
-     */
+    public ProdutoDTO atualizaProd(String nome, int qtd, float preco) throws SQLException {
+        Connection conn = DriverManager.getConnection(STRING_CONEXAO);
+        String sql = "update Produtos set nomeProd = 'novoNome', qtdProd = 'novaQtd', precoProd = 'novoPreco'";
+        return null;
+    }
     
     public ProdutoDTO autenticaProd(String cod) throws SQLException {
         // definição da String de conexão
@@ -71,7 +66,6 @@ public class ProdutoDAO {
             ProdutoDTO produtoDTO = new ProdutoDTO();
             produtoDTO.setCodProd(rs.getInt(1));        
             produtoDTO.setNomeProd(rs.getString (2));
-        
             produtoDTO.setPrecoProd(rs.getFloat(3));
             produtoDTO.setQtdProd(rs.getInt(4));
             //

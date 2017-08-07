@@ -104,7 +104,7 @@ public class cadastroAdm extends javax.swing.JFrame {
                                 .addComponent(jLabel2))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(botaoVolta)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGap(18, 18, 18)
                                 .addComponent(botaoCadastraAdm)))
                         .addGap(0, 48, Short.MAX_VALUE))
                     .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -123,10 +123,11 @@ public class cadastroAdm extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(campoCadasSenhaAdm, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botaoCadastraAdm)
-                    .addComponent(botaoVolta)))
+                    .addComponent(botaoVolta))
+                .addGap(21, 21, 21))
         );
 
         pack();
@@ -148,9 +149,8 @@ public class cadastroAdm extends javax.swing.JFrame {
             try {
                 usuarioDTO = usuarioDAO.autenticaUsuario(campoCadasNomeAdm.getText(), String.valueOf(campoCadasSenhaAdm.getPassword()));
             } catch (SQLException ex) {
-                Logger.getLogger(cadastroAdm.class.getName()).log(Level.SEVERE, null, ex);
+                Mensagens.msgErro("Deu erro no banco de dados.Por favor contate o suporte técnico da BLW");
             }
-                
         }
     }//GEN-LAST:event_botaoCadastraAdmActionPerformed
 

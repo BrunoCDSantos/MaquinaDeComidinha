@@ -6,8 +6,12 @@
 package maquinadecomida.tela;
 
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import maquinadecomida.modelo.ProdutoDAO;
+import maquinadecomida.modelo.UsuarioDAO;
 import maquinadecomida.persistencia.ProdutoDTO;
+import maquinadecomida.persistencia.UsuarioDTO;
 import maquinadecomidas.Mensagens;
 
 /**
@@ -15,6 +19,11 @@ import maquinadecomidas.Mensagens;
  * @author Windows
  */
 public class AtualizarMaq extends javax.swing.JFrame {
+
+    private String novoNome;
+    private int novaQtd;
+    private float novoPreco;
+    private static ProdutoDTO produtoDTO = new ProdutoDTO();
 
     /**
      * Creates new form AtualizarMaq
@@ -53,6 +62,9 @@ public class AtualizarMaq extends javax.swing.JFrame {
         boxNome = new javax.swing.JCheckBox();
         boxEstoque = new javax.swing.JCheckBox();
         boxPreco = new javax.swing.JCheckBox();
+        jLabel6 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tabelaProd = new javax.swing.JTable();
 
         jButton2.setText("jButton2");
 
@@ -73,7 +85,7 @@ public class AtualizarMaq extends javax.swing.JFrame {
 
         jLabel3.setText("Quantidade(uni. máx. 15):");
 
-        campoCodProdAlterar.setToolTipText("Digite o nome do produto a ser alterado.");
+        campoCodProdAlterar.setToolTipText("Digite o código do produto a ser alterado.");
 
         jLabel4.setText("Nome do novo produto:");
 
@@ -137,6 +149,32 @@ public class AtualizarMaq extends javax.swing.JFrame {
             }
         });
 
+        jLabel6.setText("Selecione os campos a serem alterados do respectivo produto:");
+
+        tabelaProd.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null}
+            },
+            new String [] {
+                "Cod Prod", "Nome Prod", "Preço Prod", "Qtd Prod"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(tabelaProd);
+        if (tabelaProd.getColumnModel().getColumnCount() > 0) {
+            tabelaProd.getColumnModel().getColumn(0).setHeaderValue("Cod Prod");
+            tabelaProd.getColumnModel().getColumn(1).setHeaderValue("Nome Prod");
+            tabelaProd.getColumnModel().getColumn(2).setHeaderValue("Preço Prod");
+            tabelaProd.getColumnModel().getColumn(3).setHeaderValue("Qtd Prod");
+        }
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -145,49 +183,57 @@ public class AtualizarMaq extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addComponent(boxNome)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(boxEstoque)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(boxPreco)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel6)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(49, 49, 49)
+                                .addComponent(boxNome)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(boxEstoque)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(boxPreco)))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 570, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel5)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(campoPrecoProd, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                    .addComponent(jLabel3)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(campoQtdProd))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                    .addComponent(jLabel4)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(campoNovoNomeProd, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel4)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(campoNovoNomeProd, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel3)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(campoQtdProd, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel5)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(campoPrecoProd, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 464, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addComponent(botaoVoltar)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                            .addComponent(botaoConfirma))
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addComponent(jLabel2)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(campoCodProdAlterar, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(botaoValidaCod))))
-                                .addGap(0, 10, Short.MAX_VALUE)))
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 469, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                                .addComponent(jLabel2)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(campoCodProdAlterar, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addGap(18, 18, 18)
+                                        .addComponent(botaoValidaCod)))
+                                .addGap(0, 0, Short.MAX_VALUE)))
                         .addContainerGap())))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(botaoVoltar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(botaoConfirma)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(18, Short.MAX_VALUE)
+                .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(15, 15, 15)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -196,13 +242,17 @@ public class AtualizarMaq extends javax.swing.JFrame {
                         .addComponent(campoCodProdAlterar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(botaoValidaCod))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel6)
+                .addGap(2, 2, 2)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(boxNome)
                     .addComponent(boxEstoque)
                     .addComponent(boxPreco))
                 .addGap(18, 18, 18)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(4, 4, 4)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(campoNovoNomeProd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
@@ -225,16 +275,52 @@ public class AtualizarMaq extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void campoQtdProdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoQtdProdActionPerformed
-        
+
     }//GEN-LAST:event_campoQtdProdActionPerformed
 
     private void botaoConfirmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoConfirmaActionPerformed
-        if(campoCodProdAlterar.equals(false)){
-            if(boxNome.isSelected()){
-                //campoNovoNomeProd.getText()
+        if (campoCodProdAlterar.isEnabled()) {
+            ProdutoDAO produtoDAO = new ProdutoDAO();
+            if (boxNome.isSelected()) {
+                if (campoNovoNomeProd.getText().isEmpty()) {
+                    Mensagens.msgAviso(campoNovoNomeProd.getToolTipText());
+                } else {
+                    novoNome = campoNovoNomeProd.getText();
+                }
+            } else {
+                //novoNome = 
             }
-        }else{
-            Mensagens.msgAviso("Verifique se o valor digitado no campo código do produto a ser alterado está correto");
+            if (boxEstoque.isSelected()) {
+                if (campoQtdProd.getText().isEmpty()) {
+                    Mensagens.msgAviso(campoQtdProd.getToolTipText());
+                } else {
+                    novaQtd = Integer.parseInt(campoQtdProd.getText());
+                }
+            } else {
+                //novaQtd = 
+            }
+            if (boxPreco.isSelected()) {
+                if (campoPrecoProd.getText().isEmpty()) {
+                    Mensagens.msgAviso(campoPrecoProd.getToolTipText());
+                } else {
+                    novoPreco = Float.parseFloat(campoPrecoProd.getText());
+                }
+            } else {
+                //novoPreco = 
+            }
+            try {
+                produtoDTO = produtoDAO.atualizaProd(novoNome, novaQtd, novoPreco);
+                Mensagens.msgInfo("Dados cadastrados com sucesso.");
+                campoCodProdAlterar.setEditable(true);
+                campoCodProdAlterar.setText("");
+                campoCodProdAlterar.requestFocus();
+                botaoValidaCod.setVisible(true);
+                
+            } catch (SQLException ex) {
+                Mensagens.msgErro("Deu erro no banco de dados.Por favor contate o suporte técnico da BLW");
+            }
+        } else {
+            Mensagens.msgAviso("Verifique se o valor digitado no campo do código do produto a ser alterado foi confirmado para a alteração.");
         }
     }//GEN-LAST:event_botaoConfirmaActionPerformed
 
@@ -253,17 +339,18 @@ public class AtualizarMaq extends javax.swing.JFrame {
                 ProdutoDTO retorno;
                 retorno = produtoDAO.autenticaProd(campoCodProdAlterar.getText());
                 if (retorno != null) {
+                    produtoDAO.montaListaProdutos();
                     campoCodProdAlterar.setEditable(false);
-                    boxPreco.setVisible(false);
-                    boxNome.setVisible(false);
-                    boxEstoque.setVisible(false);
+                    botaoValidaCod.setVisible(false);
+                    boxPreco.setVisible(true);
+                    boxNome.setVisible(true);
+                    boxEstoque.setVisible(true);
                 } else {
                     Mensagens.msgAviso("Código informado não existe no banco de dados.");
                     campoCodProdAlterar.requestFocus();
                 }
             } catch (SQLException ex) {
-                Mensagens.msgErro("Ocorreu um erro ao acessar o banco de dados. O computador vai explodir em 15 segundos. Run for your life!");
-                Mensagens.msgAviso("Booommm");
+                Mensagens.msgErro("Deu erro no banco de dados.Por favor contate o suporte técnico da BLW");
             }
         } else {
             Mensagens.msgAviso("O código deve ter até 2 digitos de 1 a 30");
@@ -273,7 +360,7 @@ public class AtualizarMaq extends javax.swing.JFrame {
     private void boxNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boxNomeActionPerformed
         if (boxNome.isSelected()) {
             campoNovoNomeProd.setEditable(true);
-        }else{
+        } else {
             campoNovoNomeProd.setEditable(false);
         }
     }//GEN-LAST:event_boxNomeActionPerformed
@@ -300,7 +387,7 @@ public class AtualizarMaq extends javax.swing.JFrame {
     }//GEN-LAST:event_boxPrecoActionPerformed
 
     private void campoNovoNomeProdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoNovoNomeProdActionPerformed
-        
+
     }//GEN-LAST:event_campoNovoNomeProdActionPerformed
 
     /**
@@ -355,6 +442,9 @@ public class AtualizarMaq extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JTable tabelaProd;
     // End of variables declaration//GEN-END:variables
 }
