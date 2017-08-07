@@ -206,13 +206,16 @@
     </Component>
     <Component class="javax.swing.JLabel" name="Produto">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Produto"/>
+        <Property name="text" type="java.lang.String" value="Produto(C&#xf3;digo)"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="campoCodigoProduto">
       <Properties>
         <Property name="toolTipText" type="java.lang.String" value="Digite o c&#xf3;digo do produto a ser comprado."/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="campoCodigoProdutoActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="botaoComprarProduto">
       <Properties>

@@ -14,9 +14,9 @@ public class Produtos extends javax.swing.JFrame {
 
     private float dinheiroDepositado;
     private float produto;
-    private ProdutoDTO produtoDinamico = new ProdutoDTO();
-    private ProdutoDAO produtoDAO = new ProdutoDAO();
-    private ArrayList<ProdutoDTO> listaProdutos;
+    private final ProdutoDTO produtoDinamico = new ProdutoDTO();
+    private final ProdutoDAO produtoDAO = new ProdutoDAO();
+    private final ArrayList<ProdutoDTO> listaProdutos;
     private int posicaoX = 20;
     private int posicaoY = 50;
     int numeroDoLado;
@@ -24,34 +24,32 @@ public class Produtos extends javax.swing.JFrame {
     public Produtos() throws SQLException {
         initComponents();
 
-    
-            listaProdutos = produtoDAO.montaListaProdutos();
-            for (ProdutoDTO produto : listaProdutos) {
-                numeroDoLado += 1;
-                JLabel produtos = new JLabel();
-                produtos.setText("00" + (numeroDoLado) + "- " + produto.getNomeProd() + " (R$) " + produto.getPrecoProd() + ("0"));
-                produtos.setBounds(posicaoX, posicaoY, 230, 30);
-                posicaoY += 30;
-                this.getContentPane().add(produtos);
-                if (produto.getCodProd() % 12 == 0) {
-                    posicaoX += 230;
-                    posicaoY = 50;
-
-                }
+        listaProdutos = produtoDAO.montaListaProdutos();
+        for (ProdutoDTO produto : listaProdutos) {
+            numeroDoLado += 1;
+            JLabel produtos = new JLabel();
+            produtos.setText("00" + (numeroDoLado) + "- " + produto.getNomeProd() + " (R$) " + produto.getPrecoProd() + ("0"));
+            produtos.setBounds(posicaoX, posicaoY, 230, 30);
+            posicaoY += 30;
+            this.getContentPane().add(produtos);
+            if (produto.getCodProd() % 12 == 0) {
+                posicaoX += 230;
+                posicaoY = 50;
 
             }
-            campoCodigoProduto.setVisible(false);
-            botaoComprarProduto.setVisible(false);
-            Produto.setVisible(false);
-            comprar.setVisible(false);
-            campoCodigoProduto.setVisible(false);
-            Troco.setVisible(false);
-            campoTroco.setVisible(false);
-            campoValorCompras.setVisible(false);
-            botaoConfCompra.setVisible(false);
-       
-            
-  
+
+        }
+        campoCodigoProduto.setVisible(false);
+        botaoComprarProduto.setVisible(false);
+        Produto.setVisible(false);
+        comprar.setVisible(false);
+        campoCodigoProduto.setVisible(false);
+        Troco.setVisible(false);
+        campoTroco.setVisible(false);
+        campoValorCompras.setVisible(false);
+        botaoConfCompra.setVisible(false);
+        campoValorCompras.setEnabled(false);
+
     }
 
     @SuppressWarnings("unchecked")
@@ -129,9 +127,14 @@ public class Produtos extends javax.swing.JFrame {
             }
         });
 
-        Produto.setText("Produto");
+        Produto.setText("Produto(Código)");
 
         campoCodigoProduto.setToolTipText("Digite o código do produto a ser comprado.");
+        campoCodigoProduto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoCodigoProdutoActionPerformed(evt);
+            }
+        });
 
         botaoComprarProduto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/tela/imgs/shopping-cart.png"))); // NOI18N
         botaoComprarProduto.setText("Comprar");
@@ -242,7 +245,8 @@ public class Produtos extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void campoValorComprasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoValorComprasActionPerformed
-        // TODO add your handling code here:
+
+
     }//GEN-LAST:event_campoValorComprasActionPerformed
 
     private void campoTrocoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoTrocoActionPerformed
@@ -273,7 +277,7 @@ public class Produtos extends javax.swing.JFrame {
             campoDinheiroDepositado.setEnabled(false);
             botaoConfCompra.setVisible(true);
 
-            dinheiroDepositado = Integer.valueOf(campoDinheiroDepositado.getText());
+            dinheiroDepositado = Integer.valueOf(campoDinheiroDepositado.getText().trim());
             String stringTroco = Float.toString(dinheiroDepositado - produto);
             campoTroco.setText(stringTroco + "0");
             campoTroco.setEnabled(false);
@@ -301,13 +305,42 @@ public class Produtos extends javax.swing.JFrame {
     }//GEN-LAST:event_campoDinheiroDepositadoActionPerformed
 
     private void botaoComprarProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoComprarProdutoActionPerformed
-        /*if(campoCodigoProduto.getText().isEmpty()){
-            Mensagens.msgAviso("Nenhum código informado.");
-            campoCodigoProduto.requestFocus();
-        } else if(campoCodigoProduto){
-            
-        }*/
+        try {
+            if (campoCodigoProduto.getText().isEmpty()) {
+                Mensagens.msgAviso("Nenhum código informado.");
+
+            } else {
+                int QtProduto = Integer.valueOf(campoCodigoProduto.getText().trim());
+                if (QtProduto > 30 || QtProduto < 1) {
+                    Mensagens.msgAviso("Código excedendo os limites.");
+
+                } else {
+                    if (Float.valueOf(campoDinheiroDepositado.getText()) < produto) {
+                        Mensagens.msgAviso("Valor menor com o valor que desejas comprar");
+
+                    } else {
+                        for (ProdutoDTO listaProduto : listaProdutos) {
+
+                            if (listaProduto.getCodProd() == Integer.valueOf(campoCodigoProduto.getText())) {
+                                produto = listaProduto.getPrecoProd() + produto;
+                                campoValorCompras.setText(Float.toString(produto) + "0");
+
+                            }
+                        }
+
+                    }
+
+                }
+            }
+
+        } catch (Exception e) {
+            Mensagens.msgAviso("O código informado invalido");
+        }
     }//GEN-LAST:event_botaoComprarProdutoActionPerformed
+
+    private void campoCodigoProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoCodigoProdutoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoCodigoProdutoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
