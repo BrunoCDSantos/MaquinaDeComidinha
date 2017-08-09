@@ -129,7 +129,7 @@ public class login extends javax.swing.JFrame {
 
     private void botaoAcessoAdmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoAcessoAdmActionPerformed
         if (campoNomeAdm.getText().isEmpty() || campoSenhaAdm.getPassword().length == 0) {
-            Mensagens.msgAviso("O nome ou a senha do administrador não foram informados");
+            Mensagens.msgAviso("O nome ou a senha do administrador não foram informados.");
         } else {
             UsuarioDAO usuarioDAO = new UsuarioDAO();
             try {
@@ -143,7 +143,6 @@ public class login extends javax.swing.JFrame {
                     this.dispose();
                 }
             } catch (SQLException ex) {
-                // mensagem de erro
                 Mensagens.msgErro("Deu erro no banco de dados.Por favor contate o suporte técnico da BLW");
             }
         }

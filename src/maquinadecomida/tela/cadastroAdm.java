@@ -19,7 +19,6 @@ import maquinadecomidas.Mensagens;
 public class cadastroAdm extends javax.swing.JFrame {
 
     private String novaSenha;
-    private String confNovaSenha;
     private String novoNome;
     private static UsuarioDTO usuarioDTO = new UsuarioDTO();
     
@@ -147,10 +146,15 @@ public class cadastroAdm extends javax.swing.JFrame {
         }else{
             UsuarioDAO usuarioDAO = new UsuarioDAO();
             try {
-                usuarioDTO = usuarioDAO.autenticaUsuario(campoCadasNomeAdm.getText(), String.valueOf(campoCadasSenhaAdm.getPassword()));
+                usuarioDTO = usuarioDAO.atualizaUsuario(novoNome, novaSenha);
+                Mensagens.msgInfo("Dados cadastrados com sucesso.");
+                OpcaoAdmin op = new OpcaoAdmin();
+                op.setVisible(true);
+                this.dispose();
             } catch (SQLException ex) {
-                Mensagens.msgErro("Deu erro no banco de dados.Por favor contate o suporte técnico da BLW");
-            }
+                Mensagens.msgErro("Não foi possivel concluir o cadastro. \n Deu erro no banco de dados.Por favor contate o suporte técnico da BLW");
+                campoCadasNomeAdm.requestFocus();
+            }   
         }
     }//GEN-LAST:event_botaoCadastraAdmActionPerformed
 
