@@ -6,12 +6,9 @@
 package maquinadecomida.tela;
 
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import javax.swing.table.DefaultTableModel;
 import maquinadecomida.modelo.ProdutoDAO;
-import maquinadecomida.modelo.UsuarioDAO;
 import maquinadecomida.persistencia.ProdutoDTO;
-import maquinadecomida.persistencia.UsuarioDTO;
 import maquinadecomidas.Mensagens;
 
 /**
@@ -282,18 +279,26 @@ public class AtualizarMaq extends javax.swing.JFrame {
             } else {
                 novoNome = produtoDTO.getNomeProd();
             }
-            
+
             if (boxEstoque.isSelected()) {
                 if (campoQtdProd.getText().isEmpty()) {
                     Mensagens.msgAviso(campoQtdProd.getToolTipText());
                     return;
                 } else {
-                    novaQtd = Integer.parseInt(campoQtdProd.getText());
+                    int valorQtd = Integer.parseInt(campoQtdProd.getText());
+                    if ((valorQtd >= 0) && (valorQtd <= 15)) {
+                        novaQtd = Integer.parseInt(campoQtdProd.getText());
+                    } else {
+                        Mensagens.msgAviso("Verifique se o valor digitado está entre 0 e 15 unidades.");
+                        campoQtdProd.setText("");
+                        campoQtdProd.requestFocus();
+                        return;
+                    }
                 }
             } else {
                 novaQtd = produtoDTO.getQtdProd();
             }
-            
+
             if (boxPreco.isSelected()) {
                 if (campoPrecoProd.getText().isEmpty()) {
                     Mensagens.msgAviso(campoPrecoProd.getToolTipText());
@@ -304,9 +309,10 @@ public class AtualizarMaq extends javax.swing.JFrame {
             } else {
                 novoPreco = produtoDTO.getPrecoProd();
             }
-            
+
             try {
-                produtoDAO.atualizaProd(novoNome, novaQtd, novoPreco);
+
+                produtoDAO.atualizaProd(novoNome, novaQtd, novoPreco, Integer.parseInt(campoCodProdAlterar.getText()));
                 Mensagens.msgInfo("Dados cadastrados com sucesso.");
                 campoCodProdAlterar.setEditable(true);
                 campoCodProdAlterar.setText("");
@@ -338,7 +344,28 @@ public class AtualizarMaq extends javax.swing.JFrame {
                 ProdutoDTO retorno;
                 retorno = produtoDAO.autenticaProd(campoCodProdAlterar.getText());
                 if (retorno != null) {
-                    produtoDAO.montaListaProdutos();
+                    DefaultTableModel modelo = new DefaultTableModel() {
+                        @Override
+                        public boolean isCellEditable(int row, int col) {
+                            return false;
+                        }
+                    };
+                    modelo.addColumn("Código");
+                    modelo.addColumn("Nome");
+                    modelo.addColumn("Quantidade");
+                    modelo.addColumn("Preço");
+
+                    String[] vetor = new String[4];
+                    vetor[0] = Integer.toString(retorno.getCodProd());
+                    vetor[1] = retorno.getNomeProd();
+                    vetor[2] = Integer.toString(retorno.getQtdProd());
+                    vetor[3] = Float.toString(retorno.getPrecoProd());
+                    modelo.addRow(vetor);
+
+                    tabelaProd.setModel(modelo);
+
+                    tabelaProd.setAutoResizeMode(0);
+                    
                     campoCodProdAlterar.setEditable(false);
                     botaoValidaCod.setVisible(false);
                     boxPreco.setVisible(true);

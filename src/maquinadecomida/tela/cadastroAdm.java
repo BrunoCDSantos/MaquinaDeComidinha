@@ -6,8 +6,6 @@
 package maquinadecomida.tela;
 
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import maquinadecomida.modelo.UsuarioDAO;
 import maquinadecomida.persistencia.UsuarioDTO;
 import maquinadecomidas.Mensagens;
@@ -21,7 +19,7 @@ public class cadastroAdm extends javax.swing.JFrame {
     private String novaSenha;
     private String novoNome;
     private static UsuarioDTO usuarioDTO = new UsuarioDTO();
-    
+
     public cadastroAdm() {
         initComponents();
     }
@@ -46,11 +44,6 @@ public class cadastroAdm extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         campoCadasNomeAdm.setToolTipText("Digite o nome do administrador a ser cadastrado.");
-        campoCadasNomeAdm.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoCadasNomeAdmActionPerformed(evt);
-            }
-        });
 
         botaoCadastraAdm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/tela/imgs/check-symbol.png"))); // NOI18N
         botaoCadastraAdm.setText("Cadastrar");
@@ -79,11 +72,6 @@ public class cadastroAdm extends javax.swing.JFrame {
         jLabel2.setText("Senha admin:");
 
         campoCadasSenhaAdm.setToolTipText("Digite uma senha de acesso para o administrador..\t");
-        campoCadasSenhaAdm.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoCadasSenhaAdmActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -132,18 +120,12 @@ public class cadastroAdm extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void campoCadasNomeAdmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoCadasNomeAdmActionPerformed
-        novoNome = campoCadasNomeAdm.getText();
-    }//GEN-LAST:event_campoCadasNomeAdmActionPerformed
-
-    private void campoCadasSenhaAdmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoCadasSenhaAdmActionPerformed
-        novaSenha = campoCadasSenhaAdm.getPassword().toString();
-    }//GEN-LAST:event_campoCadasSenhaAdmActionPerformed
-
     private void botaoCadastraAdmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCadastraAdmActionPerformed
-        if(campoCadasNomeAdm.getText().isEmpty() || campoCadasSenhaAdm.getPassword().length == 0){
+        novoNome = campoCadasNomeAdm.getText().trim();
+        novaSenha = campoCadasSenhaAdm.getPassword().toString().trim();
+        if (novoNome.isEmpty() || novaSenha.isEmpty()) {
             Mensagens.msgAviso("Verifique se todos os campos foram preenchidos corretamente.");
-        }else{
+        } else {
             UsuarioDAO usuarioDAO = new UsuarioDAO();
             try {
                 usuarioDAO.atualizaUsuario(novoNome, novaSenha);
@@ -153,8 +135,9 @@ public class cadastroAdm extends javax.swing.JFrame {
                 this.dispose();
             } catch (SQLException ex) {
                 Mensagens.msgErro("Não foi possivel concluir o cadastro. \n Deu erro no banco de dados.Por favor contate o suporte técnico da BLW");
+                ex.printStackTrace();
                 campoCadasNomeAdm.requestFocus();
-            }   
+            }
         }
     }//GEN-LAST:event_botaoCadastraAdmActionPerformed
 

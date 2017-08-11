@@ -23,13 +23,14 @@ public class ProdutoDAO {
     private static final String STRING_CONEXAO = "jdbc:mysql://localhost/MaquinaDeComida?"
             + "user=root&password=alunoifc";
 
-    public void atualizaProd(String nome, int qtd, float preco) throws SQLException {
+    public void atualizaProd(String nome, int qtd, float preco,int cod) throws SQLException {
         Connection conn = DriverManager.getConnection(STRING_CONEXAO);
-        String sql = "update Produtos set nomeProd = ?, qtdProd = ?, precoProd = ?";
+        String sql = "update Produtos set nomeProd = ?, qtdProd = ?, precoProd = ? where codProd = ?";
         PreparedStatement stmt = conn.prepareStatement(sql);
         stmt.setString(1, nome);
         stmt.setInt(2, qtd);
         stmt.setFloat(3, preco);
+        stmt.setInt(4, cod);
         stmt.execute();
         conn.close();
     }
@@ -38,7 +39,7 @@ public class ProdutoDAO {
         // definição da String de conexão
         // estabelecer a conexão...mysql-connector-java-5.1.42-bin.jar
         Connection conn = DriverManager.getConnection(STRING_CONEXAO);
-        String sql = "select codProd from Produtos where codProd = ?";
+        String sql = "select codProd, nome, preco, quantidade from Produtos where codProd = ?";
         // enviar o select para ser analisado pelo banco
         // de dados...
         PreparedStatement p = conn.prepareStatement(sql);
@@ -49,6 +50,10 @@ public class ProdutoDAO {
         if (rs.next()) {
             produtoDTO = new ProdutoDTO();
             produtoDTO.setCodProd(rs.getInt(1));
+            produtoDTO.setNomeProd(cod);
+            produtoDTO.setPrecoProd(0);
+            produtoDTO.setQtdProd(0);
+            
        }
         conn.close();
         return produtoDTO;

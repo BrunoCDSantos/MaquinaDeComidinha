@@ -79,9 +79,6 @@
       <Properties>
         <Property name="toolTipText" type="java.lang.String" value="Digite o nome do administrador a ser cadastrado."/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="campoCadasNomeAdmActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="botaoCadastraAdm">
       <Properties>
@@ -130,9 +127,6 @@
       <Properties>
         <Property name="toolTipText" type="java.lang.String" value="Digite uma senha de acesso para o administrador..&#x9;"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="campoCadasSenhaAdmActionPerformed"/>
-      </Events>
     </Component>
   </SubComponents>
 </Form>
