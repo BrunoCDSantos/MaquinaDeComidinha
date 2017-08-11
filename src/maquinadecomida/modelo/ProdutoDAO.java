@@ -23,10 +23,15 @@ public class ProdutoDAO {
     private static final String STRING_CONEXAO = "jdbc:mysql://localhost/MaquinaDeComida?"
             + "user=root&password=alunoifc";
 
-    public ProdutoDTO atualizaProd(String nome, int qtd, float preco) throws SQLException {
+    public void atualizaProd(String nome, int qtd, float preco) throws SQLException {
         Connection conn = DriverManager.getConnection(STRING_CONEXAO);
-        String sql = "update Produtos set nomeProd = 'novoNome', qtdProd = 'novaQtd', precoProd = 'novoPreco'";
-        return null;
+        String sql = "update Produtos set nomeProd = ?, qtdProd = ?, precoProd = ?";
+        PreparedStatement stmt = conn.prepareStatement(sql);
+        stmt.setString(1, nome);
+        stmt.setInt(2, qtd);
+        stmt.setFloat(3, preco);
+        stmt.execute();
+        conn.close();
     }
     
     public ProdutoDTO autenticaProd(String cod) throws SQLException {

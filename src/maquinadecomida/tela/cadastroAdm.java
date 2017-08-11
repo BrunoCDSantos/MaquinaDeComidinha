@@ -146,7 +146,7 @@ public class cadastroAdm extends javax.swing.JFrame {
         }else{
             UsuarioDAO usuarioDAO = new UsuarioDAO();
             try {
-                usuarioDTO = usuarioDAO.atualizaUsuario(novoNome, novaSenha);
+                usuarioDAO.atualizaUsuario(novoNome, novaSenha);
                 Mensagens.msgInfo("Dados cadastrados com sucesso.");
                 OpcaoAdmin op = new OpcaoAdmin();
                 op.setVisible(true);

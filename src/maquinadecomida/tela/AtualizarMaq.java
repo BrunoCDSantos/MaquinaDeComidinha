@@ -275,32 +275,38 @@ public class AtualizarMaq extends javax.swing.JFrame {
             if (boxNome.isSelected()) {
                 if (campoNovoNomeProd.getText().isEmpty()) {
                     Mensagens.msgAviso(campoNovoNomeProd.getToolTipText());
+                    return;
                 } else {
                     novoNome = campoNovoNomeProd.getText();
                 }
             } else {
                 novoNome = produtoDTO.getNomeProd();
             }
+            
             if (boxEstoque.isSelected()) {
                 if (campoQtdProd.getText().isEmpty()) {
                     Mensagens.msgAviso(campoQtdProd.getToolTipText());
+                    return;
                 } else {
                     novaQtd = Integer.parseInt(campoQtdProd.getText());
                 }
             } else {
                 novaQtd = produtoDTO.getQtdProd();
             }
+            
             if (boxPreco.isSelected()) {
                 if (campoPrecoProd.getText().isEmpty()) {
                     Mensagens.msgAviso(campoPrecoProd.getToolTipText());
+                    return;
                 } else {
                     novoPreco = Float.parseFloat(campoPrecoProd.getText());
                 }
             } else {
                 novoPreco = produtoDTO.getPrecoProd();
             }
+            
             try {
-                produtoDTO = produtoDAO.atualizaProd(novoNome, novaQtd, novoPreco);
+                produtoDAO.atualizaProd(novoNome, novaQtd, novoPreco);
                 Mensagens.msgInfo("Dados cadastrados com sucesso.");
                 campoCodProdAlterar.setEditable(true);
                 campoCodProdAlterar.setText("");
