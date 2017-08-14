@@ -23,7 +23,7 @@ public class ProdutoDAO {
     private static final String STRING_CONEXAO = "jdbc:mysql://localhost/MaquinaDeComida?"
             + "user=root&password=alunoifc";
 
-    public void atualizaProd(String nome, int qtd, float preco,int cod) throws SQLException {
+    public void atualizaProd(String nome, int qtd, float preco, int cod) throws SQLException {
         Connection conn = DriverManager.getConnection(STRING_CONEXAO);
         String sql = "update Produtos set nomeProd = ?, qtdProd = ?, precoProd = ? where codProd = ?";
         PreparedStatement stmt = conn.prepareStatement(sql);
@@ -34,7 +34,16 @@ public class ProdutoDAO {
         stmt.execute();
         conn.close();
     }
-    
+
+    public void deletaProd(int cod) throws SQLException {
+        Connection conn = DriverManager.getConnection(STRING_CONEXAO);
+        String sql = "update Produtos set qtdProd = (qtdProd - 1) where codProd = ?";
+        PreparedStatement stmt = conn.prepareStatement(sql);
+        stmt.setInt(1, cod);
+        stmt.execute();
+        conn.close();
+    }
+
     public ProdutoDTO autenticaProd(String cod) throws SQLException {
         // definição da String de conexão
         // estabelecer a conexão...mysql-connector-java-5.1.42-bin.jar
@@ -53,14 +62,13 @@ public class ProdutoDAO {
             produtoDTO.setNomeProd(rs.getString(2));
             produtoDTO.setPrecoProd(rs.getFloat(3));
             produtoDTO.setQtdProd(rs.getInt(4));
-            
-       }
+
+        }
         conn.close();
         return produtoDTO;
     }
-    
-    public ArrayList<ProdutoDTO> montaListaProdutos() throws SQLException {
 
+    public ArrayList<ProdutoDTO> montaListaProdutos() throws SQLException {
         ArrayList<ProdutoDTO> listaRetorno = new ArrayList();
 
         // estabelecer a conexão...mysql-connector-java-5.1.42-bin.jar
@@ -74,8 +82,8 @@ public class ProdutoDAO {
 
         while (rs.next()) {
             ProdutoDTO produtoDTO = new ProdutoDTO();
-            produtoDTO.setCodProd(rs.getInt(1));        
-            produtoDTO.setNomeProd(rs.getString (2));
+            produtoDTO.setCodProd(rs.getInt(1));
+            produtoDTO.setNomeProd(rs.getString(2));
             produtoDTO.setPrecoProd(rs.getFloat(3));
             produtoDTO.setQtdProd(rs.getInt(4));
             //
