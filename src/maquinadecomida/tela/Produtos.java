@@ -20,6 +20,7 @@ public class Produtos extends javax.swing.JFrame {
     private int posicaoX = 20;
     private int posicaoY = 50;
     int numeroDoLado;
+    int quantidade = 0;
 
     public Produtos() throws SQLException {
         initComponents();
@@ -304,7 +305,7 @@ public class Produtos extends javax.swing.JFrame {
 
     private void botaoComprarProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoComprarProdutoActionPerformed
         float produtoTemporario = 1;
-        int quantidade = 0;
+
         try {
 
             if (campoCodigoProduto.getText().isEmpty()) {
@@ -322,19 +323,24 @@ public class Produtos extends javax.swing.JFrame {
                         if (listaProduto.getCodProd() == Integer.valueOf(campoCodigoProduto.getText())) {
                             produtoTemporario = listaProduto.getPrecoProd() + produto;
                             quantidade = listaProduto.getQtdProd();
+                            System.out.println(quantidade);
+                            System.out.println(ProdutoDTO.getQtdProd());
 
                         }
 
                     }
                     if (quantidade < 5 && quantidade != 0) {
                         Mensagens.msgAviso("Este produto esta quase esgotado posuiem só " + ProdutoDTO.getQtdProd());
-                    } else if (quantidade != 0) {
+
+                    }
+                    if (quantidade != 0) {
 
                         if (Float.valueOf(campoDinheiroDepositado.getText()) < produtoTemporario) {
                             Mensagens.msgErro("Valor menor com o valor que desejas comprar");
 
                         } else {
 
+                            produtoDAO.deletaProd(Integer.valueOf(campoCodigoProduto.getText()));
                             produto = produto + (produtoTemporario - produto);
                             campoValorCompras.setText(Float.toString(produto) + "0");
                             String stringTroco = Float.toString(dinheiroDepositado - produto);
