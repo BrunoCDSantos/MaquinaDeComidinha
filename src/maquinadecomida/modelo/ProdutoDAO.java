@@ -39,7 +39,7 @@ public class ProdutoDAO {
         // definição da String de conexão
         // estabelecer a conexão...mysql-connector-java-5.1.42-bin.jar
         Connection conn = DriverManager.getConnection(STRING_CONEXAO);
-        String sql = "select codProd, nome, preco, quantidade from Produtos where codProd = ?";
+        String sql = "select codProd, nomeProd, precoProd, qtdProd from Produtos where codProd = ?";
         // enviar o select para ser analisado pelo banco
         // de dados...
         PreparedStatement p = conn.prepareStatement(sql);
@@ -50,9 +50,9 @@ public class ProdutoDAO {
         if (rs.next()) {
             produtoDTO = new ProdutoDTO();
             produtoDTO.setCodProd(rs.getInt(1));
-            produtoDTO.setNomeProd(cod);
-            produtoDTO.setPrecoProd(0);
-            produtoDTO.setQtdProd(0);
+            produtoDTO.setNomeProd(rs.getString(2));
+            produtoDTO.setPrecoProd(rs.getFloat(3));
+            produtoDTO.setQtdProd(rs.getInt(4));
             
        }
         conn.close();

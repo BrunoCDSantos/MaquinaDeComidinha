@@ -376,6 +376,7 @@ public class AtualizarMaq extends javax.swing.JFrame {
                     campoCodProdAlterar.requestFocus();
                 }
             } catch (SQLException ex) {
+                ex.printStackTrace();
                 Mensagens.msgErro("Deu erro no banco de dados.Por favor contate o suporte técnico da BLW");
             }
         } else {

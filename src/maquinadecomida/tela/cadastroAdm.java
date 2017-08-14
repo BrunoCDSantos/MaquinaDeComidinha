@@ -121,12 +121,14 @@ public class cadastroAdm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botaoCadastraAdmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCadastraAdmActionPerformed
+        novoNome = campoCadasNomeAdm.getText().trim();
+        novaSenha = String.valueOf(campoCadasSenhaAdm.getPassword()).trim();
         if (novoNome.isEmpty() || novaSenha.isEmpty()) {
             Mensagens.msgAviso("Verifique se todos os campos foram preenchidos corretamente.");
         } else {
             UsuarioDAO usuarioDAO = new UsuarioDAO();
             try {
-                usuarioDAO.atualizaUsuario(campoCadasNomeAdm.getText().trim(), campoCadasSenhaAdm.getPassword().toString().trim());
+                usuarioDAO.atualizaUsuario(novoNome, novaSenha);
                 Mensagens.msgInfo("Dados cadastrados com sucesso.");
                 OpcaoAdmin op = new OpcaoAdmin();
                 op.setVisible(true);
