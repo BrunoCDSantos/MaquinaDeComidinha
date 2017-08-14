@@ -250,9 +250,7 @@ public class Produtos extends javax.swing.JFrame {
     }//GEN-LAST:event_campoValorComprasActionPerformed
 
     private void campoTrocoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoTrocoActionPerformed
-        String stringTroco = Float.toString(dinheiroDepositado - produto);
-        campoTroco.setEnabled(false);
-        campoTroco.setText(stringTroco);
+
 
     }//GEN-LAST:event_campoTrocoActionPerformed
 
@@ -339,12 +337,15 @@ public class Produtos extends javax.swing.JFrame {
 
                             produto = produto + (produtoTemporario - produto);
                             campoValorCompras.setText(Float.toString(produto) + "0");
+                            String stringTroco = Float.toString(dinheiroDepositado - produto);
+                            campoTroco.setEnabled(false);
+                            campoTroco.setText(stringTroco);
                             produtoTemporario = 0;
 
                         }
-                    }else{
+                    } else {
                         Mensagens.msgErro("Não foi possivel executar a compra pois o produto acabou no estoque");
-                        
+
                     }
                 }
 
