@@ -323,9 +323,8 @@ public class Produtos extends javax.swing.JFrame {
                         if (listaProduto.getCodProd() == Integer.valueOf(campoCodigoProduto.getText())) {
                             produtoTemporario = listaProduto.getPrecoProd() + produto;
                             quantidade = listaProduto.getQtdProd();
-                            System.out.println(quantidade);
-                            System.out.println(ProdutoDTO.getQtdProd());
-
+                        
+                        
                         }
 
                     }
@@ -347,6 +346,9 @@ public class Produtos extends javax.swing.JFrame {
                             campoTroco.setEnabled(false);
                             campoTroco.setText(stringTroco);
                             produtoTemporario = 0;
+                            quantidade = quantidade - 1;
+                            campoCodigoProduto.setText("");
+                            
 
                         }
                     } else {
