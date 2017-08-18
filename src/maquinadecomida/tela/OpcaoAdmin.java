@@ -33,7 +33,6 @@ public class OpcaoAdmin extends javax.swing.JFrame {
         botaoVolta = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("OpcoesAdm");
 
         botaoLoginAdm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maquinadecomida/tela/imgs/create-new-pencil-button.png"))); // NOI18N
         botaoLoginAdm.setText("Alterar Produtos");

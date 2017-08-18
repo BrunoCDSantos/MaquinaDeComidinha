@@ -323,16 +323,14 @@ public class Produtos extends javax.swing.JFrame {
                         if (listaProduto.getCodProd() == Integer.valueOf(campoCodigoProduto.getText())) {
                             produtoTemporario = listaProduto.getPrecoProd() + produto;
                             quantidade = listaProduto.getQtdProd();
-                        
-                        
+
                         }
 
                     }
-                    if (quantidade < 5 && quantidade != 0) {
+                    if (quantidade <= 5) {
                         Mensagens.msgAviso("Este produto esta quase esgotado posuiem só " + ProdutoDTO.getQtdProd());
-
                     }
-                    if (quantidade != 0) {
+                    if (quantidade > 0) {
 
                         if (Float.valueOf(campoDinheiroDepositado.getText()) < produtoTemporario) {
                             Mensagens.msgErro("Valor menor com o valor que desejas comprar");
@@ -348,17 +346,12 @@ public class Produtos extends javax.swing.JFrame {
                             produtoTemporario = 0;
                             quantidade = quantidade - 1;
                             campoCodigoProduto.setText("");
-                            
-
                         }
                     } else {
-                        Mensagens.msgErro("Não foi possivel executar a compra pois o produto acabou no estoque");
-
+                        Mensagens.msgErro("Não foi possivel executar a compra pois o produto acabou no estoque.");
                     }
                 }
-
             }
-
         } catch (Exception e) {
             Mensagens.msgAviso("O código informado invalido");
         }

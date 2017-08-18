@@ -21,6 +21,7 @@ public class AtualizarMaq extends javax.swing.JFrame {
     private int novaQtd;
     private float novoPreco;
     private static ProdutoDTO produtoDTO = new ProdutoDTO();
+    private DefaultTableModel tabela;
 
     /**
      * Creates new form AtualizarMaq
@@ -43,7 +44,6 @@ public class AtualizarMaq extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton2 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         campoNovoNomeProd = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
@@ -62,14 +62,11 @@ public class AtualizarMaq extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabelaProd = new javax.swing.JTable();
+        jLabel7 = new javax.swing.JLabel();
 
         jButton2.setText("jButton2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jLabel1.setFont(new java.awt.Font("Nimbus Roman", 0, 18)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Alterar produtos da máquina");
 
         jLabel2.setText("Código do Produto a ser alterado(1 a 30):");
 
@@ -166,6 +163,10 @@ public class AtualizarMaq extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tabelaProd);
 
+        jLabel7.setFont(new java.awt.Font("Nimbus Roman", 0, 18)); // NOI18N
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel7.setText("Alterar produtos da máquina");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -186,6 +187,7 @@ public class AtualizarMaq extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 570, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel5)
@@ -200,7 +202,6 @@ public class AtualizarMaq extends javax.swing.JFrame {
                                     .addComponent(jLabel4)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(campoNovoNomeProd, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 469, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -209,21 +210,20 @@ public class AtualizarMaq extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(campoCodProdAlterar, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(18, 18, 18)
-                                .addComponent(botaoValidaCod)))
+                                .addComponent(botaoValidaCod))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(botaoVoltar)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(botaoConfirma)))
                         .addContainerGap())))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(botaoVoltar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(botaoConfirma)
-                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel7)
+                .addGap(16, 16, 16)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel2)
@@ -291,7 +291,7 @@ public class AtualizarMaq extends javax.swing.JFrame {
                     } else {
                         Mensagens.msgAviso("Verifique se o valor digitado está entre 0 e 15 unidades.");
                         campoQtdProd.setText("");
-                        campoQtdProd.requestFocus();
+                        //campoQtdProd.requestFocus();
                         return;
                     }
                 }
@@ -309,19 +309,25 @@ public class AtualizarMaq extends javax.swing.JFrame {
             } else {
                 novoPreco = produtoDTO.getPrecoProd();
             }
-
             try {
-
                 produtoDAO.atualizaProd(novoNome, novaQtd, novoPreco, Integer.parseInt(campoCodProdAlterar.getText()));
                 Mensagens.msgInfo("Dados cadastrados com sucesso.");
                 campoCodProdAlterar.setEditable(true);
                 campoCodProdAlterar.setText("");
-                campoCodProdAlterar.requestFocus();
                 botaoValidaCod.setVisible(true);
                 campoQtdProd.setText("");
                 campoNovoNomeProd.setText("");
+                campoPrecoProd.setEditable(false);
+                campoQtdProd.setEditable(false);
+                campoNovoNomeProd.setEditable(false);
                 campoPrecoProd.setText("");
+                boxNome.setSelected(false);
+                boxEstoque.setSelected(false);
+                boxPreco.setSelected(false);
+                tabela = (DefaultTableModel) tabelaProd.getModel();
+                tabela.setNumRows(1);
             } catch (SQLException ex) {
+                ex.printStackTrace();
                 Mensagens.msgErro("Deu erro no banco de dados.Por favor contate o suporte técnico da BLW");
             }
         } else {
@@ -341,9 +347,8 @@ public class AtualizarMaq extends javax.swing.JFrame {
         } else if (campoCodProdAlterar.getText().length() <= 2) {
             try {
                 ProdutoDAO produtoDAO = new ProdutoDAO();
-                ProdutoDTO retorno;
-                retorno = produtoDAO.autenticaProd(campoCodProdAlterar.getText());
-                if (retorno != null) {
+                produtoDTO = produtoDAO.autenticaProd(campoCodProdAlterar.getText());
+                if (produtoDTO != null) {
                     DefaultTableModel modelo = new DefaultTableModel() {
                         @Override
                         public boolean isCellEditable(int row, int col) {
@@ -356,16 +361,16 @@ public class AtualizarMaq extends javax.swing.JFrame {
                     modelo.addColumn("Preço");
 
                     String[] vetor = new String[4];
-                    vetor[0] = Integer.toString(retorno.getCodProd());
-                    vetor[1] = retorno.getNomeProd();
-                    vetor[2] = Integer.toString(retorno.getQtdProd());
-                    vetor[3] = Float.toString(retorno.getPrecoProd());
+                    vetor[0] = Integer.toString(produtoDTO.getCodProd());
+                    vetor[1] = produtoDTO.getNomeProd();
+                    vetor[2] = Integer.toString(produtoDTO.getQtdProd());
+                    vetor[3] = Float.toString(produtoDTO.getPrecoProd());
                     modelo.addRow(vetor);
 
                     tabelaProd.setModel(modelo);
 
-                    tabelaProd.setAutoResizeMode(0);
-                    
+                    tabelaProd.setAutoResizeMode(1);
+
                     campoCodProdAlterar.setEditable(false);
                     botaoValidaCod.setVisible(false);
                     boxPreco.setVisible(true);
@@ -373,7 +378,7 @@ public class AtualizarMaq extends javax.swing.JFrame {
                     boxEstoque.setVisible(true);
                 } else {
                     Mensagens.msgAviso("Código informado não existe no banco de dados.");
-                    campoCodProdAlterar.requestFocus();
+                    //campoCodProdAlterar.requestFocus();
                 }
             } catch (SQLException ex) {
                 ex.printStackTrace();
@@ -464,12 +469,12 @@ public class AtualizarMaq extends javax.swing.JFrame {
     private javax.swing.JTextField campoPrecoProd;
     private javax.swing.JTextField campoQtdProd;
     private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTable tabelaProd;
