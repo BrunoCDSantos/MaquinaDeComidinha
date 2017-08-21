@@ -230,8 +230,8 @@ public class AtualizarMaq extends javax.swing.JFrame {
                         .addComponent(campoCodProdAlterar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(botaoValidaCod))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, Short.MAX_VALUE)
                 .addComponent(jLabel6)
                 .addGap(2, 2, 2)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -269,76 +269,96 @@ public class AtualizarMaq extends javax.swing.JFrame {
     private void botaoConfirmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoConfirmaActionPerformed
         if (campoCodProdAlterar.isEnabled()) {
             ProdutoDAO produtoDAO = new ProdutoDAO();
-            if (boxNome.isSelected()) {
-                if (campoNovoNomeProd.getText().isEmpty()) {
-                    Mensagens.msgAviso(campoNovoNomeProd.getToolTipText());
-                    return;
-                } else {
-                    novoNome = campoNovoNomeProd.getText();
-                }
-            } else {
-                novoNome = produtoDTO.getNomeProd();
-            }
-
-            if (boxEstoque.isSelected()) {
-                if (campoQtdProd.getText().isEmpty()) {
-                    Mensagens.msgAviso(campoQtdProd.getToolTipText());
-                    return;
-                } else {
-                    int valorQtd = Integer.parseInt(campoQtdProd.getText());
-                    if ((valorQtd >= 0) && (valorQtd <= 15)) {
-                        novaQtd = Integer.parseInt(campoQtdProd.getText());
+            do {
+                if (boxNome.isSelected() || boxEstoque.isSelected() || boxPreco.isSelected()) {
+                    if (boxNome.isSelected()) {
+                        if (campoNovoNomeProd.getText().isEmpty()) {
+                            Mensagens.msgAviso(campoNovoNomeProd.getToolTipText());
+                            return;
+                        } else {
+                            novoNome = campoNovoNomeProd.getText();
+                        }
                     } else {
-                        Mensagens.msgAviso("Verifique se o valor digitado está entre 0 e 15 unidades.");
-                        campoQtdProd.setText("");
-                        //campoQtdProd.requestFocus();
-                        return;
+                        novoNome = produtoDTO.getNomeProd();
+                    }
+
+                    if (boxEstoque.isSelected()) {
+                        if (campoQtdProd.getText().isEmpty()) {
+                            Mensagens.msgAviso(campoQtdProd.getToolTipText());
+                            return;
+                        } else {
+                            int valorQtd = Integer.parseInt(campoQtdProd.getText());
+                            if ((valorQtd >= 0) && (valorQtd <= 15)) {
+                                novaQtd = Integer.parseInt(campoQtdProd.getText());
+                            } else {
+                                Mensagens.msgAviso("Verifique se o valor digitado está entre 0 e 15 unidades.");
+                                campoQtdProd.setText("");
+                                return;
+                            }
+                        }
+                    } else {
+                        novaQtd = produtoDTO.getQtdProd();
+                    }
+
+                    if (boxPreco.isSelected()) {
+                        if (campoPrecoProd.getText().isEmpty()) {
+                            Mensagens.msgAviso(campoPrecoProd.getToolTipText());
+                            return;
+                        } else {
+                            novoPreco = Float.parseFloat(campoPrecoProd.getText());
+                        }
+                    } else {
+                        novoPreco = produtoDTO.getPrecoProd();
                     }
                 }
-            } else {
-                novaQtd = produtoDTO.getQtdProd();
-            }
-
-            if (boxPreco.isSelected()) {
-                if (campoPrecoProd.getText().isEmpty()) {
-                    Mensagens.msgAviso(campoPrecoProd.getToolTipText());
-                    return;
-                } else {
-                    novoPreco = Float.parseFloat(campoPrecoProd.getText());
+                try {
+                    produtoDAO.atualizaProd(novoNome, novaQtd, novoPreco, Integer.parseInt(campoCodProdAlterar.getText()));
+                    Mensagens.msgInfo("Dados cadastrados com sucesso.");
+                    campoCodProdAlterar.setEditable(true);
+                    campoCodProdAlterar.setText("");
+                    botaoValidaCod.setVisible(true);
+                    campoQtdProd.setText("");
+                    campoNovoNomeProd.setText("");
+                    campoPrecoProd.setEditable(false);
+                    campoQtdProd.setEditable(false);
+                    campoNovoNomeProd.setEditable(false);
+                    campoPrecoProd.setText("");
+                    boxNome.setSelected(false);
+                    boxEstoque.setSelected(false);
+                    boxPreco.setSelected(false);
+                    tabela = (DefaultTableModel) tabelaProd.getModel();
+                    tabela.setNumRows(0);
+                } catch (SQLException ex) {
+                    ex.printStackTrace();
+                    Mensagens.msgErro("Deu erro no banco de dados.Por favor contate o suporte técnico da BLW");
                 }
-            } else {
+            } while (!(Mensagens.msgConf("Os dados serão mantidos os mesmos do atual produto.")));
+            /*if ((Mensagens.msgConf("Os dados serão mantidos os mesmos do atual produto.")) != true) {
+                novoNome = produtoDTO.getNomeProd();
+                novaQtd = produtoDTO.getQtdProd();
                 novoPreco = produtoDTO.getPrecoProd();
             }
-            try {
-                produtoDAO.atualizaProd(novoNome, novaQtd, novoPreco, Integer.parseInt(campoCodProdAlterar.getText()));
-                Mensagens.msgInfo("Dados cadastrados com sucesso.");
-                campoCodProdAlterar.setEditable(true);
-                campoCodProdAlterar.setText("");
-                botaoValidaCod.setVisible(true);
-                campoQtdProd.setText("");
-                campoNovoNomeProd.setText("");
-                campoPrecoProd.setEditable(false);
-                campoQtdProd.setEditable(false);
-                campoNovoNomeProd.setEditable(false);
-                campoPrecoProd.setText("");
-                boxNome.setSelected(false);
-                boxEstoque.setSelected(false);
-                boxPreco.setSelected(false);
-                tabela = (DefaultTableModel) tabelaProd.getModel();
-                tabela.setNumRows(1);
-            } catch (SQLException ex) {
-                ex.printStackTrace();
-                Mensagens.msgErro("Deu erro no banco de dados.Por favor contate o suporte técnico da BLW");
-            }
-        } else {
+             */
+
             Mensagens.msgAviso("Verifique se o valor digitado no campo do código do produto a ser alterado foi confirmado para a alteração.");
         }
     }//GEN-LAST:event_botaoConfirmaActionPerformed
+/*
+        if ((Mensagens.msgConf("Os dados serão mantidos os mesmos do atual produto.")) != true) {
+                        novoNome = produtoDTO.getNomeProd();
+                        novaQtd = produtoDTO.getQtdProd();
+                        novoPreco = produtoDTO.getPrecoProd();
+                    }
+        
+    
+         */
 
     private void botaoVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoVoltarActionPerformed
-        OpcaoAdmin op = new OpcaoAdmin();
-        op.setVisible(true);
-        this.dispose();
+        if (Mensagens.msgConf("Gostaria de sair da tela de alteração de produtos.")) {
+            OpcaoAdmin op = new OpcaoAdmin();
+            op.setVisible(true);
+            this.dispose();
+        };
     }//GEN-LAST:event_botaoVoltarActionPerformed
 
     private void botaoValidaCodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoValidaCodActionPerformed
@@ -359,18 +379,14 @@ public class AtualizarMaq extends javax.swing.JFrame {
                     modelo.addColumn("Nome");
                     modelo.addColumn("Quantidade");
                     modelo.addColumn("Preço");
-
                     String[] vetor = new String[4];
                     vetor[0] = Integer.toString(produtoDTO.getCodProd());
                     vetor[1] = produtoDTO.getNomeProd();
                     vetor[2] = Integer.toString(produtoDTO.getQtdProd());
                     vetor[3] = Float.toString(produtoDTO.getPrecoProd());
                     modelo.addRow(vetor);
-
                     tabelaProd.setModel(modelo);
-
                     tabelaProd.setAutoResizeMode(1);
-
                     campoCodProdAlterar.setEditable(false);
                     botaoValidaCod.setVisible(false);
                     boxPreco.setVisible(true);
@@ -378,7 +394,6 @@ public class AtualizarMaq extends javax.swing.JFrame {
                     boxEstoque.setVisible(true);
                 } else {
                     Mensagens.msgAviso("Código informado não existe no banco de dados.");
-                    //campoCodProdAlterar.requestFocus();
                 }
             } catch (SQLException ex) {
                 ex.printStackTrace();
@@ -425,37 +440,6 @@ public class AtualizarMaq extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AtualizarMaq.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AtualizarMaq.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AtualizarMaq.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AtualizarMaq.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new AtualizarMaq().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botaoConfirma;

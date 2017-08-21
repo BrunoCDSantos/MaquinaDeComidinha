@@ -256,7 +256,7 @@ public class Produtos extends javax.swing.JFrame {
     }//GEN-LAST:event_campoTrocoActionPerformed
 
     private void botaoVoltaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoVoltaActionPerformed
-        if (Mensagens.msgConf("Gostaria de encerrar a compra.")) {
+        if (Mensagens.msgConf("Gostaria de sair da tela de compra.")) {
             Principal telaPrincipal = new Principal();
             this.dispose();
             telaPrincipal.setVisible(true);
