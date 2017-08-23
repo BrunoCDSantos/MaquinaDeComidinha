@@ -32,6 +32,7 @@ public class AtualizarMaq extends javax.swing.JFrame {
         campoNovoNomeProd.setEditable(false);
         campoQtdProd.setEditable(false);
         campoPrecoProd.setEditable(false);
+        botaoConfirma.setVisible(false);
     }
 
     /**
@@ -267,9 +268,9 @@ public class AtualizarMaq extends javax.swing.JFrame {
     }//GEN-LAST:event_campoQtdProdActionPerformed
 
     private void botaoConfirmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoConfirmaActionPerformed
-        if (campoCodProdAlterar.isEnabled()) {
-            ProdutoDAO produtoDAO = new ProdutoDAO();
-            do {
+        try {
+            if ((botaoValidaCod.isEnabled())) {
+                ProdutoDAO produtoDAO = new ProdutoDAO();
                 if (boxNome.isSelected() || boxEstoque.isSelected() || boxPreco.isSelected()) {
                     if (boxNome.isSelected()) {
                         if (campoNovoNomeProd.getText().isEmpty()) {
@@ -310,40 +311,40 @@ public class AtualizarMaq extends javax.swing.JFrame {
                     } else {
                         novoPreco = produtoDTO.getPrecoProd();
                     }
+                } else {
+                    if ((Mensagens.msgConf("Os dados serão mantidos os mesmos do atual produto."))) {
+                        novoNome = produtoDTO.getNomeProd();
+                        novaQtd = produtoDTO.getQtdProd();
+                        novoPreco = produtoDTO.getPrecoProd();
+                        produtoDAO.atualizaProd(novoNome, novaQtd, novoPreco, Integer.parseInt(campoCodProdAlterar.getText()));
+                        Mensagens.msgInfo("Dados cadastrados com sucesso.");
+                        campoCodProdAlterar.setEditable(true);
+                        campoCodProdAlterar.setText("");
+                        botaoConfirma.setVisible(false);
+                        botaoValidaCod.setVisible(true);
+                        campoQtdProd.setText("");
+                        campoNovoNomeProd.setText("");
+                        campoPrecoProd.setEditable(false);
+                        campoQtdProd.setEditable(false);
+                        campoNovoNomeProd.setEditable(false);
+                        campoPrecoProd.setText("");
+                        boxNome.setSelected(false);
+                        boxEstoque.setSelected(false);
+                        boxPreco.setSelected(false);
+                        tabela = (DefaultTableModel) tabelaProd.getModel();
+                        tabela.setNumRows(0);
+                    }
                 }
-                try {
-                    produtoDAO.atualizaProd(novoNome, novaQtd, novoPreco, Integer.parseInt(campoCodProdAlterar.getText()));
-                    Mensagens.msgInfo("Dados cadastrados com sucesso.");
-                    campoCodProdAlterar.setEditable(true);
-                    campoCodProdAlterar.setText("");
-                    botaoValidaCod.setVisible(true);
-                    campoQtdProd.setText("");
-                    campoNovoNomeProd.setText("");
-                    campoPrecoProd.setEditable(false);
-                    campoQtdProd.setEditable(false);
-                    campoNovoNomeProd.setEditable(false);
-                    campoPrecoProd.setText("");
-                    boxNome.setSelected(false);
-                    boxEstoque.setSelected(false);
-                    boxPreco.setSelected(false);
-                    tabela = (DefaultTableModel) tabelaProd.getModel();
-                    tabela.setNumRows(0);
-                } catch (SQLException ex) {
-                    ex.printStackTrace();
-                    Mensagens.msgErro("Deu erro no banco de dados.Por favor contate o suporte técnico da BLW");
-                }
-            } while (!(Mensagens.msgConf("Os dados serão mantidos os mesmos do atual produto.")));
-            /*if ((Mensagens.msgConf("Os dados serão mantidos os mesmos do atual produto.")) != true) {
-                novoNome = produtoDTO.getNomeProd();
-                novaQtd = produtoDTO.getQtdProd();
-                novoPreco = produtoDTO.getPrecoProd();
+            } else {
+                Mensagens.msgAviso("Verifique se o valor digitado no campo do código do produto a ser alterado foi confirmado para a alteração.");
             }
-             */
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            Mensagens.msgErro("Deu erro no banco de dados.Por favor contate o suporte técnico da BLW");
+        };
 
-            Mensagens.msgAviso("Verifique se o valor digitado no campo do código do produto a ser alterado foi confirmado para a alteração.");
-        }
     }//GEN-LAST:event_botaoConfirmaActionPerformed
-/*
+    /*
         if ((Mensagens.msgConf("Os dados serão mantidos os mesmos do atual produto.")) != true) {
                         novoNome = produtoDTO.getNomeProd();
                         novaQtd = produtoDTO.getQtdProd();
@@ -351,7 +352,7 @@ public class AtualizarMaq extends javax.swing.JFrame {
                     }
         
     
-         */
+     */
 
     private void botaoVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoVoltarActionPerformed
         if (Mensagens.msgConf("Gostaria de sair da tela de alteração de produtos.")) {
@@ -389,6 +390,7 @@ public class AtualizarMaq extends javax.swing.JFrame {
                     tabelaProd.setAutoResizeMode(1);
                     campoCodProdAlterar.setEditable(false);
                     botaoValidaCod.setVisible(false);
+                    botaoConfirma.setVisible(true);
                     boxPreco.setVisible(true);
                     boxNome.setVisible(true);
                     boxEstoque.setVisible(true);
