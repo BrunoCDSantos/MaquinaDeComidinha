@@ -7,8 +7,8 @@ package maquinadecomida.tela;
 
 import java.sql.SQLException;
 import javax.swing.table.DefaultTableModel;
-import maquinadecomida.modelo.ProdutoDAO;
-import maquinadecomida.persistencia.ProdutoDTO;
+import maquinadecomida.persistência.ProdutoDAO;
+import maquinadecomida.persistência.ProdutoDTO;
 import maquinadecomidas.Mensagens;
 
 /**
@@ -271,69 +271,67 @@ public class AtualizarMaq extends javax.swing.JFrame {
         try {
             if ((botaoValidaCod.isEnabled())) {
                 ProdutoDAO produtoDAO = new ProdutoDAO();
-                if (boxNome.isSelected() || boxEstoque.isSelected() || boxPreco.isSelected()) {
-                    if (boxNome.isSelected()) {
-                        if (campoNovoNomeProd.getText().isEmpty()) {
-                            Mensagens.msgAviso(campoNovoNomeProd.getToolTipText());
-                            return;
-                        } else {
-                            novoNome = campoNovoNomeProd.getText();
-                        }
+                if (boxNome.isSelected()) {
+                    if (campoNovoNomeProd.getText().trim().isEmpty()) {
+                        Mensagens.msgAviso(campoNovoNomeProd.getToolTipText());
+                        return;
                     } else {
-                        novoNome = produtoDTO.getNomeProd();
-                    }
-
-                    if (boxEstoque.isSelected()) {
-                        if (campoQtdProd.getText().isEmpty()) {
-                            Mensagens.msgAviso(campoQtdProd.getToolTipText());
-                            return;
-                        } else {
-                            int valorQtd = Integer.parseInt(campoQtdProd.getText());
-                            if ((valorQtd >= 0) && (valorQtd <= 15)) {
-                                novaQtd = Integer.parseInt(campoQtdProd.getText());
-                            } else {
-                                Mensagens.msgAviso("Verifique se o valor digitado está entre 0 e 15 unidades.");
-                                campoQtdProd.setText("");
-                                return;
-                            }
-                        }
-                    } else {
-                        novaQtd = produtoDTO.getQtdProd();
-                    }
-
-                    if (boxPreco.isSelected()) {
-                        if (campoPrecoProd.getText().isEmpty()) {
-                            Mensagens.msgAviso(campoPrecoProd.getToolTipText());
-                            return;
-                        } else {
-                            novoPreco = Float.parseFloat(campoPrecoProd.getText());
-                        }
-                    } else {
-                        novoPreco = produtoDTO.getPrecoProd();
+                        novoNome = campoNovoNomeProd.getText();
                     }
                 } else {
-                    if ((Mensagens.msgConf("Os dados serão mantidos os mesmos do atual produto."))) {
-                        novoNome = produtoDTO.getNomeProd();
-                        novaQtd = produtoDTO.getQtdProd();
-                        novoPreco = produtoDTO.getPrecoProd();
-                        produtoDAO.atualizaProd(novoNome, novaQtd, novoPreco, Integer.parseInt(campoCodProdAlterar.getText()));
-                        Mensagens.msgInfo("Dados cadastrados com sucesso.");
-                        campoCodProdAlterar.setEditable(true);
-                        campoCodProdAlterar.setText("");
-                        botaoConfirma.setVisible(false);
-                        botaoValidaCod.setVisible(true);
-                        campoQtdProd.setText("");
-                        campoNovoNomeProd.setText("");
-                        campoPrecoProd.setEditable(false);
-                        campoQtdProd.setEditable(false);
-                        campoNovoNomeProd.setEditable(false);
-                        campoPrecoProd.setText("");
-                        boxNome.setSelected(false);
-                        boxEstoque.setSelected(false);
-                        boxPreco.setSelected(false);
-                        tabela = (DefaultTableModel) tabelaProd.getModel();
-                        tabela.setNumRows(0);
+                    novoNome = produtoDTO.getNomeProd();
+                }
+
+                if (boxEstoque.isSelected()) {
+                    if (campoQtdProd.getText().trim().isEmpty()) {
+                        Mensagens.msgAviso(campoQtdProd.getToolTipText());
+                        return;
+                    } else {
+                        int valorQtd = Integer.parseInt(campoQtdProd.getText().trim());
+                        if ((valorQtd >= 0) && (valorQtd <= 15)) {
+                            novaQtd = Integer.parseInt(campoQtdProd.getText().trim());
+                        } else {
+                            Mensagens.msgAviso("Verifique se o valor digitado está entre 0 e 15 unidades.");
+                            campoQtdProd.setText("");
+                            return;
+                        }
                     }
+                } else {
+                    novaQtd = produtoDTO.getQtdProd();
+                }
+
+                if (boxPreco.isSelected()) {
+                    if (campoPrecoProd.getText().isEmpty() || Float.parseFloat(campoPrecoProd.getText()) <= 0) {
+                        Mensagens.msgAviso(campoPrecoProd.getToolTipText());
+                        return;
+                    } else {
+                        novoPreco = Float.parseFloat(campoPrecoProd.getText().trim());
+                    }
+                } else {
+                    novoPreco = produtoDTO.getPrecoProd();
+                }
+                
+                if ((Mensagens.msgConf("Confirma a alteração dos dados?"))) {
+                    //novoNome = produtoDTO.getNomeProd();
+                    //novaQtd = produtoDTO.getQtdProd();
+                    //novoPreco = produtoDTO.getPrecoProd();
+                    produtoDAO.atualizaProd(novoNome, novaQtd, novoPreco, Integer.parseInt(campoCodProdAlterar.getText()));
+                    Mensagens.msgInfo("Dados cadastrados com sucesso.");
+                    campoCodProdAlterar.setEditable(true);
+                    campoCodProdAlterar.setText("");
+                    botaoConfirma.setVisible(false);
+                    botaoValidaCod.setVisible(true);
+                    campoQtdProd.setText("");
+                    campoNovoNomeProd.setText("");
+                    campoPrecoProd.setEditable(false);
+                    campoQtdProd.setEditable(false);
+                    campoNovoNomeProd.setEditable(false);
+                    campoPrecoProd.setText("");
+                    boxNome.setSelected(false);
+                    boxEstoque.setSelected(false);
+                    boxPreco.setSelected(false);
+                    tabela = (DefaultTableModel) tabelaProd.getModel();
+                    tabela.setNumRows(0);
                 }
             } else {
                 Mensagens.msgAviso("Verifique se o valor digitado no campo do código do produto a ser alterado foi confirmado para a alteração.");
@@ -358,6 +356,7 @@ public class AtualizarMaq extends javax.swing.JFrame {
         if (Mensagens.msgConf("Gostaria de sair da tela de alteração de produtos.")) {
             OpcaoAdmin op = new OpcaoAdmin();
             op.setVisible(true);
+            op.setLocationRelativeTo(null);
             this.dispose();
         };
     }//GEN-LAST:event_botaoVoltarActionPerformed
@@ -423,7 +422,7 @@ public class AtualizarMaq extends javax.swing.JFrame {
     }//GEN-LAST:event_boxEstoqueActionPerformed
 
     private void campoPrecoProdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoPrecoProdActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_campoPrecoProdActionPerformed
 
     private void boxPrecoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boxPrecoActionPerformed

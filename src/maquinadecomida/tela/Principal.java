@@ -117,6 +117,7 @@ public class Principal extends javax.swing.JFrame {
         login lg = new login();
         this.dispose();
         lg.setVisible(true);
+        lg.setLocationRelativeTo(null);
     }//GEN-LAST:event_botaoAdmActionPerformed
 
     private void botaoComprarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoComprarActionPerformed
@@ -124,6 +125,7 @@ public class Principal extends javax.swing.JFrame {
             Produtos pr = new Produtos();
             this.dispose();
             pr.setVisible(true);
+            pr.setLocationRelativeTo(null);
         } catch (SQLException ex ) {
            Mensagens.msgErro("Deu erro no banco de dados.Por favor contate o suporte técnico da BLW");
         }

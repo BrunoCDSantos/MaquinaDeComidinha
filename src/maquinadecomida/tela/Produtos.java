@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JLabel;
-import maquinadecomida.modelo.ProdutoDAO;
-import maquinadecomida.persistencia.ProdutoDTO;
+import maquinadecomida.persistência.ProdutoDAO;
+import maquinadecomida.persistência.ProdutoDTO;
 import maquinadecomidas.Mensagens;
 import maquinadecomidas.Validacao;
 
@@ -16,7 +16,7 @@ public class Produtos extends javax.swing.JFrame {
     private float produto;
     private final ProdutoDTO ProdutoDTO = new ProdutoDTO();
     private final ProdutoDAO produtoDAO = new ProdutoDAO();
-    private final ArrayList<ProdutoDTO> listaProdutos;
+    private ArrayList<ProdutoDTO> listaProdutos;
     private int posicaoX = 20;
     private int posicaoY = 50;
     int numeroDoLado;
@@ -75,9 +75,9 @@ public class Produtos extends javax.swing.JFrame {
         campoTroco = new javax.swing.JTextField();
         botaoInserirDinheiro = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
+        jm = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("tela de Produtos");
         setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Nimbus Roman", 0, 18)); // NOI18N
@@ -122,6 +122,7 @@ public class Produtos extends javax.swing.JFrame {
 
         campoDinheiroDepositado.setHorizontalAlignment(javax.swing.JTextField.TRAILING);
         campoDinheiroDepositado.setToolTipText("Digite o valor a ser inserido na máquina.");
+        campoDinheiroDepositado.setName(""); // NOI18N
         campoDinheiroDepositado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoDinheiroDepositadoActionPerformed(evt);
@@ -162,6 +163,9 @@ public class Produtos extends javax.swing.JFrame {
             }
         });
 
+        jm.setFont(new java.awt.Font("C059", 1, 10)); // NOI18N
+        jm.setText("Maior que R$2,00 e menor que R$500,00");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -178,12 +182,14 @@ public class Produtos extends javax.swing.JFrame {
                         .addComponent(jSeparator1)
                         .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
+                        .addComponent(produto001)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(botaoVolta)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(botaoConfCompra))
-                            .addComponent(produto001)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(Produto)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -203,8 +209,11 @@ public class Produtos extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(campoDinheiroDepositado, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(botaoInserirDinheiro)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                .addComponent(botaoInserirDinheiro))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jm)
+                                .addGap(139, 139, 139)))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -217,12 +226,14 @@ public class Produtos extends javax.swing.JFrame {
                 .addComponent(produto001)
                 .addGap(371, 371, 371)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(campoDinheiroDepositado, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(botaoInserirDinheiro))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jm)
+                .addGap(3, 3, 3)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Produto)
                     .addComponent(campoCodigoProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -239,8 +250,10 @@ public class Produtos extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botaoConfCompra)
                     .addComponent(botaoVolta))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
+
+        campoDinheiroDepositado.getAccessibleContext().setAccessibleName("");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -259,27 +272,34 @@ public class Produtos extends javax.swing.JFrame {
         if (Mensagens.msgConf("Gostaria de sair da tela de compra.")) {
             Principal telaPrincipal = new Principal();
             this.dispose();
+            telaPrincipal.setLocationRelativeTo(null);
             telaPrincipal.setVisible(true);
         }
     }//GEN-LAST:event_botaoVoltaActionPerformed
 
     private void botaoInserirDinheiroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoInserirDinheiroActionPerformed
-        if (Validacao.validaPreco(campoDinheiroDepositado)) {
-            botaoComprarProduto.setVisible(true);
-            campoCodigoProduto.setVisible(true);
-            Produto.setVisible(true);
-            comprar.setVisible(true);
-            campoCodigoProduto.setVisible(true);
-            Troco.setVisible(true);
-            campoTroco.setVisible(true);
-            campoValorCompras.setVisible(true);
-            campoDinheiroDepositado.setEnabled(false);
-            botaoConfCompra.setVisible(true);
 
+        if (Validacao.validaPreco(campoDinheiroDepositado)) {
             dinheiroDepositado = Integer.valueOf(campoDinheiroDepositado.getText().trim());
-            String stringTroco = Float.toString(dinheiroDepositado - produto);
-            campoTroco.setText(stringTroco + "0");
-            campoTroco.setEnabled(false);
+            if (dinheiroDepositado > 500) {
+                Mensagens.msgAviso("Limite de valor depositado excedido.");
+                campoDinheiroDepositado.setText("");
+            } else {
+                botaoComprarProduto.setVisible(true);
+                campoCodigoProduto.setVisible(true);
+                Produto.setVisible(true);
+                comprar.setVisible(true);
+                campoCodigoProduto.setVisible(true);
+                Troco.setVisible(true);
+                campoTroco.setVisible(true);
+                campoValorCompras.setVisible(true);
+                campoDinheiroDepositado.setEnabled(false);
+                jm.setVisible(false);
+                botaoConfCompra.setVisible(true);
+                String stringTroco = Float.toString(dinheiroDepositado - produto);
+                campoTroco.setText(stringTroco + "0");
+                campoTroco.setEnabled(false);
+            }
         } else {
             campoDinheiroDepositado.setText("");
         }
@@ -295,6 +315,7 @@ public class Produtos extends javax.swing.JFrame {
         if (Mensagens.msgConf("Gostaria de encerrar a compra.")) {
             Principal pr = new Principal();
             pr.setVisible(true);
+            pr.setLocationRelativeTo(null);
             this.dispose();
         }
     }//GEN-LAST:event_botaoConfCompraActionPerformed
@@ -307,36 +328,24 @@ public class Produtos extends javax.swing.JFrame {
         float produtoTemporario = 1;
 
         try {
-
+            listaProdutos = produtoDAO.montaListaProdutos();
             if (campoCodigoProduto.getText().isEmpty()) {
                 Mensagens.msgAviso("Nenhum código informado.");
-
             } else {
                 int QtProduto = Integer.valueOf(campoCodigoProduto.getText().trim());
                 if (QtProduto > 30 || QtProduto < 1) {
                     Mensagens.msgAviso("Código excedendo os limites.");
-
                 } else {
-
                     for (ProdutoDTO listaProduto : listaProdutos) {
-
                         if (listaProduto.getCodProd() == Integer.valueOf(campoCodigoProduto.getText())) {
                             produtoTemporario = listaProduto.getPrecoProd() + produto;
                             quantidade = listaProduto.getQtdProd();
-
                         }
-
-                    }
-                    if (quantidade <= 5) {
-                        Mensagens.msgAviso("Este produto esta quase esgotado posuiem só " + ProdutoDTO.getQtdProd());
                     }
                     if (quantidade > 0) {
-
                         if (Float.valueOf(campoDinheiroDepositado.getText()) < produtoTemporario) {
-                            Mensagens.msgErro("Valor menor com o valor que desejas comprar");
-
+                            Mensagens.msgErro("Valor menor que o valor que desejas comprar");
                         } else {
-
                             produtoDAO.deletaProd(Integer.valueOf(campoCodigoProduto.getText()));
                             produto = produto + (produtoTemporario - produto);
                             campoValorCompras.setText(Float.toString(produto) + "0");
@@ -349,11 +358,12 @@ public class Produtos extends javax.swing.JFrame {
                         }
                     } else {
                         Mensagens.msgErro("Não foi possivel executar a compra pois o produto acabou no estoque.");
+                        campoCodigoProduto.setText("");
                     }
                 }
             }
         } catch (Exception e) {
-            Mensagens.msgAviso("O código informado invalido");
+            Mensagens.msgAviso("Código informado invalido");
         }
     }//GEN-LAST:event_botaoComprarProdutoActionPerformed
 
@@ -380,6 +390,7 @@ public class Produtos extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JLabel jm;
     private javax.swing.JLabel produto001;
     // End of variables declaration//GEN-END:variables
 }

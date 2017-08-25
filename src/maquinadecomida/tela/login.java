@@ -6,9 +6,9 @@
 package maquinadecomida.tela;
 
 import java.sql.SQLException;
-import maquinadecomida.modelo.UsuarioDAO;
+import maquinadecomida.persistência.UsuarioDAO;
 import maquinadecomidas.Mensagens;
-import maquinadecomida.persistencia.UsuarioDTO;
+import maquinadecomida.persistência.UsuarioDTO;
 
 public class login extends javax.swing.JFrame {
 
@@ -140,6 +140,7 @@ public class login extends javax.swing.JFrame {
                 } else {
                     OpcaoAdmin op = new OpcaoAdmin();
                     op.setVisible(true);
+                    op.setLocationRelativeTo(null);
                     this.dispose();
                 }
             } catch (SQLException ex) {
@@ -153,6 +154,7 @@ public class login extends javax.swing.JFrame {
         // TODO add your handling code here:
         Principal pr = new Principal();
         pr.setVisible(true);
+        pr.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_botaoVoltaActionPerformed
 

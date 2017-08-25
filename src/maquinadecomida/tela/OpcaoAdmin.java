@@ -97,6 +97,7 @@ public class OpcaoAdmin extends javax.swing.JFrame {
         // TODO add your handling code here:
         AtualizarMaq at = new AtualizarMaq();
         at.setVisible(true);
+        at.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_botaoLoginAdmActionPerformed
 
@@ -104,6 +105,7 @@ public class OpcaoAdmin extends javax.swing.JFrame {
         // TODO add your handling code here:
         cadastroAdm ca = new cadastroAdm();
         ca.setVisible(true);
+        ca.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_botaoCadastroAdmActionPerformed
 
@@ -111,6 +113,7 @@ public class OpcaoAdmin extends javax.swing.JFrame {
         // TODO add your handling code here:
         Principal pr = new Principal();
         pr.setVisible(true);
+        pr.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_botaoVoltaActionPerformed
 

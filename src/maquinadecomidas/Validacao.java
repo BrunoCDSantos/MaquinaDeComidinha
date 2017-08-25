@@ -36,10 +36,10 @@ public class Validacao {
     public static boolean validaPreco(JTextField campo) {
         try {
             float valor = Float.valueOf(campo.getText());
-            if (valor != 0 && valor >= 1) {
+            if (valor != 0 && valor >= 2) {
                 return true;
             } else {
-                Mensagens.msgErro("Valor inexistente");
+                Mensagens.msgErro("Valor inválido");
                 return false;
             }
         } catch (Exception e) {
